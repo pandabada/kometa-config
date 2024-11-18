@@ -3,76 +3,66 @@
 ######################################################
 templates:
   Separator:
-    smart_label: random
-    sync_mode: sync
-    plex_search:
-      all:
-        title: breaking bad
+    blank_collection: true
 
 # Creates a separator to make it more clear where a category of collection starts and ends
 collections:
-  Award Collections:
-    template: { name: Separator }
-    sort_title: zzz_<<AAA
-    summary: Award collections up next.
-    file_poster: config/posters/Award Collections.png
+  # Chart Collections:
+    # template: { name: Separator }
+    # sort_title: "!_!"
+    # #summary: Chart collections up next.
+    # file_poster: config/posters/Chart Collections.png
 
-  Chart Collections:
+  Par plateforme de streaming:
     template: { name: Separator }
-    sort_title: ++_ZZZ
-    summary: Chart collections up next.
-    file_poster: config/posters/Chart Collections.png
-
-  Decade Collections:
-    template: { name: Separator }
-    sort_title: zzzz_AAA
-    summary: Decade collections up next.
-    file_poster: config/posters/Decade Collections.png
-
-  Franchise Collections:
-    template: { name: Separator }
-    sort_title: zzzzzzz_<<
-    summary: Franchise collections up next.
-    file_poster: config/posters/Franchise Collections.png
-
-  Genre Collections:
-    template: { name: Separator }
-    sort_title: +01_AAA
-    summary: Genre collections up next.
-    file_poster: config/posters/Genre Collections.png
-
-  Network Collections:
-    template: { name: Separator }
-    sort_title: zzzzzz_1AAA
-    summary: Network collections up next.
-    file_poster: config/posters/Network Collections.png
-
-  Rating Collections:
-    template: { name: Separator }
-    sort_title: zzzzzzzz_11
-    summary: Rating collections up next.
-    file_poster: config/posters/Rating Collections.png
-
-  Special Collections:
-    template: { name: Separator }
-    sort_title: zz__000
-    summary: Special collections up next.
-    file_poster: config/posters/Special Collections.png
-
-  Streaming Collections:
-    template: { name: Separator }
-    sort_title: ++++_AAA
-    summary: Streaming collections up next.
+    sort_title: "!!_!"
+    #summary: Streaming collections up next.
     file_poster: config/posters/Streaming Collections.png
 
-  Subgenre Collections:
+  Par genre:
     template: { name: Separator }
-    sort_title: +02_AAA
-    summary: Subgenre collections up next.
-    file_poster: config/posters/Subgenre Collections.png
+    sort_title: "!!!_!"
+    #summary: Genre collections up next.
+    file_poster: config/posters/Genre Collections.png
 
-  Year Collections:
+  Par sous-genres:
     template: { name: Separator }
-    sort_title: zzzzz_AAA
-    summary: Year collections up next.
+    sort_title: "!!!!_!"
+    #summary: Subgenre collections up next.
+    file_poster: config/posters/Subgenre Collections.png
+    
+  Par récompenses et prix:
+    template: { name: Separator }
+    sort_title: "~_!"
+    #summary: Award collections up next.
+    file_poster: config/posters/Award Collections.png
+
+  Par chaine:
+    template: { name: Separator }
+    sort_title: "~~_!"
+    #summary: Network collections up next.
+    file_poster: config/posters/Network Collections.png
+
+  Par franchise:
+    template: { name: Separator }
+    sort_title: "~~~_!"
+    #summary: Franchise collections up next.
+    file_poster: config/posters/Franchise Collections.png
+
+  Par décénnie:
+    template: { name: Separator }
+    sort_title: "~~~~_!"
+    #summary: Decade collections up next.
+    file_poster: config/posters/Decade Collections.png
+
+  Par année:
+    template: { name: Separator }
+    sort_title: "~~~~~_!"
+    #summary: Year collections up next.
     file_poster: config/posters/Year Collections.png
+
+  Autres:
+    template: { name: Separator }
+    sort_title: "~~~~~~_!"
+    #summary: Special collections up next.
+    file_poster: config/posters/Special Collections.png

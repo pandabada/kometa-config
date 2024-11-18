@@ -8,19 +8,19 @@ templates:
       all:
         studio: <<studio>>
       sort_by: release.desc
-    sort_title: zzzzz_<<collection_name>>
+    sort_title: "~~~~~<<_<<collection_name>>"
     sync_mode: sync
 
   Studio:
     optional:
       - company
     tmdb_company: <<company>>
-    sort_title: zzzzz_<<collection_name>>
+    sort_title: "~~~~~_<<collection_name>>"
     sync_mode: sync
     smart_label: release.desc
 
   Streaming:
-    sort_title: ++++_<<collection_name>>
+    sort_title: "!!!_<<collection_name>>"
     sync_mode: sync
     smart_label: originally_available.desc
     visible_library: true

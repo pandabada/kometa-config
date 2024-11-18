@@ -5,22 +5,22 @@ templates:
   Special:
     smart_label: random
     sync_mode: sync
-    sort_title: zz-<<collection_name>>
+    sort_title: "~~~~~~~~~-<<collection_name>>"
 
   Special Smart:
     sync_mode: sync
-    sort_title: zz-<<collection_name>>
+    sort_title: "~~~~~~~~~-<<collection_name>>"
     visible_library: true
 
   Special Other:
     smart_label: random
     sync_mode: sync
-    sort_title: zz-<<collection_name>>
+    sort_title: "~~~~~~~~~-<<collection_name>>"
     visible_library: true
 
   Special Smart Other:
     sync_mode: sync
-    sort_title: zz-<<collection_name>>
+    sort_title: "~~~~~~~~~-<<collection_name>>"
     visible_library: false
 
 collections:        

@@ -7,17 +7,17 @@ templates:
   Actor:
     smart_label: release.desc
     sync_mode: sync
-    sort_title: zzzzzzz_<<collection_name>>
+    sort_title: "~~_<<collection_name>>"
 
   Author:
     smart_label: release.desc
     sync_mode: sync
-    sort_title: zzzzzzzz_<<collection_name>>
+    sort_title: "~~~~_<<collection_name>>"
 
   Director:
     smart_label: release.desc
     sync_mode: sync
-    sort_title: zzzzzzzzz_<<collection_name>>
+    sort_title: "~~~_<<collection_name>>"
 
 collections:
   Adam Sandler:

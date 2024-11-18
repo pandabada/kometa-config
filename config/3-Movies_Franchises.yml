@@ -5,7 +5,8 @@ templates:
   Franchise:
     collection_order: release.desc
     sync_mode: sync
-    sort_title: zzzzzz_<<collection_name>>
+    sort_title: "~~~~~~_<<collection_name>>"
+    minimum_items: 2
 
 # Creates collections for movies in the same series with 2 or more.
 collections:

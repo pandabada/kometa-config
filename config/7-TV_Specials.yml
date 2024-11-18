@@ -10,27 +10,27 @@ templates:
   Special:
     smart_label: random
     sync_mode: sync
-    sort_title: zz__<<collection_name>>
+    sort_title: "~~~~~~_<<collection_name>>"
     visible_library: true
 
   Special Plus:
     smart_label: random
     sync_mode: sync
-    sort_title: zz__<<collection_name>>
+    sort_title: "~~~~~~_<<collection_name>>"
     visible_library: false
 
   Special Smart:
     sync_mode: sync
-    sort_title: zz__<<collection_name>>
+    sort_title: "~~~~~~_<<collection_name>>"
     visible_library: true
 
   Special Smart Other:
     sync_mode: sync
-    sort_title: zz__<<collection_name>>
+    sort_title: "~~~~~~_<<collection_name>>"
     visible_library: false
 
 collections:
-  18+: # TV shows with an adult rating
+  18+: # Séries TV avec une classification adulte
     template: { name: Special Smart }
     visible_shared: monthly(9)
     summary: Les séries avec cette classification ne conviennent généralement pas aux enfants ou aux personnes de moins de 17 ans (certaines sources peuvent indiquer 18 ans). Ce contenu est destiné à un public mature en raison de thèmes adultes tels que la violence, la violence sexuelle, un langage fort, la nudité, les substances, le tabagisme et le sexe.
@@ -90,14 +90,14 @@ collections:
       all:
         hdr: true
 
-  Family Friendly: # Better suited movies for family watching
+  En famille: # Films mieux adaptés pour la famille
     template: { name: Special }
-    summary: Family Friendly recognizes outstanding entertainment with an official seal for quality and impact. Age Approved Selections include age-appropriate media with the potential to spark family conversations.
+    summary: Des séries adaptées pour les familles, reconnues pour leur qualité et leur impact. Sélections incluant des médias appropriés pour susciter des conversations en famille.
     file_poster: config/posters/Family Friendly.png
     visible_shared: monthly(10)
     trakt_list: https://trakt.tv/users/k0meta/lists/common-sense-selection-shows
 
-  Favored: # Fetched information from Tautulli
+  Favoris: # Informations recueillies à partir de Tautulli
     template: { name: Special Smart Other }
     tautulli_popular:
       list_days: 62
@@ -109,11 +109,11 @@ collections:
       list_minimum: 1
     smart_label: viewed.desc
     file_poster: config/posters/Favored.png
-    summary: The most favored TV shows on Plex by users the past 2 months.
+    summary: Les séries TV les plus appréciées sur Plex par les utilisateurs au cours des 2 derniers mois.
 
-  Longest: # Longest TV shows on plex
+  Les plus longues: # Séries TV les plus longues sur Plex
     template: { name: Special Plus }
-    summary: The lengthiest shows on Plex.
+    summary: Les séries les plus longues sur Plex.
     file_poster: config/posters/Longest.png
     trakt_list:
       - https://trakt.tv/users/belamarlua/lists/long-shows-i-watched-more-then-one-time?sort=rank,asc
@@ -126,5 +126,5 @@ collections:
       list_size: 9999
       list_minimum: 1
     file_poster: config/posters/Watched.png
-    summary: Shows watched on Plex by all users.
+    summary: Séries regardées sur Plex par tous les utilisateurs.
     smart_label: viewed.desc

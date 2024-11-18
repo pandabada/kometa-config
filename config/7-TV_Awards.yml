@@ -6,7 +6,7 @@ templates:
   imdb:
     optional:
       - trakt_list
-    sort_title: "zzz_<<collection_name>>"
+    sort_title: "~_<<collection_name>>"
     sync_mode: sync
     smart_label: release.desc
     visible_library: true

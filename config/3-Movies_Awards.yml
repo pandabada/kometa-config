@@ -6,7 +6,7 @@ templates:
   imdb:
     optional:
       - trakt_list
-    sort_title: zz_<<collection_name>>
+    sort_title: "~_<<collection_name>>"
     sync_mode: sync
     smart_label: release.desc
     delete_not_scheduled: false
@@ -17,12 +17,12 @@ templates:
   Award:
     smart_label: release.desc
     sync_mode: sync
-    sort_title: zz_<<collection_name>>
+    sort_title: "~_<<collection_name>>"
 
   Award Other:
     smart_label: release.desc
     sync_mode: sync
-    sort_title: zz_<<collection_name>>
+    sort_title: "~_<<collection_name>>"
     visible_library: true
 
 # Films ayant remporté certains des prix les plus prestigieux
