@@ -1,0 +1,92 @@
+######################################################
+#                   MOVIES 17.0                      #
+######################################################
+templates:
+  Movie:
+    sync_mode: sync
+    visible_home: true
+    visible_shared: true
+    visible_library: true
+    collection_filtering: user
+
+collections:
+  Meilleurs films récents 🤩:
+    template: { name: Movie }
+    sort_title: "!_01"
+    summary: Films non-vus, sortis au cours des 6 derniers mois et avec une note IMDb supérieure à 7.
+    file_poster: config/posters/IMDb Best Recent.png
+    smart_filter:
+      sort_by: release.desc
+      validate: false
+      all:
+        audience_rating.gte: 7.0
+        release: 180
+        unplayed: true
+        
+  Films à voir ⭐:
+    template: { name: Movie }
+    sort_title: "!_02"
+    summary: Une sélection de films non-vus, recommandés par IMDb, Letterboxd, Trakt, Metacritic, RT.
+    file_poster: config/posters/Top Rated.png
+    imdb_chart: top_movies # IMDb Top 250 movies
+    letterboxd_list: 
+      - https://letterboxd.com/w0cks/list/best-picture-for-each-year-according-to-letterboxd/ # Letterboxd - Best Picture
+      - https://letterboxd.com/dave/list/official-top-250-narrative-feature-films/ # Letterboxd - Top 250
+    trakt_list: https://trakt.tv/users/k0meta/lists/metacritic-must-see-movies?sort=rank,asc # Metacritic - Must-See
+    imdb_list: ls025352113 # RT - Certified Fresh
+    tmdb_top_rated: 250 # TMDb Top 250 movies
+    smart_label:
+      sort_by: random
+      # limit: 10
+      all:
+        label: <<smart_label>>
+        unplayed: true
+        
+  Films tendances 📈:
+    template: { name: Movie }
+    sort_title: "!_03"
+    summary: Les dernières tendances, à voir (ou pas).
+    file_poster: config/posters/Trending.png
+    imdb_chart:
+      - box_office
+    tmdb_trending_weekly: 30
+    trakt_chart:
+      chart: trending
+      limit: 30
+    smart_label:
+      sort_by: release.desc
+      all:
+        label: <<smart_label>>
+        
+  # Films populaires:
+    # template: { name: Movie }
+    # sort_title: "!_04"
+    # summary: Une sélection de films qui ont rencontré un grand succès auprès du public.
+    # file_poster: config/posters/Popular.png
+    # imdb_chart:
+      # - popular_movies
+    # letterboxd_list:
+      # - https://letterboxd.com/jabison/list/letterboxd-two-million-watched-club/
+      # - https://letterboxd.com/alexanderh/list/letterboxd-one-million-watched-club/
+      # - https://letterboxd.com/crew/list/most-fans-on-letterboxd/
+    # trakt_chart:
+      # chart: watched
+      # limit: 200
+      # time_period: all
+    # smart_label:
+      # sort_by: random
+      # # limit: 10
+      # all:
+        # label: <<smart_label>>
+        # unplayed: true
+        
+  Films en VF 🇫🇷:
+    template: { name: Movie }
+    sort_title: "!_05"
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/refs/heads/master/audio_language/fr.jpg
+    summary: Les films non vus en VF (changer la piste audio de lecture si besoin).
+    smart_filter:
+      sort_by: release.desc
+      all:
+        audio_language: fr
+        unplayed: true

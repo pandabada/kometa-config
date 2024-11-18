@@ -1,0 +1,95 @@
+######################################################
+#                    TV 18.0                        #
+######################################################
+
+templates:
+  TV:
+    sync_mode: sync
+    visible_home: true
+    visible_shared: true
+    visible_library: true
+    collection_filtering: user
+
+collections:
+  Meilleurs séries récentes 🤩:
+    template: { name: TV }
+    sort_title: "!_01"
+    summary: Séries non-démarées, sorties au cours des 6 derniers mois et avec une note IMDb supérieure à 7.7.
+    file_poster: config/posters/IMDb Best Recent.png
+    smart_filter:
+      sort_by: release.desc
+      validate: false
+      all:
+        audience_rating.gte: 7.7
+        release: 180
+        episode_progress: false
+        plays.lt: 1
+        episode_plays.lt: 1
+        
+  Séries à voir ⭐:
+    template: { name: TV }
+    sort_title: "!_02"
+    summary: Une sélection de séries non-démarées, recommandées par IMDb, Letterboxd, Trakt, Metacritic, RT.
+    file_poster: config/posters/Top Rated.png
+    imdb_chart: top_shows # IMDb - Top 250
+    trakt_list:
+      - https://trakt.tv/users/k0meta/lists/metacritic-must-see-shows # Metacritic - Must-See
+      - https://trakt.tv/users/k0meta/lists/certified-fresh-shows # RT - Certified Fresh
+      - https://trakt.tv/users/diimaan/lists/top-rated-tv-shows?sort=rank,asc
+      - https://trakt.tv/users/paddy880/lists/top-rated-tv?sort=rank,asc
+      - https://trakt.tv/users/saltydude/lists/top-rated-tv-shows?sort=rank,asc
+    tmdb_top_rated: 250 # TMDb Top 250 shows
+    smart_label:
+      sort_by: random
+      # limit: 10
+      all:
+        label: <<smart_label>>
+        episode_progress: false
+        plays.lt: 1
+        episode_plays.lt: 1
+        
+  Séries tendances 📈:
+    template: { name: TV }
+    sort_title: "!_03"
+    summary: Les dernières tendances, à voir (ou pas).
+    file_poster: config/posters/Trending.png
+    tmdb_trending_weekly: 30
+    trakt_chart:
+      chart: trending
+      limit: 30
+    smart_label:
+      sort_by: release.desc
+      all:
+        label: <<smart_label>>
+        
+  # Séries les plus populaires:
+    # template: { name: TV }
+    # sort_title: "!_04"
+    # summary: Séries TV qui ont rencontré un grand succès auprès du public.
+    # file_poster: config/posters/Popular.png
+    # imdb_chart:
+      # - popular_shows
+    # trakt_chart:
+      # chart: watched
+      # limit: 220
+      # time_period: all
+    # trakt_list: https://trakt.tv/users/justin/lists/imdb-popular-tv-shows?sort=rank,asc
+    # smart_label:
+      # sort_by: random
+      # # limit: 10
+      # all:
+        # label: <<smart_label>>
+        # episode_progress: false
+        
+  Séries en VF 🇫🇷:
+    template: { name: TV }
+    sort_title: "!_05"
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/refs/heads/master/audio_language/fr.jpg
+    summary: Les séries non démarrées en VF (changer la piste audio de lecture si besoin).
+    smart_filter:
+      sort_by: release.desc
+      all:
+        audio_language: fr
+        episode_progress: false
+        plays.lt: 1
+        episode_plays.lt: 1
