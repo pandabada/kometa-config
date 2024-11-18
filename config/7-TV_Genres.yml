@@ -29,9 +29,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 7.0
+        #audience_rating.gte: 7.0
         genre: action
 
   Aventure:
@@ -42,9 +42,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 7.0
+        #audience_rating.gte: 7.0
         genre: adventure
 
   Biopic:
@@ -55,9 +55,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 6.5
+        #audience_rating.gte: 6.5
         genre: biography
 
   Dessin animé:
@@ -67,9 +67,9 @@ collections:
     file_poster: config/posters/Cartoon TV.png
     smart_filter:
       sort_by: random
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 7.0
+        #audience_rating.gte: 7.0
         genre: animation
 
   Comédie:
@@ -80,9 +80,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 7.0
+        #audience_rating.gte: 7.0
         genre: comedy
 
   Crime:
@@ -93,9 +93,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 7.0
+        #audience_rating.gte: 7.0
         genre: crime
 
   Documentaire:
@@ -106,9 +106,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 7.0
+        #audience_rating.gte: 7.0
         genre: documentary
 
   Drame:
@@ -119,61 +119,61 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 7.0
+        #audience_rating.gte: 7.0
         genre: drama
 
   Familial:
     template: { name: Genre }
     visible_shared: weekly(sunday)
     file_poster: config/posters/Family TV.png
-    summary: Family is a genre that is contains appropriate content for younger viewers. Family film aims to appeal not only to children, but to a wide range of ages. While the storyline may appeal to a younger audience, there are components of the film that are geared towards adults- such as witty jokes and humor. This genre may fall into many other genres, including comedy, adventure, fantasy, and animated film.
+    summary: "La série familiale est un genre qui contient un contenu approprié pour les jeunes spectateurs. La série familiale vise à séduire non seulement les enfants, mais aussi un large éventail d'âges. Bien que l'intrigue puisse séduire un public plus jeune, il existe des éléments de la série qui sont destinés aux adultes, comme des blagues et un humour subtil. Ce genre peut s'inscrire dans de nombreux autres genres, y compris la comédie, l'aventure, la fantaisie et la série d'animation."
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 6.6
+        #audience_rating.gte: 6.6
         genre: family
 
   Fantastique:
     template: { name: Genre }
     visible_shared: weekly(tuesday)
     file_poster: config/posters/Fantasy TV.png
-    summary: Fantasy is a genre that incorporates imaginative and fantastic themes. These themes usually involve magic, supernatural events, or fantasy worlds. Although it is its own distinct genre, these films can overlap into the horror and science fiction genres. Unlike science fiction, a fantasy film does not need to be rooted in fact. This element allows the audience to be transported into a new and unique world. Often, these films center on an ordinary hero in an extraordinary situation.
+    summary: "La série fantastique est un genre qui incorpore des thèmes imaginatifs et fantastiques. Ces thèmes impliquent généralement de la magie, des événements surnaturels ou des mondes fantastiques. Bien qu'il s'agisse d'un genre distinct, ces séries peuvent chevaucher les genres de l'horreur et de la science-fiction. Contrairement à la science-fiction, une série de fantasy n'a pas besoin d'être ancrée dans des faits. Cet élément permet au public d'être transporté dans un monde nouveau et unique. Souvent, ces séries mettent en scène un héros ordinaire dans une situation extraordinaire."
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 7.0
+        #audience_rating.gte: 7.0
         genre: fantasy
 
   Histoire:
     template: { name: Genre }
     visible_shared: weekly(friday)
     file_poster: config/posters/History TV.png
-    summary: History is a genre that takes historical events and people and interprets them in a larger scale. Historical accuracy is not the main focus, but rather the telling of a grandiose story. The drama of an History film is often accentuated by a sweeping musical score, lavish costumes, and high production value.
+    summary: "L'histoire est un genre qui prend des événements et des personnes historiques et les interprète à grande échelle. L'exactitude historique n'est pas l'objectif principal, mais plutôt le récit d'une histoire grandiose. Le drame d'une série historique est souvent accentué par une bande sonore grandiose, des costumes luxueux et une haute valeur de production."
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 6.8
+        #audience_rating.gte: 6.8
         genre: history
 
   Horreur:
     template: { name: Genre }
     visible_shared: weekly(monday)
     file_poster: config/posters/Horror TV.png
-    summary: Horror is a genre that aims to create a sense of fear, panic, alarm, and dread for the audience. These films are often unsettling and rely on scaring the audience through a portrayal of their worst fears and nightmares. Horror films usually center on the arrival of an evil force, person, or event. Many Horror films include mythical creatures such as ghosts, vampires, and zombies. Traditionally, Horror films incorporate a large amount of violence and gore into the plot. Though it has its own style, Horror film often overlaps into Fantasy, Thriller, and Science-Fiction genres.
+    summary: "L'horreur est un genre qui vise à créer un sentiment de peur, de panique, d'alarme et d'effroi chez le public. Ces séries sont souvent perturbantes et s'appuient sur la peur du public en représentant ses pires craintes et cauchemars. Les séries d'horreur se concentrent généralement sur l'arrivée d'une force, d'une personne ou d'un événement maléfique. Beaucoup de séries d'horreur incluent des créatures mythiques telles que des fantômes, des vampires et des zombies. Traditionnellement, les séries d'horreur intègrent une grande quantité de violence et de gore dans l'intrigue. Bien qu'elles aient leur propre style, les séries d'horreur chevauchent souvent les genres de la fantasy, du thriller et de la science-fiction."
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 6.5
+        #audience_rating.gte: 6.5
         genre: horror
 
   Mini-séries:
@@ -184,9 +184,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 7.0
+        #audience_rating.gte: 7.0
         genre: mini-series
 
   Mystère:
@@ -197,9 +197,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 7.0
+        #audience_rating.gte: 7.0
         genre: mystery
 
   Romance:
@@ -210,9 +210,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 6.6
+        #audience_rating.gte: 6.6
         genre: romance
 
   Science-Fiction:
@@ -223,9 +223,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 7.0
+        #audience_rating.gte: 7.0
         genre: science fiction
 
   Sport:
@@ -236,9 +236,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 6.2
+        #audience_rating.gte: 6.2
         genre: sport
 
   Thriller:
@@ -249,12 +249,12 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 7.0
+        #audience_rating.gte: 7.0
         genre: thriller
 
-  War:
+  Guerre:
     template: { name: Genre }
     visible_shared: weekly(friday)
     file_poster: config/posters/War TV.png
@@ -262,9 +262,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 6.5
+        #audience_rating.gte: 6.5
         genre:
           - war
           - war & politics
@@ -277,9 +277,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 6.2
+        #audience_rating.gte: 6.2
         genre: western
 
   ############################################
@@ -426,9 +426,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 6.4
+        #audience_rating.gte: 6.4
         genre: music
 
   Nature Documentary:
@@ -532,9 +532,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 6.4
+        #audience_rating.gte: 6.4
         genre:
           - romance
           - comedy
@@ -547,9 +547,9 @@ collections:
     smart_filter:
       sort_by: random
       limit: 200
-      validate: false
+      #validate: false
       all:
-        audience_rating.gte: 6.5
+        #audience_rating.gte: 6.5
         genre:
           - romance
           - drama

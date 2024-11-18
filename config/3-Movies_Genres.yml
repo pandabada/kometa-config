@@ -29,7 +29,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.4
         genre: action
@@ -42,7 +42,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.0
         genre: adventure
@@ -54,7 +54,7 @@ collections:
     file_poster: config/posters/Animation.png
     smart_filter:
       sort_by: random
-      validate: false
+      #validate: false
       all:
         genre: animation
         country.not: japan
@@ -67,7 +67,7 @@ collections:
     file_poster: config/posters/Anime.png
     smart_filter:
       sort_by: random
-      validate: false
+      #validate: false
       all:
         genre: animation
         country: japan
@@ -80,7 +80,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         genre: biography
 
@@ -92,7 +92,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.0
         genre: comedy
@@ -105,7 +105,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.6
         genre: crime
@@ -118,7 +118,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         genre: documentary
 
@@ -130,7 +130,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.7
         genre: drama
@@ -143,7 +143,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.1
         genre: family
@@ -156,7 +156,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.4
         genre: fantasy
@@ -169,7 +169,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.8
         genre: history
@@ -182,7 +182,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 5.5
         genre: horror
@@ -195,7 +195,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         genre: martial arts
 
@@ -207,7 +207,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         genre: musical
 
@@ -219,7 +219,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.0
         genre: mystery
@@ -232,7 +232,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.4
         genre: romance
@@ -245,7 +245,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.5
         genre: science fiction
@@ -258,7 +258,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         genre: sport
 
@@ -270,7 +270,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.3
         genre: thriller
@@ -282,7 +282,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.4
         genre: TV Movie
@@ -295,7 +295,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         audience_rating.gte: 6.4
         genre: war
@@ -308,7 +308,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         genre: western
 
@@ -606,7 +606,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 400
-      validate: false
+      #validate: false
       all:
         genre: film-noir
 
@@ -742,7 +742,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 300
-      validate: false
+      #validate: false
       all:
         genre: music
 
@@ -963,7 +963,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 300
-      validate: false
+      #validate: false
       all:
         genre:
           - romance
@@ -977,7 +977,7 @@ collections:
     smart_filter:
       sort_by: random
       limit: 300
-      validate: false
+      #validate: false
       all:
         genre:
           - romance
