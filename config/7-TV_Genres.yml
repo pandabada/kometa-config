@@ -25,7 +25,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(wednesday)
     file_poster: config/posters/Action TV.png
-    summary: Action is a genre wherein physical action takes precedence in the storytelling. The film will often have continuous motion and action including physical stunts, chases, fights, battles, and races. The story usually revolves around a hero that has a goal, but is facing incredible odds to obtain it.
+    summary: "L'action est un genre où l'action physique prend le pas sur le récit. Le film présente souvent un mouvement et une action continus, incluant des cascades, des poursuites, des combats, des batailles et des courses. L'histoire tourne généralement autour d'un héros qui a un objectif, mais qui doit faire face à des obstacles incroyables pour l'atteindre."
     smart_filter:
       sort_by: random
       limit: 200
@@ -34,11 +34,11 @@ collections:
         audience_rating.gte: 7.0
         genre: action
 
-  Adventure:
+  Aventure:
     template: { name: Genre }
     visible_shared: weekly(thursday)
     file_poster: config/posters/Adventure TV.png
-    summary: Adventure is a genre that revolves around the conquests and explorations of a protagonist. The purpose of the conquest can be to retrieve a person or treasure, but often the main focus is simply the pursuit of the unknown. These films generally take place in exotic locations and play on historical myths. Adventure films incorporate suspenseful puzzles and intricate obstacles that the protagonist must overcome in order to achieve the end goal.
+    summary: "L'aventure est un genre qui tourne autour des conquêtes et des explorations d'un protagoniste. Le but de la conquête peut être de retrouver une personne ou un trésor, mais souvent, l'accent est mis simplement sur la quête de l'inconnu. Ces films se déroulent généralement dans des lieux exotiques et s'appuient sur des mythes historiques. Les films d'aventure intègrent des énigmes palpitantes et des obstacles complexes que le protagoniste doit surmonter pour atteindre son objectif final."
     smart_filter:
       sort_by: random
       limit: 200
@@ -51,7 +51,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(thursday)
     file_poster: config/posters/Biopic TV.png
-    summary: A biographical or biopic is a film that dramatizes the life of a non-fictional or historically-based person or people. Such films show the life of a historical person and the central character's real name is used.
+    summary: "Un biographique ou biopic est une série qui dramatise la vie d'une personne ou d'un groupe de personnes non fictives ou basées sur des faits historiques. Ces séries montrent la vie d'une personnalité historique, et le vrai nom du personnage principal est utilisé."
     smart_filter:
       sort_by: random
       limit: 200
@@ -60,10 +60,10 @@ collections:
         audience_rating.gte: 6.5
         genre: biography
 
-  Cartoon:
+  Dessin animé:
     template: { name: Genre }
     visible_shared: weekly(tuesday)
-    summary: All animated cartoon shows.
+    summary: "Toutes les séries de dessins animés."
     file_poster: config/posters/Cartoon TV.png
     smart_filter:
       sort_by: random
@@ -72,11 +72,11 @@ collections:
         audience_rating.gte: 7.0
         genre: animation
 
-  Comedy:
+  Comédie:
     template: { name: Genre }
     visible_shared: weekly(friday)
     file_poster: config/posters/Comedy TV.png
-    summary: Comedy is a genre that uses humor as a driving force. The aim of a comedy film is to illicit laughter from the audience through entertaining stories and characters. Although the comedy film may take on some serious material, most have a happy ending. Comedy film has the tendency to become a hybrid sub-genre because humor can be incorporated into many other genres. Comedies are more likely than other films to fall back on the success and popularity of an individual star.
+    summary: "La comédie est un genre de série qui utilise l'humour comme moteur. L'objectif d'un série comique est de susciter le rire du public à travers des histoires et des personnages divertissants. Bien que la sérié comique puisse aborder des sujets sérieux, la plupart se terminent sur une note positive. Les séries comiques ont tendance à devenir des sous-genres hybrides, car l'humour peut être intégré dans de nombreux autres genres. Les comédies ont plus de chances que d'autres séries de s'appuyer sur le succès et la popularité d'une star individuelle."
     smart_filter:
       sort_by: random
       limit: 200
@@ -89,7 +89,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(monday)
     file_poster: config/posters/Crime TV.png
-    summary: Crime is a genre that revolves around the action of a criminal mastermind. A Crime film will often revolve around the criminal himself, chronicling his rise and fall. Some Crime films will have a storyline that follows the criminal's victim, yet others follow the person in pursuit of the criminal. This genre tends to be fast paced with an air of mystery – this mystery can come from the plot or from the characters themselves.
+    summary: "La série criminelle est un genre qui tourne autour des actions d'un génie du crime. Une série criminelle se concentre souvent sur le criminel lui-même, chroniquant sa montée et sa chute. Certaines séries criminelles suivent l'histoire de la victime du criminel, tandis que d'autres suivent la personne qui poursuit le criminel. Ce genre tend à être rythmé et empreint de mystère, ce mystère pouvant venir de l'intrigue ou des personnages eux-mêmes."
     smart_filter:
       sort_by: random
       limit: 200
@@ -98,9 +98,9 @@ collections:
         audience_rating.gte: 7.0
         genre: crime
 
-  Documentary:
+  Documentaire:
     template: { name: Genre }
-    summary: Some of the most impactful and critically acclaimed documentaries ever filmed.
+    summary: "Certaines des séries documentaires les plus marquants et acclamés par la critique jamais réalisés."
     file_poster: config/posters/Documentary TV.png
     visible_shared: weekly(wednesday)
     smart_filter:
@@ -111,11 +111,11 @@ collections:
         audience_rating.gte: 7.0
         genre: documentary
 
-  Drama:
+  Drame:
     template: { name: Genre }
     visible_shared: weekly(saturday)
     file_poster: config/posters/Drama TV.png
-    summary: Drama is a genre that relies on the emotional and relational development of realistic characters. While Drama film relies heavily on this kind of development, dramatic themes play a large role in the plot as well. Often, these dramatic themes are taken from intense, real life issues. Whether heroes or heroines are facing a conflict from the outside or a conflict within themselves, Drama film aims to tell an honest story of human struggles.
+    summary: "La série dramatique est un genre qui s'appuie sur le développement émotionnel et relationnel de personnages réalistes. Bien que la série dramatique repose fortement sur ce type de développement, les thèmes dramatiques jouent également un grand rôle dans l'intrigue. Souvent, ces thèmes dramatiques sont tirés de problèmes intenses de la vie réelle. Que les héros ou héroïnes affrontent un conflit extérieur ou un conflit intérieur, la série dramatique vise à raconter une histoire honnête des luttes humaines."
     smart_filter:
       sort_by: random
       limit: 200
@@ -124,7 +124,7 @@ collections:
         audience_rating.gte: 7.0
         genre: drama
 
-  Family:
+  Familial:
     template: { name: Genre }
     visible_shared: weekly(sunday)
     file_poster: config/posters/Family TV.png
@@ -137,7 +137,7 @@ collections:
         audience_rating.gte: 6.6
         genre: family
 
-  Fantasy:
+  Fantastique:
     template: { name: Genre }
     visible_shared: weekly(tuesday)
     file_poster: config/posters/Fantasy TV.png
@@ -150,7 +150,7 @@ collections:
         audience_rating.gte: 7.0
         genre: fantasy
 
-  History:
+  Histoire:
     template: { name: Genre }
     visible_shared: weekly(friday)
     file_poster: config/posters/History TV.png
@@ -163,7 +163,7 @@ collections:
         audience_rating.gte: 6.8
         genre: history
 
-  Horror:
+  Horreur:
     template: { name: Genre }
     visible_shared: weekly(monday)
     file_poster: config/posters/Horror TV.png
@@ -180,7 +180,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(sunday)
     file_poster: config/posters/Miniseries TV.png
-    summary: Shows with only one season.
+    summary: "Séries avec une seule saison."
     smart_filter:
       sort_by: random
       limit: 200
@@ -189,11 +189,11 @@ collections:
         audience_rating.gte: 7.0
         genre: mini-series
 
-  Mystery:
+  Mystère:
     template: { name: Genre }
     visible_shared: weekly(saturday)
     file_poster: config/posters/Mystery TV.png
-    summary: A Mystery centers on a person of authority, usually a detective, that is trying to solve a mysterious crime. The main protagonist uses clues, investigation, and logical reasoning. The biggest element in these films is a sense of “whodunit” suspense, usually created through visual cues and unusual plot twists.
+    summary: "Un mystère se concentre sur une personne d'autorité, généralement un détective, qui essaie de résoudre un crime mystérieux. Le protagoniste principal utilise des indices, des enquêtes et un raisonnement logique. L'élément le plus important dans ces récits est un sentiment de suspense du type 'qui a fait ça ?', généralement créé par des indices visuels et des rebondissements inattendus dans l'intrigue."
     smart_filter:
       sort_by: random
       limit: 200
@@ -206,7 +206,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(wednesday)
     file_poster: config/posters/Romance TV.png
-    summary: Romance can be defined as a genre wherein the plot revolves around the love between two protagonists. This genre usually has a theme that explores an issue within love, including but not limited to love at first sight, forbidden love, love triangles, and sacrificial love. The tone of Romance film can vary greatly. Whether the end is happy or tragic, Romance film aims to evoke strong emotions in the audience."
+    summary: "La série romantique peut être définie comme un genre où l'intrigue tourne autour de l'amour entre deux protagonistes. Ce genre explore généralement un thème lié à des problématiques amoureuses, y compris, mais sans s'y limiter, l'amour au premier regard, l'amour interdit, les triangles amoureux et l'amour sacrificiel. Le ton de la série romantique peut varier considérablement. Que la fin soit heureuse ou tragique, la série romantique vise à susciter de fortes émotions chez le public."
     smart_filter:
       sort_by: random
       limit: 200
@@ -215,11 +215,11 @@ collections:
         audience_rating.gte: 6.6
         genre: romance
 
-  Sci-Fi:
+  Science-Fiction:
     template: { name: Genre }
     visible_shared: weekly(monday)
     file_poster: config/posters/Sci-Fi TV.png
-    summary: Science Fiction is a genre that incorporates hypothetical, science-based themes into the plot of the film. Often, this genre incorporates futuristic elements and technologies to explore social, political, and philosophical issues. The film itself is usually set in the future, either on earth or in space. Traditionally, a Science Fiction film will incorporate heroes, villains, unexplored locations, fantastical quests, and advanced technology.
+    summary: "La science-fiction est un genre qui intègre des thèmes hypothétiques basés sur la science dans l'intrigue de la série. Souvent, ce genre incorpore des éléments et des technologies futuristes pour explorer des problématiques sociales, politiques et philosophiques. La série est généralement située dans le futur, que ce soit sur Terre ou dans l'espace. Traditionnellement, une série de science-fiction met en scène des héros, des méchants, des lieux inexplorés, des quêtes fantastiques et une technologie avancée."
     smart_filter:
       sort_by: random
       limit: 200
@@ -232,7 +232,7 @@ collections:
     template: { name: Genre }
     visible_shared: monthly(8)
     file_poster: config/posters/Sport TV.png
-    summary: A Sport revolves around a sport setting, event, or an athlete. Often, these films will center on a single sporting event that carries significant importance. Sports films traditionally have a simple plot that builds up to the significant sporting event. This genre is known for incorporating film techniques to build anticipation and intensity. Sport films have a large range of sub-genres, from comedies to dramas, and are more likely than other genres to be based true-life events.
+    summary: "Une série sportive tourne autour d'un cadre sportif, d'un événement ou d'un athlète. Souvent, ces séries se concentrent sur un événement sportif unique qui revêt une grande importance. Les séries sportives ont traditionnellement une intrigue simple qui se construit jusqu'à cet événement sportif significatif. Ce genre est connu pour intégrer des techniques cinématographiques afin de créer de l'anticipation et de l'intensité. Les séries sportives couvrent une large gamme de sous-genres, des comédies aux drames, et sont plus susceptibles que d'autres genres d'être basées sur des événements réels."
     smart_filter:
       sort_by: random
       limit: 200
@@ -245,7 +245,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(thursday)
     file_poster: config/posters/Thriller TV.png
-    summary: Thriller series is a genre that revolves around anticipation and suspense. The aim for Thrillers is to keep the audience alert and on the edge of their seats. The protagonist in these series is set against a problem – an escape, a mission, or a mystery. No matter what sub-genre a Thriller series falls into, it will emphasize the danger that the protagonist faces. The tension with the main problem is built on throughout the series and leads to a highly stressful climax.
+    summary: "La série thriller est un genre qui tourne autour de l'anticipation et du suspense. L'objectif des thrillers est de garder le public en alerte et sur le bord de son siège. Le protagoniste de ces séries est confronté à un problème – une fuite, une mission ou un mystère. Peu importe le sous-genre auquel appartient une série thriller, elle mettra en avant le danger auquel le protagoniste fait face. La tension liée au problème principal est cultivée tout au long de la série et mène à un climax très stressant."
     smart_filter:
       sort_by: random
       limit: 200
@@ -258,7 +258,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(friday)
     file_poster: config/posters/War TV.png
-    summary: War is a genre that looks at the reality of war on a grand scale. They often focus on landmark battles as well as political issues within war. This genre usually focuses on a main character and his team of support, giving the audience an inside look into the gritty reality of war.
+    summary: "La guerre est un genre qui examine la réalité de la guerre à grande échelle. Il se concentre souvent sur des batailles emblématiques ainsi que sur des problématiques politiques liées à la guerre. Ce genre met généralement en avant un personnage principal et son équipe de soutien, offrant au public un aperçu brut de la réalité de la guerre."
     smart_filter:
       sort_by: random
       limit: 200
@@ -273,7 +273,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(sunday)
     file_poster: config/posters/Western TV.png
-    summary: Westerns often stress the harshness and isolation of the wilderness, and frequently set the action in an arid, desolate landscape. Western films generally have specific settings, such as isolated ranches, Native American villages, or small frontier towns with a saloon.
+    summary: "Les westerns soulignent souvent la dureté et l'isolement de la nature sauvage, et situent fréquemment l'action dans un paysage aride et désolé. Les séries western ont généralement des décors spécifiques, tels que des ranchs isolés, des villages amérindiens ou de petites villes de front pionnier avec un saloon."
     smart_filter:
       sort_by: random
       limit: 200

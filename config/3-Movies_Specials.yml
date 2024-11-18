@@ -26,28 +26,28 @@ templates:
 collections:        
   2160P:
     template: { name: Special }
-    summary: A collection of movies in 4K.
+    summary: Une collection de films en 4K.
     file_poster: config/posters/2160P.png
     plex_search:
       all:
         resolution: 4K
 
-  DV/HDR: # 1080p or 4K movies with HDR and or Dolby Vision
+  DV/HDR: 
     template: { name: Special }
-    summary: A collection of movies in HDR10+ and Dolby Vision.
+    summary: Une collection de films en HDR10+ et Dolby Vision.
     file_poster: config/posters/DV-HDR.png
     plex_search:
       all:
         hdr: true
 
-  Family Friendly: # Better suited movies for family watching
+  En famille:
     template: { name: Special Other }
-    summary: Family Friendly recognizes outstanding entertainment with an official seal for quality and impact. Age Approved Selections include age-appropriate media with the potential to spark family conversations.
+    summary: Des films adaptés pour les familles, reconnus pour leur qualité et leur impact. Sélections incluant des médias appropriés pour susciter des conversations en famille.
     visible_shared: monthly(25)
     file_poster: config/posters/Family Friendly.png
     trakt_list: https://trakt.tv/users/k0meta/lists/common-sense-selection-movies
 
-  Favored: # Fetched information from Tautulli
+  Favoris:
     template: { name: Special Smart Other }
     tautulli_popular:
       list_days: 31
@@ -59,12 +59,12 @@ collections:
       list_minimum: 1
     smart_label: viewed.desc
     file_poster: config/posters/Favored.png
-    summary: The most favored Movies on Plex by users the past month.
+    summary: Les films les plus appréciés sur Plex par les utilisateurs le mois dernier.
 
-  Longest: # Longest movies on plex
+  Les plus longs:
     template: { name: Special Smart Other }
     file_poster: config/posters/Longest.png
-    summary: The longest movies on Plex  a minimum of 150 minutes in duration.
+    summary: Les films les plus longs sur Plex, d'une durée minimale de 150 minutes.
     smart_filter:
       sort_by: duration.desc
       validate: false
@@ -74,7 +74,7 @@ collections:
   Les plus courts:
     template: { name: Special Smart }
     visible_library: true
-    summary: The shortest movies on Plex with a max duration of 85 minutes and under.
+    summary: Les films les plus courts sur Plex, d'une durée maximale de 85 minutes.
     file_poster: config/posters/Shortest.png
     smart_filter:
       sort_by: duration.asc
@@ -83,12 +83,12 @@ collections:
         duration.lt: 85
         genre.not: Animation
 
-  Watched: # Fetched information from Tautulli
+  Vus:
     template: { name: Special Smart Other }
     tautulli_watched:
       list_days: 9999
       list_size: 9999
       list_minimum: 1
     file_poster: config/posters/Watched.png
-    summary: Movies watched on Plex by all users.
+    summary: Films regardés sur Plex par tous les utilisateurs.
     smart_label: viewed.desc

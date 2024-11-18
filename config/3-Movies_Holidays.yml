@@ -11,7 +11,7 @@ templates:
 
 # Holiday collections that will show up when the holiday has started and disappear when it has ended
 collections:
-  Christmas 🎅:
+  Sélection Noël 🎅:
     template: { name: Holiday }
     visible_home: range(12/01-12/26)
     visible_shared: range(12/01-12/26)
@@ -24,7 +24,7 @@ collections:
       - https://trakt.tv/users/questdvd/lists/absolute-hayes-christmas-classics
       - https://trakt.tv/users/littlestella3/lists/christmas
 
-  Easter 🐣:
+  Sélection Pâques 🐣:
     template: { name: Holiday }
     visible_home: range(03/31-04/15)
     visible_shared: range(03/31-04/15)
@@ -34,7 +34,7 @@ collections:
       - https://trakt.tv/users/smwixted/lists/easter?sort=votes,asc
       - https://trakt.tv/users/tarzanislav/lists/easter?sort=added,asc
 
-  Fathers Day 👨‍👦:
+  Sélection Fête des Pères 👨‍👦:
     template: { name: Holiday }
     visible_home: range(11/08-11/14)
     visible_shared: range(11/08-11/14)
@@ -44,7 +44,7 @@ collections:
       - https://trakt.tv/users/fcisco13/lists/dad-movies?sort=rank,asc
       - https://trakt.tv/users/segfaulted/lists/movies-for-dad?sort=rank,asc
 
-  Halloween 👻:
+  Sélection Halloween 👻:
     template: { name: Holiday }
     visible_home: range(10/01-10/31)
     visible_shared: range(10/01-10/31)
@@ -56,7 +56,7 @@ collections:
       - https://trakt.tv/users/kairbear08/lists/halloween
       - https://trakt.tv/users/mybicycle/lists/halloween
 
-  Mothers Day 👩‍👧:
+  Sélection Fête des Mères 👩‍👧:
     template: { name: Holiday }
     visible_home: range(05/25-05/31)
     visible_shared: range(05/25-05/31)
@@ -66,7 +66,7 @@ collections:
       - https://trakt.tv/users/movie-pal/lists/mother-s-day?sort=rank,asc
       - https://trakt.tv/users/mdm144/lists/mother-s-day?sort=rank,asc
 
-  New Years 🍾:
+  Sélection Nouvel An 🍾:
     template: { name: Holiday }
     visible_home: range(12/30-01/05)
     visible_shared: range(12/30-01/05)
@@ -78,7 +78,7 @@ collections:
       - https://trakt.tv/users/padawan_seneca/lists/new-years-eve?sort=rank,asc
       - https://trakt.tv/users/galacticboy/lists/new-years?sort=rank,asc
 
-  Valentines Day 💘:
+  Sélection Saint Valentin 💘:
     template: { name: Holiday }
     visible_home: range(02/14-02/15)
     visible_shared: range(02/14-02/15)

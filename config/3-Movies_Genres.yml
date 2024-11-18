@@ -25,7 +25,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(monday)
     file_poster: config/posters/Action.png
-    summary: Action film is a genre wherein physical action takes precedence in the storytelling. The film will often have continuous motion and action including physical stunts, chases, fights, battles, and races. The story usually revolves around a hero that has a goal, but is facing incredible odds to obtain it.
+    summary: "Le film d'action est un genre où l'action physique prend le pas sur le récit. Le film présente souvent un mouvement et une action continus, incluant des cascades, des poursuites, des combats, des batailles et des courses. L'histoire tourne généralement autour d'un héros qui a un objectif, mais qui doit faire face à des obstacles incroyables pour l'atteindre."
     smart_filter:
       sort_by: random
       limit: 400
@@ -34,11 +34,11 @@ collections:
         audience_rating.gte: 6.4
         genre: action
 
-  Adventure:
+  Aventure:
     template: { name: Genre }
     visible_shared: weekly(tuesday)
     file_poster: config/posters/Adventure.png
-    summary: Adventure film is a genre that revolves around the conquests and explorations of a protagonist. The purpose of the conquest can be to retrieve a person or treasure, but often the main focus is simply the pursuit of the unknown. These films generally take place in exotic locations and play on historical myths. Adventure films incorporate suspenseful puzzles and intricate obstacles that the protagonist must overcome in order to achieve the end goal.
+    summary: "Le film d'aventure est un genre qui tourne autour des conquêtes et des explorations d'un protagoniste. Le but de la conquête peut être de retrouver une personne ou un trésor, mais souvent, l'accent est mis simplement sur la quête de l'inconnu. Ces films se déroulent généralement dans des lieux exotiques et s'appuient sur des mythes historiques. Les films d'aventure intègrent des énigmes palpitantes et des obstacles complexes que le protagoniste doit surmonter pour atteindre son objectif final."
     smart_filter:
       sort_by: random
       limit: 400
@@ -50,7 +50,7 @@ collections:
   Animation:
     template: { name: Genre }
     visible_shared: monthly(2)
-    summary: All animated cartoon movies.
+    summary: "Tous les films d'animation et de dessin animé."
     file_poster: config/posters/Animation.png
     smart_filter:
       sort_by: random
@@ -63,7 +63,7 @@ collections:
   Anime:
     template: { name: Genre }
     visible_shared: monthly(3)
-    summary: All japanese animation movies.
+    summary: "Tous les films d'animation japonaise."
     file_poster: config/posters/Anime.png
     smart_filter:
       sort_by: random
@@ -76,7 +76,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(sunday)
     file_poster: config/posters/Biopic.png
-    summary: A biographical film or biopic is a film that dramatizes the life of a non-fictional or historically-based person or people. Such films show the life of a historical person and the central character's real name is used.
+    summary: "Un biographique ou biopic est un film qui dramatise la vie d'une personne ou d'un groupe de personnes non fictives ou basées sur des faits historiques. Ces films montrent la vie d'une personnalité historique, et le vrai nom du personnage principal est utilisé."
     smart_filter:
       sort_by: random
       limit: 400
@@ -84,11 +84,11 @@ collections:
       all:
         genre: biography
 
-  Comedy:
+  Comédie:
     template: { name: Genre }
     visible_shared: weekly(monday)
     file_poster: config/posters/Comedy.png
-    summary: Comedy is a genre of film that uses humor as a driving force. The aim of a comedy film is to illicit laughter from the audience through entertaining stories and characters. Although the comedy film may take on some serious material, most have a happy ending. Comedy film has the tendency to become a hybrid sub-genre because humor can be incorporated into many Genre Others. Comedies are more likely than other films to fall back on the success and popularity of an individual star.
+    summary: "La comédie est un genre de film qui utilise l'humour comme moteur. L'objectif d'un film comique est de susciter le rire du public à travers des histoires et des personnages divertissants. Bien que le film comique puisse aborder des sujets sérieux, la plupart se terminent sur une note positive. Les films comiques ont tendance à devenir des sous-genres hybrides, car l'humour peut être intégré dans de nombreux autres genres. Les comédies ont plus de chances que d'autres films de s'appuyer sur le succès et la popularité d'une star individuelle."
     smart_filter:
       sort_by: random
       limit: 400
@@ -101,7 +101,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(sunday)
     file_poster: config/posters/Crime.png
-    summary: Crime film is a genre that revolves around the action of a criminal mastermind. A Crime film will often revolve around the criminal himself, chronicling his rise and fall. Some Crime films will have a storyline that follows the criminal's victim, yet others follow the person in pursuit of the criminal. This genre tends to be fast paced with an air of mystery – this mystery can come from the plot or from the characters themselves.
+    summary: "Le film criminel est un genre qui tourne autour des actions d'un génie du crime. Un film criminel se concentre souvent sur le criminel lui-même, chroniquant sa montée et sa chute. Certains films criminels suivent l'histoire de la victime du criminel, tandis que d'autres suivent la personne qui poursuit le criminel. Ce genre tend à être rythmé et empreint de mystère, ce mystère pouvant venir de l'intrigue ou des personnages eux-mêmes."
     smart_filter:
       sort_by: random
       limit: 400
@@ -110,9 +110,9 @@ collections:
         audience_rating.gte: 6.6
         genre: crime
 
-  Documentary:
+  Documentaire:
     template: { name: Genre }
-    summary: Some of the most impactful and critically acclaimed documentaries ever filmed.
+    summary: "Certains des films documentaires les plus marquants et acclamés par la critique jamais réalisés."
     file_poster: config/posters/Documentary.png
     visible_shared: monthly(1)
     smart_filter:
@@ -122,11 +122,11 @@ collections:
       all:
         genre: documentary
 
-  Drama:
+  Drame:
     template: { name: Genre }
     visible_shared: weekly(monday)
     file_poster: config/posters/Drama.png
-    summary: Drama film is a genre that relies on the emotional and relational development of realistic characters. While Drama film relies heavily on this kind of development, dramatic themes play a large role in the plot as well. Often, these dramatic themes are taken from intense, real life issues. Whether heroes or heroines are facing a conflict from the outside or a conflict within themselves, Drama film aims to tell an honest story of human struggles.
+    summary: "Le film dramatique est un genre qui s'appuie sur le développement émotionnel et relationnel de personnages réalistes. Bien que le film dramatique repose fortement sur ce type de développement, les thèmes dramatiques jouent également un grand rôle dans l'intrigue. Souvent, ces thèmes dramatiques sont tirés de problèmes intenses de la vie réelle. Que les héros ou héroïnes affrontent un conflit extérieur ou un conflit intérieur, le film dramatique vise à raconter une histoire honnête des luttes humaines."
     smart_filter:
       sort_by: random
       limit: 400
@@ -135,11 +135,11 @@ collections:
         audience_rating.gte: 6.7
         genre: drama
 
-  Family:
+  Familial:
     template: { name: Genre }
     visible_shared: weekly(tuesday)
     file_poster: config/posters/Family.png
-    summary: Family film is a genre that is contains appropriate content for younger viewers. Family film aims to appeal not only to children, but to a wide range of ages. While the storyline may appeal to a younger audience, there are components of the film that are geared towards adults- such as witty jokes and humor. This genre may fall into many Genre Others, including comedy, adventure, fantasy, and animated film.
+    summary: "Le film familial est un genre qui contient un contenu approprié pour les jeunes spectateurs. Le film familial vise à séduire non seulement les enfants, mais aussi un large éventail d'âges. Bien que l'intrigue puisse séduire un public plus jeune, il existe des éléments du film qui sont destinés aux adultes, comme des blagues et un humour subtil. Ce genre peut s'inscrire dans de nombreux autres genres, y compris la comédie, l'aventure, la fantaisie et le film d'animation."
     smart_filter:
       sort_by: random
       limit: 400
@@ -148,11 +148,11 @@ collections:
         audience_rating.gte: 6.1
         genre: family
 
-  Fantasy:
+  Fantastique:
     template: { name: Genre }
     visible_shared: weekly(saturday)
     file_poster: config/posters/Fantasy.png
-    summary: Fantasy film is a genre that incorporates imaginative and fantastic themes. These themes usually involve magic, supernatural events, or fantasy worlds. Although it is its own distinct genre, these films can overlap into the horror and science fiction genres. Unlike science fiction, a fantasy film does not need to be rooted in fact. This element allows the audience to be transported into a new and unique world. Often, these films center on an ordinary hero in an extraordinary situation.
+    summary: "Le film fantastique est un genre qui incorpore des thèmes imaginatifs et fantastiques. Ces thèmes impliquent généralement de la magie, des événements surnaturels ou des mondes fantastiques. Bien qu'il s'agisse d'un genre distinct, ces films peuvent chevaucher les genres de l'horreur et de la science-fiction. Contrairement à la science-fiction, un film de fantasy n'a pas besoin d'être ancré dans des faits. Cet élément permet au public d'être transporté dans un monde nouveau et unique. Souvent, ces films mettent en scène un héros ordinaire dans une situation extraordinaire."
     smart_filter:
       sort_by: random
       limit: 400
@@ -161,11 +161,11 @@ collections:
         audience_rating.gte: 6.4
         genre: fantasy
 
-  History:
+  Histoire:
     template: { name: Genre }
     visible_shared: weekly(thursday)
     file_poster: config/posters/History.png
-    summary: History film is a genre that takes historical events and people and interprets them in a larger scale. Historical accuracy is not the main focus, but rather the telling of a grandiose story. The drama of an History film is often accentuated by a sweeping musical score, lavish costumes, and high production value.
+    summary: "Le film historique est un genre qui prend des événements et des personnes historiques et les interprète à grande échelle. L'exactitude historique n'est pas l'objectif principal, mais plutôt le récit d'une histoire grandiose. Le drame d'un film historique est souvent accentué par une bande sonore sweeping, des costumes luxueux et une haute valeur de production."
     smart_filter:
       sort_by: random
       limit: 400
@@ -174,11 +174,11 @@ collections:
         audience_rating.gte: 6.8
         genre: history
 
-  Horror:
+  Horreur:
     template: { name: Genre }
     visible_shared: weekly(wednesday)
     file_poster: config/posters/Horror.png
-    summary: Horror film is a genre that aims to create a sense of fear, panic, alarm, and dread for the audience. These films are often unsettling and rely on scaring the audience through a portrayal of their worst fears and nightmares. Horror films usually center on the arrival of an evil force, person, or event. Many Horror films include mythical creatures such as ghosts, vampires, and zombies. Traditionally, Horror films incorporate a large amount of violence and gore into the plot. Though it has its own style, Horror film often overlaps into Fantasy, Thriller, and Science-Fiction genres.
+    summary: "Le film d'horreur est un genre qui vise à créer un sentiment de peur, de panique, d'alarme et d'effroi chez le public. Ces films sont souvent perturbants et s'appuient sur la peur du public en représentant ses pires craintes et cauchemars. Les films d'horreur se concentrent généralement sur l'arrivée d'une force, d'une personne ou d'un événement maléfique. Beaucoup de films d'horreur incluent des créatures mythiques telles que des fantômes, des vampires et des zombies. Traditionnellement, les films d'horreur intègrent une grande quantité de violence et de gore dans l'intrigue. Bien qu'il ait son propre style, le film d'horreur chevauche souvent les genres de la fantasy, du thriller et de la science-fiction."
     smart_filter:
       sort_by: random
       limit: 400
@@ -187,11 +187,11 @@ collections:
         audience_rating.gte: 5.5
         genre: horror
 
-  Martial Art:
+  Arts martiaux:
     template: { name: Genre }
     visible_shared: monthly(20)
     file_poster: config/posters/Martial Art.png
-    summary: Martial Arts film is a sub-genre of action films that feature numerous martial arts combat between characters. These combats are usually the films' primary appeal and entertainment value, and often are a method of storytelling and character expression and development. Martial Arts are frequently featured in training scenes and other sequences in addition to fights. Martial Arts films commonly include other types of action, such as hand-to-hand combat, stuntwork, chases, and gunfights.
+    summary: "Le film d'arts martiaux est un sous-genre de films d'action qui présente de nombreux combats d'arts martiaux entre les personnages. Ces combats constituent généralement l'attrait principal et la valeur divertissante des films, et sont souvent un moyen de narration ainsi que d'expression et de développement des personnages. Les arts martiaux sont fréquemment mis en avant dans des scènes d'entraînement et d'autres séquences en plus des combats. Les films d'arts martiaux incluent souvent d'autres types d'action, tels que le combat à mains nues, les cascades, les poursuites et les fusillades."
     smart_filter:
       sort_by: random
       limit: 400
@@ -199,11 +199,11 @@ collections:
       all:
         genre: martial arts
 
-  Musical:
+  Comédie musicale:
     template: { name: Genre }
     visible_shared: monthly(26)
     file_poster: config/posters/Musical.png
-    summary: A Musical interweaves vocal and dance performances into the narrative of the film. The songs of a film can either be used to further the story or simply enhance the experience of the audience. These films are often done on a grand scale and incorporate lavish costumes and sets. Traditional musicals center on a well-known star, famous for their dancing or singing skills (i.e. Fred Astaire, Gene Kelly, Judy Garland). These films explore concepts such are love and success, allowing the audience to escape from reality.
+    summary: "Une comédie musicale intègre des performances vocales et de danse dans la narration du film. Les chansons d'un film peuvent être utilisées pour faire avancer l'histoire ou simplement améliorer l'expérience du public. Ces films sont souvent réalisés à grande échelle et incluent des costumes et des décors somptueux. Les comédies musicales traditionnelles se concentrent sur une star bien connue, célèbre pour ses talents de danse ou de chant (par exemple, Fred Astaire, Gene Kelly, Judy Garland). Ces films explorent des concepts tels que l'amour et le succès, permettant au public de s'évader de la réalité."
     smart_filter:
       sort_by: random
       limit: 400
@@ -211,11 +211,11 @@ collections:
       all:
         genre: musical
 
-  Mystery:
+  Mystère:
     template: { name: Genre }
     visible_shared: weekly(monday)
     file_poster: config/posters/Mystery.png
-    summary: A Mystery film centers on a person of authority, usually a detective, that is trying to solve a mysterious crime. The main protagonist uses clues, investigation, and logical reasoning. The biggest element in these films is a sense of “whodunit” suspense, usually created through visual cues and unusual plot twists.
+    summary: "Un film mystère se concentre sur une personne d'autorité, généralement un détective, qui essaie de résoudre un crime mystérieux. Le protagoniste principal utilise des indices, des enquêtes et un raisonnement logique. L'élément le plus important dans ces films est un sentiment de suspense du type 'qui a fait ça ?', généralement créé par des indices visuels et des rebondissements inattendus dans l'intrigue."
     smart_filter:
       sort_by: random
       limit: 400
@@ -228,7 +228,7 @@ collections:
     template: { name: Genre }
     visible_shared: monthly(29)
     file_poster: config/posters/Romance.png
-    summary: Romance film can be defined as a genre wherein the plot revolves around the love between two protagonists. This genre usually has a theme that explores an issue within love, including but not limited to love at first sight, forbidden love, love triangles, and sacrificial love. The tone of Romance film can vary greatly. Whether the end is happy or tragic, Romance film aims to evoke strong emotions in the audience.
+    summary: "Le film romantique peut être défini comme un genre où l'intrigue tourne autour de l'amour entre deux protagonistes. Ce genre explore généralement un thème lié à des problématiques amoureuses, y compris, mais sans s'y limiter, l'amour au premier regard, l'amour interdit, les triangles amoureux et l'amour sacrificiel. Le ton du film romantique peut varier considérablement. Que la fin soit heureuse ou tragique, le film romantique vise à susciter de fortes émotions chez le public."
     smart_filter:
       sort_by: random
       limit: 400
@@ -237,11 +237,11 @@ collections:
         audience_rating.gte: 6.4
         genre: romance
 
-  Sci-Fi:
+  Science-Fiction:
     template: { name: Genre }
     visible_shared: weekly(tuesday)
     file_poster: config/posters/Sci-Fi.png
-    summary: Science Fiction (Sci-Fi) film is a genre that incorporates hypothetical, science-based themes into the plot of the film. Often, this genre incorporates futuristic elements and technologies to explore social, political, and philosophical issues. The film itself is usually set in the future, either on earth or in space. Traditionally, a Science Fiction film will incorporate heroes, villains, unexplored locations, fantastical quests, and advanced technology.
+    summary: "Le film de science-fiction (Sci-Fi) est un genre qui intègre des thèmes hypothétiques basés sur la science dans l'intrigue du film. Souvent, ce genre incorpore des éléments et des technologies futuristes pour explorer des problématiques sociales, politiques et philosophiques. Le film est généralement situé dans le futur, que ce soit sur Terre ou dans l'espace. Traditionnellement, un film de science-fiction met en scène des héros, des méchants, des lieux inexplorés, des quêtes fantastiques et une technologie avancée."
     smart_filter:
       sort_by: random
       limit: 400
@@ -254,7 +254,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(thursday)
     file_poster: config/posters/Sport.png
-    summary: A Sport Film revolves around a sport setting, event, or an athlete. Often, these films will center on a single sporting event that carries significant importance. Sports films traditionally have a simple plot that builds up to the significant sporting event. This genre is known for incorporating film techniques to build anticipation and intensity. Sport films have a large range of sub-genres, from comedies to dramas, and are more likely than Genre Others to be based true-life events.
+    summary: "Le film sportif tourne autour d'un cadre sportif, d'un événement ou d'un athlète. Souvent, ces films se concentrent sur un événement sportif unique qui revêt une grande importance. Les films de sport ont traditionnellement une intrigue simple qui se construit jusqu'à cet événement sportif significatif. Ce genre est connu pour intégrer des techniques cinématographiques afin de créer de l'anticipation et de l'intensité. Les films sportifs couvrent une large gamme de sous-genres, des comédies aux drames, et sont plus susceptibles que d'autres genres d'être basés sur des événements réels."
     smart_filter:
       sort_by: random
       limit: 400
@@ -266,7 +266,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(friday)
     file_poster: config/posters/Thriller.png
-    summary: Thriller Film is a genre that revolves around anticipation and suspense. The aim for Thrillers is to keep the audience alert and on the edge of their seats. The protagonist in these films is set against a problem – an escape, a mission, or a mystery. No matter what sub-genre a Thriller film falls into, it will emphasize the danger that the protagonist faces. The tension with the main problem is built on throughout the film and leads to a highly stressful climax.
+    summary: "Le film thriller est un genre qui tourne autour de l'anticipation et du suspense. L'objectif des thrillers est de garder le public en alerte et sur le bord de son siège. Le protagoniste de ces films est confronté à un problème – une fuite, une mission ou un mystère. Peu importe le sous-genre auquel appartient un film thriller, il mettra en avant le danger auquel le protagoniste fait face. La tension liée au problème principal est cultivée tout au long du film et mène à un climax très stressant."
     smart_filter:
       sort_by: random
       limit: 400
@@ -275,10 +275,10 @@ collections:
         audience_rating.gte: 6.3
         genre: thriller
 
-  TV Movie:
+  Téléfilm:
     template: { name: Genre }
     file_poster: config/posters/TV Movie.png
-    summary: TV movies are a unique genre of televised films designed for broadcast on television networks. These films typically have a shorter duration compared to feature films, often ranging from one to two hours.
+    summary: "Les téléfilms sont un genre unique de films diffusés à la télévision, conçus pour être diffusés sur des chaînes de télévision. Ces films ont généralement une durée plus courte par rapport aux longs métrages, variant souvent d'une à deux heures."
     smart_filter:
       sort_by: random
       limit: 400
@@ -287,11 +287,11 @@ collections:
         audience_rating.gte: 6.4
         genre: TV Movie
 
-  War:
+  Guerre:
     template: { name: Genre }
     visible_shared: weekly(wednesday)
     file_poster: config/posters/War.png
-    summary: War Film is a genre that looks at the reality of war on a grand scale. They often focus on landmark battles as well as political issues within war. This genre usually focuses on a main character and his team of support, giving the audience an inside look into the gritty reality of war.
+    summary: "Le film de guerre est un genre qui examine la réalité de la guerre à grande échelle. Il se concentre souvent sur des batailles emblématiques ainsi que sur des problématiques politiques liées à la guerre. Ce genre met généralement en avant un personnage principal et son équipe de soutien, offrant au public un aperçu brut de la réalité de la guerre."
     smart_filter:
       sort_by: random
       limit: 400
@@ -304,7 +304,7 @@ collections:
     template: { name: Genre }
     visible_shared: weekly(monday)
     file_poster: config/posters/Western.png
-    summary: Westerns often stress the harshness and isolation of the wilderness, and frequently set the action in an arid, desolate landscape. Western films generally have specific settings, such as isolated ranches, Native American villages, or small frontier towns with a saloon.
+    summary: "Les westerns soulignent souvent la dureté et l'isolement de la nature sauvage, et situent fréquemment l'action dans un paysage aride et désolé. Les films western ont généralement des décors spécifiques, tels que des ranchs isolés, des villages amérindiens ou de petites villes de front pionnier avec un saloon."
     smart_filter:
       sort_by: random
       limit: 400

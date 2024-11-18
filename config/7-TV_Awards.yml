@@ -18,7 +18,7 @@ templates:
 collections:
   BAFTA - Winners:
     template: { name: imdb }
-    summary: "A collection of BAFTA Winners"
+    summary: "Une collection de gagnants des BAFTA"
     visible_shared: monthly(10)
     visible_library: false
     file_poster: config/posters/BAFTA Winners.png
@@ -33,7 +33,7 @@ collections:
 
   Critics Choice Awards - Winners:
     template: { name: imdb }
-    summary: "A collection of Critics Choice Award Winners"
+    summary: "Une collection de gagnants des Critics Choice Awards"
     visible_shared: monthly(5)
     visible_library: false
     file_poster: config/posters/Critics Choice Awards Winners.png
@@ -48,7 +48,7 @@ collections:
 
   Emmy - Winners:
     template: { name: imdb }
-    summary: "A collection of Emmy Award Winners"
+    summary: "Une collection de gagnants des Emmy Awards"
     visible_shared: monthly(20)
     file_poster: config/posters/Emmy Winners.png
     imdb_award:
@@ -62,7 +62,7 @@ collections:
 
   Golden Globe - Winners:
     template: { name: imdb }
-    summary: "A collection of Golden Globes Winners"
+    summary: "Une collection de gagnants des Golden Globes"
     visible_shared: monthly(15)
     file_poster: config/posters/Golden Globe Winners.png
     imdb_award:

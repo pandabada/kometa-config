@@ -25,11 +25,11 @@ templates:
     sort_title: zz_<<collection_name>>
     visible_library: true
 
-# Movies who has won some the most prestigious awards
+# Films ayant remporté certains des prix les plus prestigieux
 collections:
   BAFTA - Best Film:
     template: { name: imdb }
-    summary: The British Academy Film Awards is an annual award show hosted by the British Academy of Film and Television Arts (BAFTA) to honour the best British and international contributions to film. The ceremonies were initially held at the flagship Odeon cinema in Leicester Square in London, before being held at the Royal Opera House.
+    summary: Les British Academy Film Awards sont une cérémonie annuelle organisée par la British Academy of Film and Television Arts (BAFTA) pour récompenser les meilleures contributions britanniques et internationales au cinéma. Les cérémonies se tenaient initialement dans le cinéma Odeon phare à Leicester Square, Londres, avant de se dérouler à la Royal Opera House.
     file_poster: config/posters/BAFTA Best Film.png
     visible_shared: monthly(27)
     imdb_award:
@@ -44,7 +44,7 @@ collections:
 
   BAFTA - Winners:
     template: { name: imdb }
-    summary: The British Academy Film Awards is an annual award show hosted by the British Academy of Film and Television Arts (BAFTA) to honour the best British and international contributions to film. The ceremonies were initially held at the flagship Odeon cinema in Leicester Square in London, before being held at the Royal Opera House.
+    summary: Les British Academy Film Awards sont une cérémonie annuelle organisée par la British Academy of Film and Television Arts (BAFTA) pour récompenser les meilleures contributions britanniques et internationales au cinéma. Les cérémonies se tenaient initialement dans le cinéma Odeon phare à Leicester Square, Londres, avant de se dérouler à la Royal Opera House.
     visible_shared: monthly(3)
     file_poster: config/posters/BAFTA Winners.png
     imdb_award:
@@ -58,13 +58,14 @@ collections:
 
   Berlinale - Winners:
     template: { name: Award }
-    summary: The Berlin International Film Festival, also known as Berlinale, is one of the largest and most prestigious film festivals in the world. It is held annually in Berlin, Germany, and showcases a diverse range of international films.
+    summary: Le Festival international du film de Berlin, également connu sous le nom de Berlinale, est l'un des plus grands et prestigieux festivals de cinéma au monde. Il se tient chaque année à Berlin, en Allemagne, et présente un large éventail de films internationaux.
+    visible_library: true
     file_poster: config/posters/Berlinale Winners.png
     letterboxd_list: https://letterboxd.com/koyoti/list/berlinale-golden-bear-winners/
 
   Cannes - Palme d'Or:
     template: { name: imdb }
-    summary: The Cannes Film Festival until 2003 called the International Film Festival (Festival international du film) and known in English as the Cannes Film Festival, is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries, from all around the world. Founded in 1946, the invitation-only festival is held annually at the Palais des Festivals et des Congrès. The festival was formally accredited by the FIAPF in 1951.
+    summary: Le Festival de Cannes, jusqu'en 2003 appelé le Festival international du film, est un festival de cinéma annuel qui se tient à Cannes, en France, et présente des films de tous genres, y compris des documentaires, venus du monde entier. Créé en 1946, ce festival sur invitation est organisé chaque année au Palais des Festivals et des Congrès. Il a été accrédité officiellement par la FIAPF en 1951.
     visible_shared: monthly(17)
     file_poster: config/posters/Cannes Palme d'or.png
     imdb_award:
@@ -79,7 +80,7 @@ collections:
 
   Critics Choice Awards - Winners:
     template: { name: imdb }
-    summary: The Critics' Choice Movie Awards (formerly known as the Broadcast Film Critics Association Award) is an awards show presented annually by the American-Canadian Critics Choice Association to honor the finest in cinematic achievement.
+    summary: Les Critics' Choice Movie Awards (anciennement connus sous le nom de Broadcast Film Critics Association Award) sont une cérémonie annuelle présentée par la Critics Choice Association américano-canadienne pour récompenser les meilleures réalisations cinématographiques.
     visible_shared: monthly(14)
     file_poster: config/posters/Critics Choice Awards Winners.png
     imdb_award:
@@ -93,7 +94,7 @@ collections:
 
   Golden Globe - Best Picture:
     template: { name: imdb }
-    summary: The Golden Globe Awards are accolades bestowed by the Hollywood Foreign Press Association starting in January 1944, recognizing excellence in both American and international film and television. Beginning in 2022, there are 105 members of the HFPA.
+    summary: Les Golden Globe Awards sont des distinctions décernées par la Hollywood Foreign Press Association depuis janvier 1944, reconnaissant l'excellence dans les films et la télévision, tant américains qu'internationaux. Depuis 2022, l'HFPA compte 105 membres.
     visible_shared:
       - monthly(23)
       - monthly(24)
@@ -115,7 +116,7 @@ collections:
 
   Golden Globe - Winners:
     template: { name: imdb }
-    summary: The Golden Globe Awards are accolades bestowed by the Hollywood Foreign Press Association starting in January 1944, recognizing excellence in both American and international film and television. Beginning in 2022, there are 105 members of the HFPA.
+    summary: Les Golden Globe Awards sont des distinctions décernées par la Hollywood Foreign Press Association depuis janvier 1944, reconnaissant l'excellence dans les films et la télévision, tant américains qu'internationaux. Depuis 2022, l'HFPA compte 105 membres.
     visible_shared:
       - monthly(17)
       - monthly(18)
@@ -134,7 +135,7 @@ collections:
     visible_shared:
       - monthly(21)
       - monthly(22)
-    summary: Highest honor at the oscars.
+    summary: La plus haute distinction des Oscars.
     file_poster: config/posters/Oscars Best Picture.png
     imdb_award:
       event_id: "ev0000003"
@@ -154,7 +155,7 @@ collections:
       - monthly(30)
       - monthly(31)
     file_poster: config/posters/Oscars Winners.png
-    summary: Oscar Category Winning Movies.
+    summary: Films ayant remporté une catégorie aux Oscars.
     imdb_award:
       event_id: "ev0000003"
       event_year: "1929-current"
@@ -165,7 +166,7 @@ collections:
 
   Sundance - Winners:
     template: { name: imdb }
-    summary: A list of all (with exceptions of short movies) films that won awards at the American Sundance Film Festival.
+    summary: Une liste de tous les films (à quelques exceptions près, comme les courts-métrages) ayant remporté un prix au festival américain de Sundance.
     visible_shared: monthly(11)
     file_poster: config/posters/Sundance Winners.png
     imdb_award:
@@ -179,7 +180,7 @@ collections:
 
   Venice - Best Film:
     template: { name: imdb }
-    summary: The Venice Film Festival or Venice International Film Festival is an annual film festival held in Venice, Italy. It is the world's oldest film festival and one of the big six International film festivals worldwide, which include the Big Three European Film Festivals, alongside the Toronto Film Festival in Canada the Sundance Film Festival in the United States and the Melbourne International Film Festival in Australia.
+    summary: Le Festival international du film de Venise est un festival annuel qui se tient à Venise, en Italie. Il s'agit du plus ancien festival de cinéma au monde et fait partie des six plus grands festivals internationaux de cinéma, avec les trois grands festivals européens, le Festival de Toronto au Canada, le Festival de Sundance aux États-Unis et le Festival de Melbourne en Australie.
     visible_shared: monthly(9)
     file_poster: config/posters/Venice Best Film.png
     imdb_award:

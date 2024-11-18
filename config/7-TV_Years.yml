@@ -6,15 +6,15 @@ templates:
   Decade:
     smart_label: audience_rating.desc
     sync_mode: sync
-    sort_title: zzzz_<<collection_name>>
-    summary: Best shows of the decade with a minimum of 7.8 IMDb Rating.
+    sort_title: "~~~~_<<collection_name>>"
+    summary: "Les meilleures séries de la décennie avec une note IMDb d'au moins 7,8."
     visible_library: true
 
   Year:
     smart_label: audience_rating.desc
     sync_mode: sync
-    sort_title: zzzzz_<<collection_name>>
-    summary: Best shows of the year with a minimum of 7.8 IMDb Rating.
+    sort_title: "~~~~~_<<collection_name>>"
+    summary: "Les meilleures séries de l'année avec une note IMDb d'au moins 7,8."
     visible_library: false
 
 # TV shows with a IMDb rating greater than 7.8 from a decade

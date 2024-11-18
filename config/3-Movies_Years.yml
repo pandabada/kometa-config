@@ -5,15 +5,15 @@ templates:
   Decade:
     smart_label: audience_rating.desc
     sync_mode: sync
-    sort_title: zzz_<<collection_name>>
-    summary: Best movies of the decade with a minimum of 7.0 IMDb Rating.
+    sort_title: "~~~~~~~_<<collection_name>>"
+    summary: "Les meilleurs films de la décennie avec une note IMDb d'au moins 7."
     visible_library: true
 
   Year:
     smart_label: audience_rating.desc
     sync_mode: sync
-    sort_title: zzzz_<<collection_name>>
-    summary: Best movies of the year with a minimum of 7.0 IMDb Rating.
+    sort_title: "~~~~~~~~_<<collection_name>>"
+    summary: "Les meilleurs films de l'année avec une note IMDb d'au moins 7,0."
     visible_library: false
 
 # Movies with a IMDb rating greater than 7.0 from a decade
