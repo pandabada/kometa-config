@@ -14,6 +14,7 @@ collections:
   Sélection Noël 🎅:
     template: { name: Holiday }
     visible_home: range(12/01-12/26)
+    visible_library: range(12/01-12/26)
     visible_shared: range(12/01-12/26)
     summary: Ho ho ho.
     file_poster: config/posters/Christmas.png
@@ -27,6 +28,7 @@ collections:
   Sélection Pâques 🐣:
     template: { name: Holiday }
     visible_home: range(03/31-04/15)
+    visible_library: range(03/31-04/15)
     visible_shared: range(03/31-04/15)
     summary: The Easter bunny is here!
     file_poster: config/posters/Easter.png
@@ -36,8 +38,9 @@ collections:
 
   Sélection Fête des Pères 👨‍👦:
     template: { name: Holiday }
-    visible_home: range(11/08-11/14)
-    visible_shared: range(11/08-11/14)
+    visible_home: range(06/08-06/21)
+    visible_library: range(06/08-06/21)
+    visible_shared: range(06/08-06/21)
     summary: Every Fathers Special day.
     file_poster: config/posters/Fathers Day.png
     trakt_list:
@@ -47,6 +50,7 @@ collections:
   Sélection Halloween 👻:
     template: { name: Holiday }
     visible_home: range(10/01-10/31)
+    visible_library: range(10/01-10/31)
     visible_shared: range(10/01-10/31)
     summary: This is Halloween!
     file_poster: config/posters/Halloween..png
@@ -58,8 +62,9 @@ collections:
 
   Sélection Fête des Mères 👩‍👧:
     template: { name: Holiday }
-    visible_home: range(05/25-05/31)
-    visible_shared: range(05/25-05/31)
+    visible_home: range(05/25-06/07)
+    visible_library: range(05/25-06/07)
+    visible_shared: range(05/25-06/07)
     summary: Every Mothers special day.
     file_poster: config/posters/Mothers Day.png
     trakt_list:
@@ -69,6 +74,7 @@ collections:
   Sélection Nouvel An 🍾:
     template: { name: Holiday }
     visible_home: range(12/30-01/05)
+    visible_library: range(12/30-01/05)
     visible_shared: range(12/30-01/05)
     summary: Happy New Year!
     file_poster: config/posters/New Year.png
@@ -81,6 +87,7 @@ collections:
   Sélection Saint Valentin 💘:
     template: { name: Holiday }
     visible_home: range(02/14-02/15)
+    visible_library: range(02/14-02/15)
     visible_shared: range(02/14-02/15)
     summary: Love me tender, love me sweet.
     file_poster: config/posters/Valentines Day.png

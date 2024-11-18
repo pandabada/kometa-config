@@ -12,6 +12,7 @@ templates:
     sort_title: "~~_<<collection_name>>"
 
   streaming:
+    visible_library: true
     smart_filter:
       sort_by: release.desc
       validate: false
@@ -220,7 +221,6 @@ collections:
   Apple TV+:
     template: { name: streaming, network: "Apple TV+" }
     file_poster: config/posters/Apple TV+.png
-    visible_library: true
     studio: Apple, Apple TV+
     visible_shared:
       - monthly(1)
@@ -230,7 +230,6 @@ collections:
   Disney+:
     template: { name: streaming, network: "Disney Channel, Disney XD, Disney+" }
     file_poster: config/posters/Disney+.png
-    visible_library: true
     studio: Disney Television Animation, Disney+, Walt Disney Pictures, Walt Disney Television
     visible_shared:
       - monthly(22)
@@ -289,7 +288,6 @@ collections:
   Prime Video:
     template: { name: streaming, network: "Prime Video" }
     file_poster: config/posters/Prime Video.png
-    visible_library: true
     studio: Amazon Prime Video
     visible_shared:
       - monthly(19)
