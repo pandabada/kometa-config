@@ -176,17 +176,7 @@ collections:
         audience_rating.gte: 6.5
         genre: horror
 
-  K-Drama:
-    template: { name: Genre }
-    smart_label: random
-    file_poster: config/posters/K-Drama TV.png
-    visible_shared: weekly(tuesday)
-    summary: All Korean shows in one place.
-    trakt_list:
-      - https://trakt.tv/users/xscaredycat/lists/korean-dramas
-      - https://trakt.tv/users/marguis/lists/korean-dramas
-
-  Miniseries:
+  Mini-séries:
     template: { name: Genre }
     visible_shared: weekly(sunday)
     file_poster: config/posters/Miniseries TV.png

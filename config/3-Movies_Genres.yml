@@ -552,21 +552,21 @@ collections:
       - https://trakt.tv/users/29zombies/lists/disaster?sort=title,asc
       - https://trakt.tv/users/urban-legend/lists/disaster
 
-  Donghua:
-    template: { name: Genre Smart }
-    file_poster: config/posters/Donghua.png
-    summary: Animated movies from China.
-    smart_filter:
-      sort_by: random
-      validate: false
-      all:
-        country: china
-        genre: animation
-        title.not:
-          - extinct
-          - abominable
-          - kung fu
-          - paws of
+  # Donghua:
+    # template: { name: Genre Smart }
+    # file_poster: config/posters/Donghua.png
+    # summary: Animated movies from China.
+    # smart_filter:
+      # sort_by: random
+      # #validate: false
+      # all:
+        # country: china
+        # genre: animation
+        # title.not:
+          # - extinct
+          # - abominable
+          # - kung fu
+          # - paws of
 
   Drug:
     template: { name: Genre Other }
@@ -1217,94 +1217,94 @@ collections:
   ######################################################
 
   # Collections based on movies from a certain country
-  China:
-    template: { name: Genre Other }
-    summary: Some of the best movies made in China.
-    file_poster: config/posters/China.png
-    visible_shared: range(09/04-09/12)
-    trakt_list:
-      - https://trakt.tv/users/c858/lists/chinese-movies?sort=rank,asc
-      - https://trakt.tv/users/hmaurin/lists/chinese-movies?sort=released,asc
-    plex_search:
-      any:
-        audio_language: zh
+  # China:
+    # template: { name: Genre Other }
+    # summary: Some of the best movies made in China.
+    # file_poster: config/posters/China.png
+    # visible_shared: range(09/04-09/12)
+    # trakt_list:
+      # - https://trakt.tv/users/c858/lists/chinese-movies?sort=rank,asc
+      # - https://trakt.tv/users/hmaurin/lists/chinese-movies?sort=released,asc
+    # plex_search:
+      # any:
+        # audio_language: zh
 
-  France:
-    template: { name: Genre Other }
-    summary: Some of the best movies made in France.
-    file_poster: config/posters/France.png
-    visible_shared: range(04/14-04/22)
-    trakt_list: https://trakt.tv/users/elementmedia/lists/french-movies
-    plex_search:
-      any:
-        audio_language: fr
+  # France:
+    # template: { name: Genre Other }
+    # summary: Some of the best movies made in France.
+    # file_poster: config/posters/France.png
+    # visible_shared: range(04/14-04/22)
+    # trakt_list: https://trakt.tv/users/elementmedia/lists/french-movies
+    # plex_search:
+      # any:
+        # audio_language: fr
 
-  Germany:
-    template: { name: Genre Other }
-    summary: Some of the best movies made in Germany.
-    file_poster: config/posters/Germany.png
-    visible_shared: range(10/14-10/22)
-    trakt_list: https://trakt.tv/users/jason-postrel/lists/top-rated-german-movies?sort=rank,asc
-    plex_search:
-      any:
-        audio_language: de
+  # Germany:
+    # template: { name: Genre Other }
+    # summary: Some of the best movies made in Germany.
+    # file_poster: config/posters/Germany.png
+    # visible_shared: range(10/14-10/22)
+    # trakt_list: https://trakt.tv/users/jason-postrel/lists/top-rated-german-movies?sort=rank,asc
+    # plex_search:
+      # any:
+        # audio_language: de
 
-  India:
-    template: { name: Genre Other }
-    summary: Some of the best movies made in India.
-    file_poster: config/posters/India.png
-    visible_shared: range(06/14-06/22)
-    trakt_list: https://trakt.tv/users/satzisa/lists/indian-movies
-    plex_search:
-      any:
-        audio_language: hi
+  # India:
+    # template: { name: Genre Other }
+    # summary: Some of the best movies made in India.
+    # file_poster: config/posters/India.png
+    # visible_shared: range(06/14-06/22)
+    # trakt_list: https://trakt.tv/users/satzisa/lists/indian-movies
+    # plex_search:
+      # any:
+        # audio_language: hi
 
-  Italy:
-    template: { name: Genre Other }
-    summary: Some of the best movies made in Italy.
-    file_poster: config/posters/Italy.png
-    visible_shared: range(11/14-11/22)
-    trakt_list: https://trakt.tv/users/fulvio91/lists/italian-movies
-    plex_search:
-      any:
-        audio_language: it
+  # Italy:
+    # template: { name: Genre Other }
+    # summary: Some of the best movies made in Italy.
+    # file_poster: config/posters/Italy.png
+    # visible_shared: range(11/14-11/22)
+    # trakt_list: https://trakt.tv/users/fulvio91/lists/italian-movies
+    # plex_search:
+      # any:
+        # audio_language: it
 
-  Japan:
-    template: { name: Genre Other }
-    summary: Some of the best movies made in Japan.
-    visible_shared: range(09/14-09/22)
-    file_poster: config/posters/Japan.png
-    trakt_list: https://trakt.tv/users/a-homrany-hotmail-com/lists/japanese-movies
-    plex_search:
-      any:
-        audio_language: ja
+  # Japan:
+    # template: { name: Genre Other }
+    # summary: Some of the best movies made in Japan.
+    # visible_shared: range(09/14-09/22)
+    # file_poster: config/posters/Japan.png
+    # trakt_list: https://trakt.tv/users/a-homrany-hotmail-com/lists/japanese-movies
+    # plex_search:
+      # any:
+        # audio_language: ja
 
-  South Korea:
-    template: { name: Genre Other }
-    file_poster: config/posters/South Korea.png
-    visible_shared: range(07/14-07/22)
-    summary: Some of the best movies made in South Korea.
-    trakt_list: https://trakt.tv/users/bwf2/lists/south-korean-movies-2018-2022?sort=rank,asc
-    plex_search:
-      any:
-        audio_language: ko
+  # South Korea:
+    # template: { name: Genre Other }
+    # file_poster: config/posters/South Korea.png
+    # visible_shared: range(07/14-07/22)
+    # summary: Some of the best movies made in South Korea.
+    # trakt_list: https://trakt.tv/users/bwf2/lists/south-korean-movies-2018-2022?sort=rank,asc
+    # plex_search:
+      # any:
+        # audio_language: ko
 
-  Sweden:
-    template: { name: Genre Other }
-    summary: Some of the best movies made in Sweden.
-    visible_shared: range(03/14-03/22)
-    file_poster: config/posters/Sweden.png
-    trakt_list: https://trakt.tv/users/a925sw/lists/swedish-movies?sort=rank,asc
-    plex_search:
-      any:
-        audio_language: sv
+  # Sweden:
+    # template: { name: Genre Other }
+    # summary: Some of the best movies made in Sweden.
+    # visible_shared: range(03/14-03/22)
+    # file_poster: config/posters/Sweden.png
+    # trakt_list: https://trakt.tv/users/a925sw/lists/swedish-movies?sort=rank,asc
+    # plex_search:
+      # any:
+        # audio_language: sv
 
-  Spain:
-    template: { name: Genre Other }
-    summary: Some of the best movies made in Spain.
-    file_poster: config/posters/Spain.png
-    visible_shared: range(05/14-05/22)
-    trakt_list: https://trakt.tv/users/ocr893sa/lists/spanish-movies
-    plex_search:
-      any:
-        audio_language: es
+  # Spain:
+    # template: { name: Genre Other }
+    # summary: Some of the best movies made in Spain.
+    # file_poster: config/posters/Spain.png
+    # visible_shared: range(05/14-05/22)
+    # trakt_list: https://trakt.tv/users/ocr893sa/lists/spanish-movies
+    # plex_search:
+      # any:
+        # audio_language: es

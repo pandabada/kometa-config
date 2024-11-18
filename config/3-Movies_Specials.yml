@@ -23,18 +23,7 @@ templates:
     sort_title: zz-<<collection_name>>
     visible_library: false
 
-collections:
-  1001+ Movies You Must See Before You Die:
-    template: { name: Special Other }
-    summary: 1001+ of the best movies you need to see before you die.
-    visible_shared:
-      - monthly(4)
-      - monthly(6)
-    file_poster: config/posters/1001+ Movies You Must See Before You Die.png
-    trakt_list:
-      - https://trakt.tv/users/captainnapalm/lists/1001-greatest-movies-of-all-time?sort=rank,asc
-      - https://trakt.tv/users/athwilson/lists/1001-movies?sort=released,desc
-
+collections:        
   2160P:
     template: { name: Special }
     summary: A collection of movies in 4K.
@@ -82,39 +71,7 @@ collections:
       all:
         duration.gt: 149
 
-  Newly Released: # Released within the month
-    template: { name: Special Smart }
-    file_poster: config/posters/Newly Released.png
-    summary: Movies recently released in the past month.
-    smart_filter:
-      sort_by: release.desc
-      validate: false
-      all:
-        release: 30
-
-  No Swedish Subtitles:
-    sync_mode: sync
-    sort_title: zzzzzzzzzzz_No Swedish Subtitles
-    file_poster: config/posters/No Swedish Subtitles.png
-    summary: Movies yet to recieve swedish subtitles.
-    smart_filter:
-      sort_by: added.desc
-      all:
-        subtitle_language.not: sv
-
-  Random: # Random movies with a rating above 4 from IMDb
-    template: { name: Special Smart }
-    file_poster: config/posters/Random.png
-    summary: Random movies.
-    visible_shared: monthly(5)
-    smart_filter:
-      sort_by: random
-      validate: false
-      limit: 300
-      all:
-        audience_rating.gte: 4.0
-
-  Shortest: # Shortest movies on plex
+  Les plus courts:
     template: { name: Special Smart }
     visible_library: true
     summary: The shortest movies on Plex with a max duration of 85 minutes and under.
@@ -135,13 +92,3 @@ collections:
     file_poster: config/posters/Watched.png
     summary: Movies watched on Plex by all users.
     smart_label: viewed.desc
-
-  Worst: # Movies with a rating of less than 4 from IMDb
-    template: { name: Special Smart Other }
-    summary: Worst movies on Plex rated 4.0 or lower.
-    file_poster: config/posters/Worst.png
-    smart_filter:
-      sort_by: audience_rating.asc
-      validate: false
-      all:
-        audience_rating.lte: 4.0
