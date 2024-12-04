@@ -1143,14 +1143,13 @@ collections:
       all:
         title: goosebumps
 
-  Godzilla (Anime):
+  Godzilla:
     template: { name: Franchise }
-    summary: Godzilla Planet of the Monsters is a 2017 Japanese computer-animated kaiju film directed by Kōbun Shizuno and Hiroyuki Seshita, written by Gen Urobuchi, and produced by Toho Animation and Polygon Pictures, in association with Netflix.
-    file_poster: config/posters/Godzilla Anime.png
+    summary: The Godzilla film series, originating from Japan's Toho Studios in 1954, is one of the longest-running film franchises in history. It centers around Godzilla, a giant prehistoric sea monster awakened and empowered by nuclear radiation.
+    file_poster: config/posters/Godzilla.png
     plex_search:
       all:
         title: godzilla
-        genre: animation
 
   Gremlins:
     template: { name: Franchise }
@@ -2775,10 +2774,8 @@ collections:
   The Twilight Saga:
     template: { name: Franchise }
     summary: The Twilight saga is a popular movie series based on the vampire-themed romance novels written by Stephenie Meyer.
-    file_poster: config/posters/The Twilight Saga.jpeg
-    plex_search:
-      all:
-        title: twilight saga
+    file_poster: config/posters/The Twilight Saga.png
+    tmdb_collection: 33514
 
   To All the Boys:
     template: { name: Franchise }
@@ -3011,6 +3008,12 @@ collections:
       all:
         title: venom
         actor: tom hardy
+
+  Waynes World:
+    template: { name: Franchise }
+    summary: Wayne Campbell and Garth Algar are the hosts of Wayne's World, a local Friday late-night cable access program based in Aurora, Illinois, where they ogle pictures of beautiful celebrity women, play air guitar and drums, and interview local people, indirectly making fun of them over the course of the interview.
+    file_poster: config/posters/Waynes World.png
+    tmdb_collection: 8979
 
   The Wog Boys:
     template: { name: Franchise }

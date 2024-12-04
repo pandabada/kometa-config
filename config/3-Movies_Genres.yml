@@ -434,7 +434,6 @@ collections:
     file_poster: config/posters/Cyberpunk.png
     visible_shared: monthly(5)
     trakt_list:
-      - https://trakt.tv/users/chatterer/lists/cyberpunk?sort=released,asc
       - https://trakt.tv/users/oya-kesh/lists/cyberpunk?sort=rank,asc
 
   Con-Artist:
@@ -585,7 +584,7 @@ collections:
     visible_shared: weekly(friday)
     trakt_list:
       - https://trakt.tv/users/mezuror/lists/dystopian
-      - https://trakt.tv/users/remontant/lists/dystopian-movies
+      - https://trakt.tv/users/maxtrontv/lists/dystopian-movies
 
   Fairytale:
     template: { name: Genre Other }
@@ -595,8 +594,8 @@ collections:
     limit: 300
     trakt_list:
       - https://trakt.tv/users/raluca-303/lists/fairytale?sort=released,asc
-      - https://trakt.tv/users/mrfinesse/lists/fairytale?sort=title,asc
       - https://trakt.tv/users/pterisaur/lists/fairytales?sort=random,asc
+      - https://trakt.tv/users/urban-legend/lists/fairytales?sort=rank,asc
 
   Film Noir:
     template: { name: Genre Smart }
@@ -940,9 +939,11 @@ collections:
     summary: A remake is a film, or occasionally a television series, video game, or similar form of entertainment, that is based upon and retells the story of an earlier production in the same medium—e.g., a "new version of an existing film".
     file_poster: config/posters/Remake.png
     visible_shared: monthly(25)
-    trakt_list:
-      - https://trakt.tv/users/chatterer/lists/remake?sort=released,asc
-      - https://trakt.tv/users/bob-frapples/lists/remakes?sort=rank,asc
+    letterboxd_list:
+      - https://letterboxd.com/zgrace/list/remakes/
+      - https://letterboxd.com/1lostfan/list/remakes/
+      - https://letterboxd.com/rasmusjonsson/list/remakes/
+      - https://letterboxd.com/kultgestalt/list/remakes/
 
   Robot:
     template: { name: Genre Other }
