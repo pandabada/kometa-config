@@ -10,7 +10,7 @@ templates:
     sort_title: "~~~~~~_<<collection_name>>"
     visible_library: true
 
-  Special Plus:
+  Special Other:
     smart_label: random
     sync_mode: sync
     sort_title: "~~~~~~_<<collection_name>>"
@@ -40,8 +40,8 @@ collections:
       all:
         content_rating: TV-MA
 
-  480P+: # Séries TV en qualité 480p et 576p
-    template: { name: Special Plus }
+  480P+: # 480p and 576p TV Shows
+    template: { name: Special Other }
     summary: Une collection de séries TV en qualité SD, 480p et 576p.
     sort_title: zz__1480P+
     file_poster: config/posters/480P+.png
@@ -53,7 +53,7 @@ collections:
           - 576p
 
   720P:
-    template: { name: Special Plus }
+    template: { name: Special Other }
     summary: Une collection de séries TV en qualité 720p.
     sort_title: zz__1720P
     file_poster: config/posters/720P.png
@@ -62,7 +62,7 @@ collections:
         resolution: 720p
 
   1080P:
-    template: { name: Special Plus }
+    template: { name: Special Other }
     summary: Une collection de séries TV en qualité 1080p.
     sort_title: zz__31080P
     file_poster: config/posters/1080P.png
@@ -108,8 +108,8 @@ collections:
     file_poster: config/posters/Favored.png
     summary: Les séries TV les plus appréciées sur Plex par les utilisateurs au cours des 2 derniers mois.
 
-  Les plus longues: # Séries TV les plus longues sur Plex
-    template: { name: Special Plus }
+  Longest: # Longest TV shows on plex
+    template: { name: Special Other }
     summary: Les séries les plus longues sur Plex.
     file_poster: config/posters/Longest.png
     trakt_list:

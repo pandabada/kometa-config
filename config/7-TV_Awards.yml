@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 #############################################################
-#                       AWARDS 9.5                          #
+#                       AWARDS 10.0                         #
 #############################################################
 
 templates:
-  imdb:
+  Awards:
     optional:
       - trakt_list
     sort_title: "~_<<collection_name>>"
@@ -15,13 +15,38 @@ templates:
     trakt_list:
       - <<trakt_list>>
 
-# Séries qui ont remporté certains des prix les plus prestigieux
+  Letterboxd:
+    optional:
+      - letterboxd_extra_1
+      - letterboxd_extra_2
+      - letterboxd_extra_3
+      - letterboxd_extra_4
+      - letterboxd_extra_5
+    sort_title: "zzz_<<collection_name>>"
+    sync_mode: sync
+    smart_label: release.desc
+    delete_not_scheduled: false
+    letterboxd_list:
+      url: https://letterboxd.com/<<user>>/list/<<list>>/by/<<sort>>
+      limit: 9999
+
+  Custom:
+    optional:
+      - trakt_list
+    sort_title: "zzz_<<collection_name>>"
+    sync_mode: sync
+    smart_label: release.desc
+    delete_not_scheduled: false
+    imdb_list:
+      url: https://www.imdb.com/list/<<imdb_list>>/?sort=release_date,desc
+      limit: 9999
+
+# TV shows who has won some the most prestigious awards
 collections:
   BAFTA - Winners:
-    template: { name: imdb }
+    template: { name: Awards }
     summary: "Une collection de gagnants des BAFTA"
     visible_shared: monthly(10)
-    visible_library: false
     file_poster: config/posters/BAFTA Winners.png
     imdb_award:
       event_id: "ev0000123"
@@ -33,10 +58,9 @@ collections:
       limit: 9999
 
   Critics Choice Awards - Winners:
-    template: { name: imdb }
+    template: { name: Awards }
     summary: "Une collection de gagnants des Critics Choice Awards"
     visible_shared: monthly(5)
-    visible_library: false
     file_poster: config/posters/Critics Choice Awards Winners.png
     imdb_award:
       event_id: "ev0000133"
@@ -48,7 +72,7 @@ collections:
       limit: 9999
 
   Emmy - Winners:
-    template: { name: imdb }
+    template: { name: Awards }
     summary: "Une collection de gagnants des Emmy Awards"
     visible_shared: monthly(20)
     file_poster: config/posters/Emmy Winners.png
@@ -62,7 +86,7 @@ collections:
       limit: 9999
 
   Golden Globe - Winners:
-    template: { name: imdb }
+    template: { name: Awards }
     summary: "Une collection de gagnants des Golden Globes"
     visible_shared: monthly(15)
     file_poster: config/posters/Golden Globe Winners.png

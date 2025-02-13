@@ -10,11 +10,18 @@ templates:
     summary: "Les meilleurs films de la décennie avec une note IMDb d'au moins 7."
     visible_library: true
 
+  Decade True:
+    smart_label: audience_rating.desc
+    sync_mode: sync
+    sort_title: "~~~~~~~_<<collection_name>>"
+    summary: "Les meilleurs films de la décennie avec une note IMDb d'au moins 7."
+    visible_library: true
+
   Year:
     smart_label: audience_rating.desc
     sync_mode: sync
     sort_title: "~~~~~~~~_<<collection_name>>"
-    summary: "Les meilleurs films de l'année avec une note IMDb d'au moins 7,0."
+    summary: "Les meilleurs films de l'année avec une note IMDb d'au moins 7."
     visible_library: false
 
 # Movies with a IMDb rating greater than 7.0 from a decade

@@ -258,7 +258,6 @@ collections:
   Netflix:
     template: { name: streaming, network: "Netflix" }
     file_poster: config/posters/Netflix.png
-    visible_library: true
     studio: Netflix
     visible_shared:
       - monthly(16)

@@ -1,17 +1,17 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 ######################################################
-#                  AWARDS 9.5                        #
+#                  AWARDS 10.0                       #
 ######################################################
 
 templates:
-  imdb:
+  Awards:
     optional:
       - trakt_list
     sort_title: "~_<<collection_name>>"
     sync_mode: sync
     smart_label: release.desc
     delete_not_scheduled: false
-    visible_library: true
+    visible_library: false
     trakt_list:
       - <<trakt_list>>
 
@@ -29,7 +29,7 @@ templates:
 # Films ayant remporté certains des prix les plus prestigieux
 collections:
   BAFTA - Best Film:
-    template: { name: imdb }
+    template: { name: Awards }
     summary: Les British Academy Film Awards sont une cérémonie annuelle organisée par la British Academy of Film and Television Arts (BAFTA) pour récompenser les meilleures contributions britanniques et internationales au cinéma. Les cérémonies se tenaient initialement dans le cinéma Odeon phare à Leicester Square, Londres, avant de se dérouler à la Royal Opera House.
     file_poster: config/posters/BAFTA Best Film.png
     visible_shared: monthly(27)
@@ -44,7 +44,7 @@ collections:
       limit: 9999
 
   BAFTA - Winners:
-    template: { name: imdb }
+    template: { name: Awards }
     summary: Les British Academy Film Awards sont une cérémonie annuelle organisée par la British Academy of Film and Television Arts (BAFTA) pour récompenser les meilleures contributions britanniques et internationales au cinéma. Les cérémonies se tenaient initialement dans le cinéma Odeon phare à Leicester Square, Londres, avant de se dérouler à la Royal Opera House.
     visible_shared: monthly(3)
     file_poster: config/posters/BAFTA Winners.png
@@ -65,7 +65,7 @@ collections:
     letterboxd_list: https://letterboxd.com/koyoti/list/berlinale-golden-bear-winners/
 
   Cannes - Palme d'Or:
-    template: { name: imdb }
+    template: { name: Awards }
     summary: Le Festival de Cannes, jusqu'en 2003 appelé le Festival international du film, est un festival de cinéma annuel qui se tient à Cannes, en France, et présente des films de tous genres, y compris des documentaires, venus du monde entier. Créé en 1946, ce festival sur invitation est organisé chaque année au Palais des Festivals et des Congrès. Il a été accrédité officiellement par la FIAPF en 1951.
     visible_shared: monthly(17)
     file_poster: config/posters/Cannes Palme d'or.png
@@ -80,7 +80,7 @@ collections:
       limit: 9999
 
   Critics Choice Awards - Winners:
-    template: { name: imdb }
+    template: { name: Awards }
     summary: Les Critics' Choice Movie Awards (anciennement connus sous le nom de Broadcast Film Critics Association Award) sont une cérémonie annuelle présentée par la Critics Choice Association américano-canadienne pour récompenser les meilleures réalisations cinématographiques.
     visible_shared: monthly(14)
     file_poster: config/posters/Critics Choice Awards Winners.png
@@ -94,7 +94,7 @@ collections:
       limit: 9999
 
   Golden Globe - Best Picture:
-    template: { name: imdb }
+    template: { name: Awards }
     summary: Les Golden Globe Awards sont des distinctions décernées par la Hollywood Foreign Press Association depuis janvier 1944, reconnaissant l'excellence dans les films et la télévision, tant américains qu'internationaux. Depuis 2022, l'HFPA compte 105 membres.
     visible_shared:
       - monthly(23)
@@ -116,7 +116,7 @@ collections:
       limit: 9999
 
   Golden Globe - Winners:
-    template: { name: imdb }
+    template: { name: Awards }
     summary: Les Golden Globe Awards sont des distinctions décernées par la Hollywood Foreign Press Association depuis janvier 1944, reconnaissant l'excellence dans les films et la télévision, tant américains qu'internationaux. Depuis 2022, l'HFPA compte 105 membres.
     visible_shared:
       - monthly(17)
@@ -132,7 +132,8 @@ collections:
       limit: 9999
 
   Oscars - Best Picture:
-    template: { name: imdb }
+    template: { name: Awards }
+    visible_library: true
     visible_shared:
       - monthly(21)
       - monthly(22)
@@ -151,7 +152,8 @@ collections:
       limit: 9999
 
   Oscars - Winners:
-    template: { name: imdb }
+    template: { name: Awards }
+    visible_library: true
     visible_shared:
       - monthly(30)
       - monthly(31)
@@ -180,7 +182,7 @@ collections:
       limit: 9999
 
   Venice - Best Film:
-    template: { name: imdb }
+    template: { name: Awards }
     summary: Le Festival international du film de Venise est un festival annuel qui se tient à Venise, en Italie. Il s'agit du plus ancien festival de cinéma au monde et fait partie des six plus grands festivals internationaux de cinéma, avec les trois grands festivals européens, le Festival de Toronto au Canada, le Festival de Sundance aux États-Unis et le Festival de Melbourne en Australie.
     visible_shared: monthly(9)
     file_poster: config/posters/Venice Best Film.png

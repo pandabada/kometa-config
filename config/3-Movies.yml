@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 ######################################################
-#                   MOVIES 17.0                      #
+#                   MOVIES 18.0                      #
 ######################################################
 templates:
   Movie:
@@ -83,12 +83,14 @@ collections:
   MAL - Most Favorited: # MyAnimeList specific chart lists
     template: { name: Movie }
     mal_favorite: 500
+    visible_library: false
     summary: Most favorited animes on MyAnimeList.
     file_poster: config/posters/MAL Most Favorited.png
 
   MAL - Popular:
     template: { name: Movie }
     mal_popular: 500
+    visible_library: false
     summary: Anime movies popular this season according to MyAnimeList and Anilist.
     file_poster: config/posters/MAL Popular.png
 
@@ -135,6 +137,7 @@ collections:
     template: { name: Movie Release }
     tmdb_now_playing: 50
     file_poster: config/posters/TMDb Now Playing.png
+    visible_library: false
     visible_shared: monthly(3)
     summary: Recentley released movies on TMDb.
 
@@ -155,6 +158,7 @@ collections:
   TorrentFreak - Most Pirated: # TorrentFreak specific chart lists
     template: { name: Movie Basic }
     summary: Most pirated movies of the week according TorrentFreak.
+    visible_library: false
     collection_order: custom
     file_poster: config/posters/TorrentFreak Most Pirated.png
     trakt_list: https://trakt.tv/users/hdlists/lists/top-ten-pirated-movies-of-the-week-torrent-freak-com
