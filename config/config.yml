@@ -27,7 +27,7 @@ libraries:
     - file: config/3.1-Movies_Overlays_Rating.yml
       # - file: config/3.1-Movies_Overlays_Subtitle.yml
     - file: config/3.1-Movies_Overlays_Top.yml
-  S�ries TV:
+  Séries TV:
     collection_files:
     - file: config/7-TV_General.yml
     - file: config/7-TV_Separators.yml
