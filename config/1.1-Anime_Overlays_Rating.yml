@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 # Adds the mal overlay to all qualified animes alongside a number rating
 templates:
   MAL Overlay:

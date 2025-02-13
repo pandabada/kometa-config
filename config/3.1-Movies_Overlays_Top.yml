@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 # Adds a top overlay to all qualified movies from IMDb, Trakt, Letterboxd, TMDb and mal
 templates:
   IMDB Top:

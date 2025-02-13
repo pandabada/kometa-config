@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 # Adds overlay to each category of videos
 templates:
   Anime Ending Overlay:

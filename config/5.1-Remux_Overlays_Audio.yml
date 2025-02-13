@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 # Adds the audio overlay to all qualified remux movies based on the audio codec
 templates:
   # DTS Surround
