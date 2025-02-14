@@ -188,13 +188,16 @@ collections:
     visible_shared: weekly(sunday)
     file_poster: config/posters/Miniseries TV.png
     summary: "Séries avec une seule saison."
-    smart_filter:
-      sort_by: random
-      limit: 200
+    # smart_filter:
+      # sort_by: random
+      # limit: 200
       #validate: false
-      all:
+      # all:
         #audience_rating.gte: 7.0
-        genre: mini-series
+        # genre: mini-series
+    plex_all: true
+    filters:
+      tmdb_type: miniseries
 
   Mystère:
     template: { name: Genre }
