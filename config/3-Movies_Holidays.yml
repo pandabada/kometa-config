@@ -24,7 +24,6 @@ collections:
       - https://trakt.tv/users/k0meta/lists/christmas-extravaganza-non-tv-movie
       - https://trakt.tv/users/movistapp/lists/christmas-movies
       - https://trakt.tv/users/questdvd/lists/absolute-hayes-christmas-classics
-      - https://trakt.tv/users/littlestella3/lists/christmas
 
   Sélection Pâques 🐣:
     template: { name: Holiday }
@@ -35,7 +34,8 @@ collections:
     file_poster: config/posters/Easter.png
     trakt_list:
       - https://trakt.tv/users/smwixted/lists/easter?sort=votes,asc
-      - https://trakt.tv/users/tarzanislav/lists/easter?sort=added,asc
+      - https://trakt.tv/users/galacticboy/lists/easter-movies?sort=rank,asc
+      - https://trakt.tv/users/brandnu76/lists/easter-movies-shows?sort=votes,asc
 
   Sélection Fête des Pères 👨‍👦:
     template: { name: Holiday }
@@ -46,7 +46,7 @@ collections:
     file_poster: config/posters/Fathers Day.png
     trakt_list:
       - https://trakt.tv/users/fcisco13/lists/dad-movies?sort=rank,asc
-      - https://trakt.tv/users/segfaulted/lists/movies-for-dad?sort=rank,asc
+      - https://trakt.tv/users/marko8426/lists/dad-s-best-action-movies?sort=rank,asc
 
   Sélection Halloween 👻:
     template: { name: Holiday }
@@ -59,7 +59,6 @@ collections:
       - https://trakt.tv/users/29zombies/lists/halloween
       - https://trakt.tv/users/membball84/lists/halloween-halloween-halloween?sort=title,asc
       - https://trakt.tv/users/kairbear08/lists/halloween
-      - https://trakt.tv/users/mybicycle/lists/halloween
 
   Sélection Fête des Mères 👩‍👧:
     template: { name: Holiday }

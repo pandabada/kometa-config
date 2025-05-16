@@ -1125,7 +1125,7 @@ collections:
   Outdoor:
     template: { name: Subgenre }
     anilist_search:
-      tag: outdoor
+      tag: outdoor activities
       sort_by: score
       limit: 500
     file_poster: config/posters/Outdoor Anime.png
@@ -1152,7 +1152,7 @@ collections:
   Pirate:
     template: { name: Subgenre }
     anilist_search:
-      tag: Pirates
+      tag: pirates
       sort_by: score
       limit: 500
     file_poster: config/posters/Pirate Anime.png
