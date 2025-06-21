@@ -14,14 +14,14 @@ collections:
   Meilleurs films récents 🤩:
     template: { name: Movie }
     sort_title: "!_01"
-    summary: Films non-vus, sortis au cours des 6 derniers mois et avec une note IMDb supérieure à 7.
+    summary: Films non-vus, sortis au cours des 12 derniers mois et avec une note IMDb supérieure à 7.
     file_poster: config/posters/IMDb Best Recent.png
     smart_filter:
       sort_by: release.desc
       validate: false
       all:
         audience_rating.gte: 7.0
-        release: 180
+        release: 365
         unplayed: true
         
   Films à voir ⭐:
