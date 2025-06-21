@@ -14,11 +14,37 @@ libraries:
     - file: config/3-Movies_Specials.yml
     - file: config/3-Movies_Years.yml
     operations:
-    - delete_collections:
-        # configured: false
-        managed: true
+    # - delete_collections:
+        # # configured: false
+        # managed: true
     - mass_genre_update:
-      - unlock
+      # - unlock
+      - tmdb
+      - imdb
+    - mass_audience_rating_update: imdb
+    overlay_files:
+    - file: config/3.1-Movies_Overlays_4K.yml
+    - file: config/3.1-Movies_Overlays_Rating.yml
+      # - file: config/3.1-Movies_Overlays_Subtitle.yml
+    - file: config/3.1-Movies_Overlays_Top.yml
+  Films enfants:
+    collection_files:
+    - file: config/3-Movies_General.yml
+    - file: config/3-Movies_Separators.yml
+    - file: config/3-Movies_Holidays
+    - file: config/3-Movies_Studios.yml
+    # - file: config/3-Movies_Genres.yml
+    # - file: config/3-Movies_Awards.yml
+    # - file: config/3-Movies_People.yml
+    # - file: config/3-Movies_Franchises.yml
+    # - file: config/3-Movies_Specials.yml
+    # - file: config/3-Movies_Years.yml
+    operations:
+    # - delete_collections:
+    #     # configured: false
+    #     managed: true
+    - mass_genre_update:
+      # - unlock
       - tmdb
       - imdb
     - mass_audience_rating_update: imdb
@@ -38,11 +64,35 @@ libraries:
     - file: config/7-TV_Years.yml
     - file: config/7-TV_Specials.yml
     operations:
-    - delete_collections:
-        # configured: false
-        managed: true
+    # - delete_collections:
+        # # configured: false
+        # managed: true
     - mass_genre_update:
-      - unlock
+      # - unlock
+      - tmdb
+      - imdb
+    - mass_audience_rating_update: imdb
+    overlay_files:
+    - file: config/7.1-TV_Overlays_4K.yml
+    - file: config/7.1-TV_Overlays_Canceled.yml
+    - file: config/7.1-TV_Overlays_Rating.yml
+    - file: config/7.1-TV_Overlays_Top.yml
+  Séries TV enfants:
+    collection_files:
+    - file: config/7-TV_General.yml
+    - file: config/7-TV_Separators.yml
+    - file: config/7-TV_Networks.yml
+    # - file: config/7-TV_Genres.yml
+    # - file: config/7-TV_Awards.yml
+    # - file: config/7-TV_Franchises.yml
+    # - file: config/7-TV_Years.yml
+    # - file: config/7-TV_Specials.yml
+    operations:
+    # - delete_collections:
+    #     # configured: false
+    #     managed: true
+    - mass_genre_update:
+      # - unlock
       - tmdb
       - imdb
     - mass_audience_rating_update: imdb
@@ -88,7 +138,6 @@ settings:
   ignore_ids:
   ignore_imdb_ids:
   item_refresh_delay: 0
-  overlay_artwork_quality: 90
   playlist_sync_to_users: all
   playlist_exclude_users:
   playlist_report: false
@@ -96,7 +145,8 @@ settings:
   custom_repo:
   check_nightly: false
   overlay_artwork_filetype: jpg
-  overlay_artwork_quality:
+  overlay_artwork_quality: 90
+  show_unfiltered: false
 webhooks: # Can be individually specified per library as well
   error:
   version:
