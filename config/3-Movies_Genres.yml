@@ -890,7 +890,6 @@ collections:
     visible_shared: weekly(friday)
     limit: 300
     trakt_list:
-      - https://trakt.tv/users/mattgriff/lists/period-pieces?sort=popularity,asc
       - https://trakt.tv/users/kingkearney/lists/period-pieces?sort=rank,asc
       - https://trakt.tv/users/kingkearney/lists/20th-century-period-pieces?sort=random,asc
       - https://trakt.tv/users/majeed_pk/lists/the-best-costume-dramas?sort=rank,asc
@@ -1009,8 +1008,20 @@ collections:
       - https://letterboxd.com/_jacobhayden_/list/samurai/
       - https://letterboxd.com/dsuter8/list/samurai/
 
+  Shark:
+    template: { name: Subgenre False }
+    summary: Movies featuring sharks take many forms, usually set in the ocean, and often blend suspense, action, and survival as humans face off against these powerful predators.
+    file_poster: config/posters/Shark.png
+    visible_shared: monthly(20)
+    trakt_list:
+      - https://trakt.tv/users/warren-befbf124-1c71-4d68-a603-2edfbc6e04c4/lists/killer-sharks?sort=rank,asc
+      - https://trakt.tv/users/bwittgen/lists/shark-movies?sort=rank,asc
+      - https://trakt.tv/users/ziggy73701/lists/shark-movies?sort=title,asc
+      - https://trakt.tv/users/mgm202020/lists/shark-movies?sort=rank,asc
+      - https://trakt.tv/users/mrspacegoose/lists/shark-week?sort=added,asc
+
   Silent Era:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre False }
     summary: A silent film is a film with no synchronized recorded sound (or more generally, no audible dialogue). Though silent films convey narrative and emotion visually, various plot elements (such as a setting or era) or key lines of dialogue may, when necessary, be conveyed by the use of title cards.
     file_poster: config/posters/Silent Era.png
     trakt_list:
@@ -1086,7 +1097,6 @@ collections:
     trakt_list:
       - https://trakt.tv/users/vdimaio/lists/spys?sort=released,desc
       - https://trakt.tv/users/pprojecttv/lists/spy?sort=my_rating,asc
-      - https://trakt.tv/users/mattgriff/lists/spy-vs-spy?sort=rank,asc
       - https://trakt.tv/users/marcelocastanheira/lists/spy-vs-spy?sort=released,asc
 
   Stop Motion:

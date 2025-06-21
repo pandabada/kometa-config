@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 ######################################################
-#                   SPECIALS 17.0                    #
+#                   SPECIALS 17.5                    #
 ######################################################
 
 templates:
@@ -115,6 +115,18 @@ collections:
     trakt_list:
       - https://trakt.tv/users/andrewh4352/lists/top-shows-long-running?sort=rank,asc
       - https://trakt.tv/users/copeland1994/lists/all-time-series-rankings-long-running-shows-only?sort=rank,asc
+
+  Newly Released: # Released within last 2 months
+    template: { name: Special Smart }
+    file_poster: config/posters/Newly Released.png
+    summary: Shows recently released in the past 2 months.
+    visible_shared: monthly(27)
+    sonarr_add_missing: false
+    sonarr_add_existing: false
+    sonarr_monitor_existing: false
+    trakt_list:
+      - https://trakt.tv/users/jhn322/lists/upcoming-tv?sort=rank,asc
+      - https://trakt.tv/users/jhn322/lists/upcoming-documentary?sort=rank,asc
 
   Vues: # Informations recueillies à partir de Tautulli
     template: { name: Special Smart Other }
