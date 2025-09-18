@@ -330,7 +330,7 @@ collections:
     file_poster: config/posters/Assassin.png
     limit: 300
     trakt_list:
-      - https://trakt.tv/users/pprojecttv/lists/assassin?sort=my_rating,asc
+      - https://trakt.tv/users/majeed_pk/lists/hitmen-assassins-killers-for-hire?sort=rank,asc
       - https://trakt.tv/users/archervert/lists/female-assassins?sort=rank,asc
       - https://trakt.tv/users/29zombies/lists/assassin-hitman-spy?sort=title,asc
 
@@ -768,7 +768,6 @@ collections:
     file_poster: config/posters/Mythology.png
     visible_shared: monthly(17)
     trakt_list:
-      - https://trakt.tv/users/johnnysp4rkles/lists/greek-roman-mythology?sort=title,asc
       - https://trakt.tv/users/jagster101/lists/mythological?sort=rank,asc
       - https://trakt.tv/users/187rocky/lists/greek-mythology?sort=rank,asc
 
@@ -872,7 +871,6 @@ collections:
     limit: 300
     trakt_list:
       - https://trakt.tv/users/rizreflects/lists/philosophical?sort=rank,asc
-      - https://trakt.tv/users/naziman/lists/best-philosophical-films?sort=released,asc
       - https://trakt.tv/users/steveach/lists/philosophical?sort=votes,asc
       - https://trakt.tv/users/majeed_pk/lists/best-philosophical-films
 
@@ -1025,7 +1023,7 @@ collections:
     summary: A silent film is a film with no synchronized recorded sound (or more generally, no audible dialogue). Though silent films convey narrative and emotion visually, various plot elements (such as a setting or era) or key lines of dialogue may, when necessary, be conveyed by the use of title cards.
     file_poster: config/posters/Silent Era.png
     trakt_list:
-      - https://trakt.tv/users/maxwelldeux/lists/silent-era-s-the-top-300-silent-era-films?sort=rank,asc
+      - https://trakt.tv/users/i-really-am-maxwell-gmail-com/lists/silent-era-s-the-top-300-silent-era-films?sort=rank,asc
       - https://trakt.tv/users/kingkearney/lists/silent-films-22573340?sort=random,asc
 
   Survival:
@@ -1096,7 +1094,7 @@ collections:
     visible_shared: monthly(8)
     trakt_list:
       - https://trakt.tv/users/vdimaio/lists/spys?sort=released,desc
-      - https://trakt.tv/users/pprojecttv/lists/spy?sort=my_rating,asc
+      - https://trakt.tv/users/siskourso/lists/spy-movies?sort=rank,asc
       - https://trakt.tv/users/marcelocastanheira/lists/spy-vs-spy?sort=released,asc
 
   Stop Motion:
