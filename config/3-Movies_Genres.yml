@@ -1019,7 +1019,7 @@ collections:
       - https://trakt.tv/users/mrspacegoose/lists/shark-week?sort=added,asc
 
   Silent Era:
-    template: { name: Subgenre False }
+    template: { name: Subgenre Other }
     summary: A silent film is a film with no synchronized recorded sound (or more generally, no audible dialogue). Though silent films convey narrative and emotion visually, various plot elements (such as a setting or era) or key lines of dialogue may, when necessary, be conveyed by the use of title cards.
     file_poster: config/posters/Silent Era.png
     trakt_list:
