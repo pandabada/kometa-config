@@ -829,14 +829,6 @@ collections:
       all:
         title: don't breathe
 
-  Downton Abbey:
-    template: { name: Franchise }
-    summary: Downton Abbey is a British historical drama television series set in the early 20th century, created and co-written by Julian Fellowes.
-    file_poster: config/posters/Downton Abbey.png
-    plex_search:
-      all:
-        title: downton abbey
-
   Dumb and Dumber:
     template: { name: Franchise }
     summary: Dumb and Dumber is a series of comedy films starring Jim Carrey and Jeff Daniels. The films have been released from 1994 to 2014.
@@ -3150,6 +3142,9 @@ collections:
     trakt_list:
       - https://trakt.tv/users/haiderales/lists/conjuring-universe?sort=rank,asc
       - https://trakt.tv/users/ximphrambugle/lists/conjuring-universe?sort=rank,asc
+    plex_search:
+      all:
+        title: the conjuring
 
   DC Animated Universe:
     template: { name: Franchise }
