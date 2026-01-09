@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 ######################################################
-#                  GENRES 20.5                       #
+#                  GENRES 23.0                       #
 ######################################################
 
 templates:
@@ -26,36 +26,39 @@ templates:
     sort_title: "!!!!!_<<collection_name>>"
     sync_mode: sync
 
-# Creates collections for genres with a limit of 400
+# Creates collections for genres with a limit of 300
 collections:
   Action:
     template: { name: Genre }
+    visible_library: weekly(monday|wednesday)
     visible_shared: weekly(monday)
     file_poster: config/posters/Action.png
     summary: "Le film d'action est un genre où l'action physique prend le pas sur le récit. Le film présente souvent un mouvement et une action continus, incluant des cascades, des poursuites, des combats, des batailles et des courses. L'histoire tourne généralement autour d'un héros qui a un objectif, mais qui doit faire face à des obstacles incroyables pour l'atteindre."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.4
         genre: action
 
   Aventure:
     template: { name: Genre }
+    visible_library: weekly(tuesday|friday)
     visible_shared: weekly(tuesday)
     file_poster: config/posters/Adventure.png
     summary: "Le film d'aventure est un genre qui tourne autour des conquêtes et des explorations d'un protagoniste. Le but de la conquête peut être de retrouver une personne ou un trésor, mais souvent, l'accent est mis simplement sur la quête de l'inconnu. Ces films se déroulent généralement dans des lieux exotiques et s'appuient sur des mythes historiques. Les films d'aventure intègrent des énigmes palpitantes et des obstacles complexes que le protagoniste doit surmonter pour atteindre son objectif final."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.0
         genre: adventure
 
   Animation:
     template: { name: Genre }
+    visible_library: weekly(wednesday|friday)
     visible_shared: monthly(2)
     summary: "Tous les films d'animation et de dessin animé."
     file_poster: config/posters/Animation.png
@@ -69,6 +72,7 @@ collections:
 
   Anime:
     template: { name: Genre }
+    visible_library: weekly(saturday)
     visible_shared: monthly(3)
     summary: "Tous les films d'animation japonaise."
     file_poster: config/posters/Anime.png
@@ -81,241 +85,259 @@ collections:
 
   Biopic:
     template: { name: Genre }
+    visible_library: weekly(friday|sunday)
     visible_shared: weekly(sunday)
     file_poster: config/posters/Biopic.png
     summary: "Un biographique ou biopic est un film qui dramatise la vie d'une personne ou d'un groupe de personnes non fictives ou basées sur des faits historiques. Ces films montrent la vie d'une personnalité historique, et le vrai nom du personnage principal est utilisé."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         genre: biography
 
   Comédie:
     template: { name: Genre }
+    visible_library: weekly(saturday|monday)
     visible_shared: weekly(monday)
     file_poster: config/posters/Comedy.png
     summary: "La comédie est un genre de film qui utilise l'humour comme moteur. L'objectif d'un film comique est de susciter le rire du public à travers des histoires et des personnages divertissants. Bien que le film comique puisse aborder des sujets sérieux, la plupart se terminent sur une note positive. Les films comiques ont tendance à devenir des sous-genres hybrides, car l'humour peut être intégré dans de nombreux autres genres. Les comédies ont plus de chances que d'autres films de s'appuyer sur le succès et la popularité d'une star individuelle."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.0
         genre: comedy
 
   Crime:
     template: { name: Genre }
+    visible_library: weekly(sunday|tuesday)
     visible_shared: weekly(sunday)
     file_poster: config/posters/Crime.png
     summary: "Le film criminel est un genre qui tourne autour des actions d'un génie du crime. Un film criminel se concentre souvent sur le criminel lui-même, chroniquant sa montée et sa chute. Certains films criminels suivent l'histoire de la victime du criminel, tandis que d'autres suivent la personne qui poursuit le criminel. Ce genre tend à être rythmé et empreint de mystère, ce mystère pouvant venir de l'intrigue ou des personnages eux-mêmes."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.6
         genre: crime
 
   Documentaire:
     template: { name: Genre }
+    visible_library: weekly(monday|wednesday)
     summary: "Certains des films documentaires les plus marquants et acclamés par la critique jamais réalisés."
     file_poster: config/posters/Documentary.png
     visible_shared: monthly(1)
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         genre: documentary
 
   Drame:
     template: { name: Genre }
+    visible_library: weekly(tuesday|friday)
     visible_shared: weekly(monday)
     file_poster: config/posters/Drama.png
     summary: "Le film dramatique est un genre qui s'appuie sur le développement émotionnel et relationnel de personnages réalistes. Bien que le film dramatique repose fortement sur ce type de développement, les thèmes dramatiques jouent également un grand rôle dans l'intrigue. Souvent, ces thèmes dramatiques sont tirés de problèmes intenses de la vie réelle. Que les héros ou héroïnes affrontent un conflit extérieur ou un conflit intérieur, le film dramatique vise à raconter une histoire honnête des luttes humaines."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.7
         genre: drama
 
   Familial:
     template: { name: Genre }
+    visible_library: weekly(wednesday|friday)
     visible_shared: weekly(tuesday)
     file_poster: config/posters/Family.png
     summary: "Le film familial est un genre qui contient un contenu approprié pour les jeunes spectateurs. Le film familial vise à séduire non seulement les enfants, mais aussi un large éventail d'âges. Bien que l'intrigue puisse séduire un public plus jeune, il existe des éléments du film qui sont destinés aux adultes, comme des blagues et un humour subtil. Ce genre peut s'inscrire dans de nombreux autres genres, y compris la comédie, l'aventure, la fantaisie et le film d'animation."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.1
         genre: family
 
   Fantastique:
     template: { name: Genre }
+    visible_library: weekly(thursday|saturday)
     visible_shared: weekly(saturday)
     file_poster: config/posters/Fantasy.png
     summary: "Le film fantastique est un genre qui incorpore des thèmes imaginatifs et fantastiques. Ces thèmes impliquent généralement de la magie, des événements surnaturels ou des mondes fantastiques. Bien qu'il s'agisse d'un genre distinct, ces films peuvent chevaucher les genres de l'horreur et de la science-fiction. Contrairement à la science-fiction, un film de fantasy n'a pas besoin d'être ancré dans des faits. Cet élément permet au public d'être transporté dans un monde nouveau et unique. Souvent, ces films mettent en scène un héros ordinaire dans une situation extraordinaire."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.4
         genre: fantasy
 
   Histoire:
     template: { name: Genre }
+    visible_library: weekly(friday|sunday)
     visible_shared: weekly(thursday)
     file_poster: config/posters/History.png
     summary: "Le film historique est un genre qui prend des événements et des personnes historiques et les interprète à grande échelle. L'exactitude historique n'est pas l'objectif principal, mais plutôt le récit d'une histoire grandiose. Le drame d'un film historique est souvent accentué par une bande sonore sweeping, des costumes luxueux et une haute valeur de production."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.8
         genre: history
 
   Horreur:
     template: { name: Genre }
+    visible_library: weekly(saturday|monday)
     visible_shared: weekly(wednesday)
     file_poster: config/posters/Horror.png
     summary: "Le film d'horreur est un genre qui vise à créer un sentiment de peur, de panique, d'alarme et d'effroi chez le public. Ces films sont souvent perturbants et s'appuient sur la peur du public en représentant ses pires craintes et cauchemars. Les films d'horreur se concentrent généralement sur l'arrivée d'une force, d'une personne ou d'un événement maléfique. Beaucoup de films d'horreur incluent des créatures mythiques telles que des fantômes, des vampires et des zombies. Traditionnellement, les films d'horreur intègrent une grande quantité de violence et de gore dans l'intrigue. Bien qu'il ait son propre style, le film d'horreur chevauche souvent les genres de la fantasy, du thriller et de la science-fiction."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 5.5
         genre: horror
 
   Arts martiaux:
     template: { name: Genre }
-    visible_shared: monthly(20)
+    visible_library: weekly(tuesday)
     file_poster: config/posters/Martial Art.png
     summary: "Le film d'arts martiaux est un sous-genre de films d'action qui présente de nombreux combats d'arts martiaux entre les personnages. Ces combats constituent généralement l'attrait principal et la valeur divertissante des films, et sont souvent un moyen de narration ainsi que d'expression et de développement des personnages. Les arts martiaux sont fréquemment mis en avant dans des scènes d'entraînement et d'autres séquences en plus des combats. Les films d'arts martiaux incluent souvent d'autres types d'action, tels que le combat à mains nues, les cascades, les poursuites et les fusillades."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         genre: martial arts
 
   Comédie musicale:
     template: { name: Genre }
+    visible_library: weekly(wednesday)
     visible_shared: monthly(26)
     file_poster: config/posters/Musical.png
     summary: "Une comédie musicale intègre des performances vocales et de danse dans la narration du film. Les chansons d'un film peuvent être utilisées pour faire avancer l'histoire ou simplement améliorer l'expérience du public. Ces films sont souvent réalisés à grande échelle et incluent des costumes et des décors somptueux. Les comédies musicales traditionnelles se concentrent sur une star bien connue, célèbre pour ses talents de danse ou de chant (par exemple, Fred Astaire, Gene Kelly, Judy Garland). Ces films explorent des concepts tels que l'amour et le succès, permettant au public de s'évader de la réalité."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         genre: musical
 
   Mystère:
     template: { name: Genre }
+    visible_library: weekly(tuesday|saturday)
     visible_shared: weekly(monday)
     file_poster: config/posters/Mystery.png
     summary: "Un film mystère se concentre sur une personne d'autorité, généralement un détective, qui essaie de résoudre un crime mystérieux. Le protagoniste principal utilise des indices, des enquêtes et un raisonnement logique. L'élément le plus important dans ces films est un sentiment de suspense du type 'qui a fait ça ?', généralement créé par des indices visuels et des rebondissements inattendus dans l'intrigue."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.0
         genre: mystery
 
   Romance:
     template: { name: Genre }
+    visible_library: weekly(wednesday|friday)
     visible_shared: monthly(29)
     file_poster: config/posters/Romance.png
     summary: "Le film romantique peut être défini comme un genre où l'intrigue tourne autour de l'amour entre deux protagonistes. Ce genre explore généralement un thème lié à des problématiques amoureuses, y compris, mais sans s'y limiter, l'amour au premier regard, l'amour interdit, les triangles amoureux et l'amour sacrificiel. Le ton du film romantique peut varier considérablement. Que la fin soit heureuse ou tragique, le film romantique vise à susciter de fortes émotions chez le public."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.4
         genre: romance
 
   Science-Fiction:
     template: { name: Genre }
+    visible_library: weekly(thursday|saturday)
     visible_shared: weekly(tuesday)
     file_poster: config/posters/Sci-Fi.png
     summary: "Le film de science-fiction (Sci-Fi) est un genre qui intègre des thèmes hypothétiques basés sur la science dans l'intrigue du film. Souvent, ce genre incorpore des éléments et des technologies futuristes pour explorer des problématiques sociales, politiques et philosophiques. Le film est généralement situé dans le futur, que ce soit sur Terre ou dans l'espace. Traditionnellement, un film de science-fiction met en scène des héros, des méchants, des lieux inexplorés, des quêtes fantastiques et une technologie avancée."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.5
         genre: science fiction
 
   Sport:
     template: { name: Genre }
+    visible_library: weekly(friday|sunday)
     visible_shared: weekly(thursday)
     file_poster: config/posters/Sport.png
     summary: "Le film sportif tourne autour d'un cadre sportif, d'un événement ou d'un athlète. Souvent, ces films se concentrent sur un événement sportif unique qui revêt une grande importance. Les films de sport ont traditionnellement une intrigue simple qui se construit jusqu'à cet événement sportif significatif. Ce genre est connu pour intégrer des techniques cinématographiques afin de créer de l'anticipation et de l'intensité. Les films sportifs couvrent une large gamme de sous-genres, des comédies aux drames, et sont plus susceptibles que d'autres genres d'être basés sur des événements réels."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         genre: sport
 
   Thriller:
     template: { name: Genre }
+    visible_library: weekly(saturday|monday)
     visible_shared: weekly(friday)
     file_poster: config/posters/Thriller.png
     summary: "Le film thriller est un genre qui tourne autour de l'anticipation et du suspense. L'objectif des thrillers est de garder le public en alerte et sur le bord de son siège. Le protagoniste de ces films est confronté à un problème – une fuite, une mission ou un mystère. Peu importe le sous-genre auquel appartient un film thriller, il mettra en avant le danger auquel le protagoniste fait face. La tension liée au problème principal est cultivée tout au long du film et mène à un climax très stressant."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.3
         genre: thriller
 
   Téléfilm:
     template: { name: Genre }
+    visible_library: weekly(sunday)
     file_poster: config/posters/TV Movie.png
     summary: "Les téléfilms sont un genre unique de films diffusés à la télévision, conçus pour être diffusés sur des chaînes de télévision. Ces films ont généralement une durée plus courte par rapport aux longs métrages, variant souvent d'une à deux heures."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.4
         genre: TV Movie
 
   Guerre:
     template: { name: Genre }
+    visible_library: weekly(monday|wednesday)
     visible_shared: weekly(wednesday)
     file_poster: config/posters/War.png
     summary: "Le film de guerre est un genre qui examine la réalité de la guerre à grande échelle. Il se concentre souvent sur des batailles emblématiques ainsi que sur des problématiques politiques liées à la guerre. Ce genre met généralement en avant un personnage principal et son équipe de soutien, offrant au public un aperçu brut de la réalité de la guerre."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         audience_rating.gte: 6.4
         genre: war
 
   Western:
     template: { name: Genre }
+    visible_library: weekly(tuesday|saturday)
     visible_shared: weekly(monday)
     file_poster: config/posters/Western.png
     summary: "Les westerns soulignent souvent la dureté et l'isolement de la nature sauvage, et situent fréquemment l'action dans un paysage aride et désolé. Les films western ont généralement des décors spécifiques, tels que des ranchs isolés, des villages amérindiens ou de petites villes de front pionnier avec un saloon."
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         genre: western
 
@@ -326,6 +348,7 @@ collections:
   # Creates more unique genre collections based on certain themes mostly from Letterboxd
   Assassin:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday|friday)
     summary: An assassin is a person who is hired to kill someone, usually for political, religious, or monetary reasons. The term "assassin" is derived from the word "hashshashin," which was used to describe a secretive and deadly group of Islamic militants who operated in the Middle East during the 11th century.
     file_poster: config/posters/Assassin.png
     limit: 300
@@ -335,6 +358,7 @@ collections:
 
   Alien:
     template: { name: Subgenre }
+    visible_library: weekly(thursday|saturday)
     summary: Movies containing aliens in them in some form.
     file_poster: config/posters/Alien.png
     visible_shared: monthly(22)
@@ -346,14 +370,15 @@ collections:
 
   Anxiety:
     template: { name: Subgenre }
+    visible_library: weekly(friday|sunday)
     summary: Movies that leave you visibly shaken. Masterclasses in building tension that make you feel truly anxious for whatever is happening on screen.
     file_poster: config/posters/Anxiety.png
-    visible_shared: monthly(2)
     limit: 300
     letterboxd_list: https://letterboxd.com/juliendonkeyboi/list/anxiety-inducing-cinema/
 
   Artificial Intelligence:
     template: { name: Subgenre }
+    visible_library: weekly(saturday|monday)
     summary: Artificial Intelligence (AI) refers to the development of computer systems that can perform tasks that would typically require human intelligence, such as understanding natural language, recognizing images and speech, making decisions, and solving complex problems. AI systems are designed to simulate cognitive abilities, such as reasoning, learning, perception, and self-correction.
     file_poster: config/posters/Artificial Intelligence.png
     visible_shared: monthly(2)
@@ -372,7 +397,8 @@ collections:
       - https://letterboxd.com/ak_hmoney/list/anti-hero/
 
   Alternate History:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(sunday|tuesday)
     summary: Alternate history, also known as alternative history or AH, is a genre of fiction that explores the consequences of historical events if they had happened differently.
     file_poster: config/posters/Alternate History.png
     letterboxd_list:
@@ -387,6 +413,7 @@ collections:
 
   Based on a True Story:
     template: { name: Subgenre }
+    visible_library: weekly(sunday|tuesday)
     summary: Movies based on true events.
     file_poster: config/posters/Based on a True Story.png
     visible_shared: weekly(saturday)
@@ -399,11 +426,11 @@ collections:
     template: { name: Subgenre Other }
     summary: Hindi cinema, popularly known as Bollywood and formerly as Bombay cinema, refers to the film industry based in Mumbai, engaged in production of motion pictures in Hindi language.
     file_poster: config/posters/Bollywood.png
-    visible_shared: monthly(18)
     letterboxd_list: https://letterboxd.com/moviemavengal/list/bollywood/
 
   Book Adaption:
     template: { name: Subgenre }
+    visible_library: weekly(monday|wednesday)
     summary: Movies based on book novels.
     file_poster: config/posters/Book Adaption.png
     visible_shared: monthly(23)
@@ -423,6 +450,7 @@ collections:
 
   Chick Flick:
     template: { name: Subgenre }
+    visible_library: weekly(thursday)
     summary: Get in touch with your feminine side.
     file_poster: config/posters/Chick Flick.png
     visible_shared: monthly(15)
@@ -433,6 +461,7 @@ collections:
 
   Cyberpunk:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday|friday)
     summary: Cyberpunk is a subgenre of science fiction that emerged in the 1980s. It typically features a dystopian future society that is heavily influenced by advanced technology, particularly in the areas of cybernetics, virtual reality, and artificial intelligence. The stories often explore themes such as corporate greed, government corruption, social decay, and the blurring of lines between humans and machines.
     file_poster: config/posters/Cyberpunk.png
     visible_shared: monthly(5)
@@ -442,9 +471,10 @@ collections:
 
   Con-Artist:
     template: { name: Subgenre }
+    visible_library: weekly(thursday|saturday)
     summary: A con artist is someone who uses deception and manipulation to gain the trust of others and then exploit them for personal gain. Con artists often have a charming and charismatic personality, which allows them to convince their victims to trust them.
     file_poster: config/posters/Con-Artist.png
-    visible_shared: monthly(7)
+    visible_shared: monthly(31)
     limit: 300
     letterboxd_list: https://letterboxd.com/shrill_falsetto/list/con-artistry-films-to-watch-or-rewatch/
 
@@ -459,6 +489,7 @@ collections:
 
   Comedy Horror:
     template: { name: Subgenre }
+    visible_library: weekly(friday|sunday)
     summary: Comedy horror is a genre of fiction that combines elements of comedy and horror. It typically features humorous situations and characters, often in a dark or macabre setting. The humor may be derived from parodying horror tropes, poking fun at genre conventions, or making light of scary situations.
     file_poster: config/posters/Comedy Horror.png
     visible_shared: monthly(12)
@@ -469,15 +500,16 @@ collections:
 
   Comfort:
     template: { name: Subgenre }
+    visible_library: weekly(saturday|monday)
     summary: For when youre feeling like everything is a bit too much.
     file_poster: config/posters/Comfort.png
-    visible_shared: monthly(20)
     letterboxd_list:
       - https://letterboxd.com/cinemaparadisa/list/comfort-movies/
       - https://letterboxd.com/maiders/list/comfort-movies/
 
   Coming of Age:
     template: { name: Subgenre }
+    visible_library: weekly(sunday|tuesday)
     summary: Coming-of-age films focus on the psychological and moral growth or transition of a protagonist from youth to adulthood.
     file_poster: config/posters/Coming of Age.png
     visible_shared: monthly(24)
@@ -485,6 +517,7 @@ collections:
 
   Comic Book:
     template: { name: Subgenre }
+    visible_library: weekly(monday|wednesday)
     summary: Movies based on comic books.
     file_poster: config/posters/Comic Book.png
     visible_shared: monthly(9)
@@ -495,6 +528,7 @@ collections:
 
   Conspiracy:
     template: { name: Subgenre }
+    visible_library: weekly(tuesday|saturday)
     summary: The protagonists of conspiracy movies are often journalists or amateur investigators who find themselves (often inadvertently) pulling on a small thread which unravels a vast conspiracy that ultimately goes "all the way to the top".
     file_poster: config/posters/Conspiracy.png
     visible_shared: weekly(wednesday)
@@ -503,7 +537,8 @@ collections:
       - https://letterboxd.com/rybrow/list/conspiracy/
 
   Courtroom:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(wednesday|saturday)
     summary: Showcasing brainy lawyers, gripping cases, and complex plotlines, these are the best legal dramas to watch
     file_poster: config/posters/Courtroom.png
     visible_shared: weekly(wednesday)
@@ -524,6 +559,7 @@ collections:
 
   Dark Comedy:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday|sunday)
     summary: Dark comedy is a style of comedy that makes light of subject matter that is generally considered taboo, particularly subjects that are normally considered serious or painful to discuss.
     file_poster: config/posters/Dark Comedy.png
     visible_shared: weekly(tuesday)
@@ -531,16 +567,18 @@ collections:
     letterboxd_list: https://letterboxd.com/zynys/list/dark-comedy/
 
   Dark Fantasy:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(monday|friday)
     summary: The genre of dark fantasy is a type of speculative fiction that combines elements of horror and fantasy. Dark fantasy stories typically feature a dark or ominous tone and explore themes of death, evil, and the supernatural.
     file_poster: config/posters/Dark Fantasy.png
     visible_shared: monthly(8)
     letterboxd_list:
       - https://letterboxd.com/abbyfrancesca/list/dark-fantasy/
-      - https://letterboxd.com/newarchive/list/dark-fantasy/
+      - https://letterboxd.com/binbats/list/dark-fantasy/
 
   Deep Sea:
     template: { name: Subgenre }
+    visible_library: weekly(thursday|saturday)
     summary: Deep out at sea or below sea.
     file_poster: config/posters/Deep Sea.png
     visible_shared: monthly(25)
@@ -551,6 +589,7 @@ collections:
 
   Disaster:
     template: { name: Subgenre }
+    visible_library: weekly(friday|sunday)
     summary: A disaster film or disaster movie is a film genre that has an impending or ongoing disaster as its subject and primary plot device. Such disasters may include natural disasters, accidents, military/terrorist attacks or global catastrophes.
     file_poster: config/posters/Disaster.png
     visible_shared: weekly(thursday)
@@ -576,7 +615,8 @@ collections:
   #         - paws of
 
   Drug:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(thursday|sunday)
     summary: Movies involving drugs in any capacity.
     file_poster: config/posters/Drug.png
     visible_shared: weekly(sunday)
@@ -585,7 +625,8 @@ collections:
       - https://letterboxd.com/jcs_ginger/list/favorite-drug-movies/
 
   Dystopian:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(friday|sunday)
     summary: A dystopia, or cacotopia, is a speculated ideal society with minimal crime, violence and poverty that is undesirable or frightening.
     file_poster: config/posters/Dystopian.png
     visible_shared: weekly(friday)
@@ -596,6 +637,7 @@ collections:
 
   Fairytale:
     template: { name: Subgenre }
+    visible_library: weekly(saturday|monday)
     summary: The genre of fairytales is a type of story that typically involves magical elements, mythical creatures, and fantastical settings. Fairytales often follow a simple structure, with a hero or heroine facing a challenge or obstacle and overcoming it with the help of a magical object, a wise mentor, or their own bravery and resourcefulness.
     file_poster: config/posters/Fairytale.png
     visible_shared: monthly(11)
@@ -607,18 +649,19 @@ collections:
 
   Film Noir:
     template: { name: Subgenre Other }
+    visible_library: weekly(saturday)
     summary: Film noir is a genre of films that emerged in the United States during the 1940s and 1950s. The term "film noir" was coined by French critics to describe a style of filmmaking that was characterized by its dark, moody atmosphere and cynical view of the world.
     file_poster: config/posters/Film Noir.png
-    visible_shared: monthly(31)
     smart_filter:
       sort_by: random
-      limit: 400
-      #validate: false
+      limit: 300
+      validate: false
       all:
         genre: film-noir
 
   Gangster:
     template: { name: Subgenre }
+    visible_library: weekly(sunday|tuesday)
     summary: Gangster film is a sub-genre of crime films that center on organized crime or the mafia. Often the plot revolves around the rise and fall of an organized crime leader. Many Gangster films explore the destructive nature of organized crime, while others attempt to show the humanity of the individual characters.
     file_poster: config/posters/Gangster.png
     visible_shared: weekly(sunday)
@@ -628,6 +671,7 @@ collections:
 
   Goth:
     template: { name: Subgenre }
+    visible_library: weekly(monday|wednesday)
     summary: The goth genre is a cultural movement that emerged in the late 1970s and early 1980s in the United Kingdom. It is characterized by its dark and melancholic aesthetic, which includes black clothing, heavy makeup, and an interest in themes related to death, decay, and the macabre.
     file_poster: config/posters/Goth.png
     visible_shared: monthly(13)
@@ -636,7 +680,8 @@ collections:
       - https://letterboxd.com/mayaramry/list/goth/
 
   Gore:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(monday|thursday)
     summary: The gore genre is a type of horror entertainment that focuses on graphic and explicit depictions of violence, bloodshed, and bodily mutilation. It often features extreme and disturbing imagery, such as dismemberment, torture, and mutilation, with the intent of shocking and repulsing the audience.
     file_poster: config/posters/Gore.png
     visible_shared: monthly(14)
@@ -646,15 +691,17 @@ collections:
 
   Ghost:
     template: { name: Subgenre }
+    visible_library: weekly(tuesday|thursday)
     summary: A ghost is a supernatural entity that is believed to be the spirit or soul of a deceased person. Ghosts are often depicted as apparitions or images of the deceased, and they are said to haunt specific locations or objects.
     file_poster: config/posters/Ghost.png
     visible_shared: monthly(16)
     letterboxd_list:
-      - https://letterboxd.com/soledreams/list/ghost/
+      - https://letterboxd.com/canbulgulu/list/ghost/
       - https://letterboxd.com/pac28/list/ghost/
 
   Hacking:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(wednesday|saturday)
     summary: Hacker, a computer expert with advanced technical knowledge. Hacker culture, activity within the computer programmer subculture.
     file_poster: config/posters/Hacking.png
     visible_shared: monthly(3)
@@ -664,6 +711,7 @@ collections:
 
   Heist:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday|friday)
     summary: Movies detailing the preparation for, execution of and aftermath of a (well-)planned and often daring heist.
     file_poster: config/posters/Heist.png
     visible_shared: weekly(friday)
@@ -673,13 +721,14 @@ collections:
 
   Impactful:
     template: { name: Subgenre }
+    visible_library: weekly(thursday|saturday)
     summary: These movies is a cinematic alchemists, wielding narratives that intricately blend emotions, intellect, and visuals to induce a transformative journey for the viewer. By the final frame, these films leave an indelible mark, reshaping perspectives and imprinting a lasting impact on the audience's psyche.
     file_poster: config/posters/Impactful.png
-    visible_shared: monthly(11)
     letterboxd_list: https://letterboxd.com/andredenervaux/list/youre-not-the-same-person-once-the-film-has/
 
   Indie:
     template: { name: Subgenre }
+    visible_library: weekly(friday|sunday)
     summary: An independent film or indie movie is a feature film or short film that is produced outside the major film studio system, in addition to being produced and distributed by independent entertainment companies.
     file_poster: config/posters/Indie.png
     visible_shared: monthly(21)
@@ -696,6 +745,7 @@ collections:
 
   Lynchian:
     template: { name: Subgenre }
+    visible_library: weekly(saturday|monday)
     summary: Characterized by the surreal, unsettling, and often dreamlike qualities found in the works of filmmaker David Lynch. Lynchian films typically feature bizarre and disturbing imagery, nonlinear narratives, and a blending of the mundane with the macabre, creating a unique and disorienting viewing experience. Rest in peace, David Lynch 1946-2025.
     file_poster: config/posters/Lynchian.png
     visible_shared: monthly(20)
@@ -714,6 +764,7 @@ collections:
 
   Mindfuck:
     template: { name: Subgenre }
+    visible_library: weekly(sunday|tuesday)
     summary: A mindfuck movie plays with your mind, confuses you, and leads you on. It’s not just a movie with a twist ending. Mindfucks are borderline-incoherent, dreamlike, and surreal.
     file_poster: config/posters/Mindfuck.png
     visible_shared: weekly(thursday)
@@ -723,6 +774,7 @@ collections:
 
   Medieval:
     template: { name: Subgenre }
+    visible_library: weekly(monday|wednesday)
     summary: Middle Ages, Period in European history traditionally dated from the fall of the Roman Empire to the dawn of the Renaissance.
     file_poster: config/posters/Medieval.png
     visible_shared: monthly(17)
@@ -731,14 +783,16 @@ collections:
       - https://letterboxd.com/nanshe_of_nina/list/medieval/
 
   Monster:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(tuesday|thursday)
     summary: Movies where the main protagonist is a monster of some form.
     file_poster: config/posters/Monster.png
     visible_shared: monthly(19)
     letterboxd_list: https://letterboxd.com/dsuter8/list/monster/
 
   Motorsport:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(thursday|saturday)
     summary: Motorsport movies revolve around the thrilling world of racing, capturing the high-speed excitement, intense competition, and the human stories behind the drivers. These films often combine adrenaline-pumping race sequences with character-driven narratives, offering audiences a visceral experience of the passion and challenges within the motorsport culture.
     file_poster: config/posters/Motorsport.png
     visible_shared: monthly(7)
@@ -748,6 +802,7 @@ collections:
 
   Music:
     template: { name: Subgenre Other }
+    visible_library: weekly(wednesday|friday)
     visible_shared: monthly(18)
     file_poster: config/posters/Music.png
     summary: Music film is genre that revolves around music being an integral part of the characters lives.
@@ -759,7 +814,8 @@ collections:
         genre: music
 
   Mythology:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(thursday|sunday)
     summary: Myths are fiction stories based on historical beliefs of ancient people. Webster's Dictionary defines myths as “an idea or story that is believed by many people but that is not true; a story that was told in an ancient culture to explain a practice, belief, or natural occurrence.
     file_poster: config/posters/Mythology.png
     visible_shared: monthly(17)
@@ -768,7 +824,8 @@ collections:
       - https://letterboxd.com/ethanyoung512/list/mythology/
 
   Naval:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(friday|sunday)
     summary: Naval refers to anything related to or associated with the navy, which is the branch of a country's armed forces that is responsible for conducting military operations at sea.
     file_poster: config/posters/Naval.png
     visible_shared: monthly(26)
@@ -788,7 +845,8 @@ collections:
       - https://letterboxd.com/kyrahmk/list/nostalgia/
 
   One Location:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(wednesday|friday)
     summary: Movies set generally in one location, for example a house.
     file_poster: config/posters/One Location.png
     visible_shared: monthly(16)
@@ -797,7 +855,8 @@ collections:
       - https://letterboxd.com/frantz/list/one-location/
 
   One-shot:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(friday)
     summary: Films that appear as one shot, whether achieved through a genuine single take or edited together.
     file_poster: config/posters/One-shot.png
     visible_shared: monthly(18)
@@ -806,7 +865,8 @@ collections:
       - https://letterboxd.com/darrencb/list/one-shot-movies/
 
   Outer Space:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(tuesday|thursday)
     summary: Movies That Take Place in Outer Space
     file_poster: config/posters/Outer Space.png
     visible_shared: monthly(15)
@@ -816,6 +876,7 @@ collections:
 
   Paranormal:
     template: { name: Subgenre }
+    visible_library: weekly(tuesday|thursday)
     summary: Movies containing something supernatural like ghosts or spirits.
     file_poster: config/posters/Paranormal.png
     visible_shared: monthly(14)
@@ -825,7 +886,8 @@ collections:
       - https://letterboxd.com/turtleking967/list/paranormal/
 
   Pandemic:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(tuesday|thursday)
     summary: A Pandemic film resolves around widespread viruses, plagues, and diseases.
     file_poster: config/posters/Pandemic.png
     visible_shared: weekly(tuesday)
@@ -835,6 +897,7 @@ collections:
 
   Psychological:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday|friday)
     summary: The psychological genre is a category of literature, film, and other media that focuses on the inner workings of the human mind, exploring mental and emotional states, motivations, and behaviors. Psychological works often delve into the depths of the human psyche, examining issues such as identity, consciousness, memory, and perception.
     file_poster: config/posters/Psychological.png
     visible_shared: monthly(19)
@@ -852,6 +915,7 @@ collections:
 
   Prehistoric:
     template: { name: Subgenre }
+    visible_library: weekly(thursday|saturday)
     summary: Prehistoric refers to the period of time before written history, when human beings lived without written records or recorded history. This period is generally divided into the Stone Age, the Bronze Age, and the Iron Age, and it is characterized by the development of tools and technology, the emergence of agriculture and animal domestication, and the evolution of human societies.
     file_poster: config/posters/Prehistoric.png
     letterboxd_list:
@@ -860,6 +924,7 @@ collections:
 
   Philosophical:
     template: { name: Subgenre }
+    visible_library: weekly(friday|sunday)
     summary: Philosophical refers to a genre of literature, art, and other forms of media that explore fundamental questions about existence, knowledge, values, ethics, and the nature of reality. Philosophical works often challenge conventional wisdom and encourage readers to think deeply about complex ideas.
     file_poster: config/posters/Philosophical.png
     visible_shared: monthly(22)
@@ -879,6 +944,7 @@ collections:
 
   Period Piece:
     template: { name: Subgenre }
+    visible_library: weekly(saturday|monday)
     summary: Movies in the period piece fiction genre are made up of stories that feature historical places, people, or events that are crucial to the story.
     file_poster: config/posters/Period Piece.png
     visible_shared: weekly(friday)
@@ -889,6 +955,7 @@ collections:
 
   Plot Twist:
     template: { name: Subgenre }
+    visible_library: weekly(sunday|tuesday)
     summary: A plot twist is a story development that readers do not expect in which either something shocking happens or something shocking is revealed. Generally, the storyteller will set up expectations and then "twist" those expectations by revealing new information through subsequent plot points.
     file_poster: config/posters/Plot Twist.png
     visible_shared: weekly(wednesday)
@@ -898,6 +965,7 @@ collections:
 
   Police:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday)
     summary: Movies in the perspective of a policeman or a policeman being present in any capacity.
     file_poster: config/posters/Police.png
     visible_shared: weekly(saturday)
@@ -906,7 +974,8 @@ collections:
       - https://letterboxd.com/nislav2001/list/police/
 
   Political:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(thursday)
     summary: Political cinema refers to films that do not hide their political stance. In this sense, they differ from other films not because they are political, but because of the way in which their politics is presented.
     file_poster: config/posters/Political.png
     visible_shared: weekly(friday)
@@ -916,6 +985,7 @@ collections:
 
   Post Apocalyptic:
     template: { name: Subgenre }
+    visible_library: weekly(tuesday|thursday)
     summary: Apocalyptic and post-apocalyptic fiction are subgenres of science fiction that are set in a time period where the earth as we know it is coming to an end.
     file_poster: config/posters/Post Apocalyptic.png
     visible_shared: monthly(13)
@@ -924,7 +994,8 @@ collections:
       - https://letterboxd.com/caroline/list/post-apocalyptic/
 
   Prison:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(monday|wednesday)
     summary: Movies taking place inside a prison.
     file_poster: config/posters/Prison.png
     visible_shared: monthly(12)
@@ -934,6 +1005,7 @@ collections:
 
   Revenge:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday|friday)
     summary: Revenge is a theoretical genre in which the principal theme is retribution and its often-fatal consequences.
     file_poster: config/posters/Revenge.png
     visible_shared: monthly(11)
@@ -954,6 +1026,7 @@ collections:
 
   Robot:
     template: { name: Subgenre }
+    visible_library: weekly(thursday|saturday)
     summary: Movies containing robots in many forms, often set in the future.
     file_poster: config/posters/Robot.png
     visible_shared: monthly(10)
@@ -963,6 +1036,7 @@ collections:
 
   Romantic Comedy:
     template: { name: Subgenre Other }
+    visible_library: weekly(saturday)
     visible_shared: weekly(thursday)
     file_poster: config/posters/Romantic Comedy.png
     summary: Romantic Comedy is a genre that attempts to catch the viewer’s heart with the combination of love and humor. This sub-genre is light-hearted and usually places the two protagonists in humorus situation. Romantic-Comedy series revolves around a romantic ideal, such as true love. In the end, the ideal triumphs over the situation or obstacle, thus creating a happy ending.
@@ -977,6 +1051,7 @@ collections:
 
   Romantic Drama:
     template: { name: Subgenre Other }
+    visible_library: weekly(sunday)
     visible_shared: weekly(saturday)
     file_poster: config/posters/Romantic Drama.png
     summary: Romantic Drama film is a genre that explores the complex side of love. The plot usually centers around an obstacle that is preventing love between two people. The obstacles in Romantic Drama film can range from a family's disapproval, to forbidden love, to one's own psychological restraints. Many Romantic Dramas end with the lovers separating because of the enormity of the obstacle, the realization of incompatibility, or simply because of fate.
@@ -990,7 +1065,8 @@ collections:
           - drama
 
   Samurai:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(friday)
     summary: A samurai was a member of the military nobility in feudal Japan, typically serving a lord or daimyo. The samurai were known for their martial skills, discipline, and honor, and they played an important role in Japanese society for centuries.
     file_poster: config/posters/Samurai.png
     visible_shared: monthly(30)
@@ -1000,7 +1076,8 @@ collections:
       - https://letterboxd.com/dsuter8/list/samurai/
 
   Shark:
-    template: { name: Subgenre False }
+    template: { name: Subgenre }
+    visible_library: weekly(tuesday|thursday)
     summary: Movies featuring sharks take many forms, usually set in the ocean, and often blend suspense, action, and survival as humans face off against these powerful predators.
     file_poster: config/posters/Shark.png
     visible_shared: monthly(20)
@@ -1015,7 +1092,8 @@ collections:
     letterboxd_list: https://letterboxd.com/locnarpdx/list/silent-era/
 
   Survival:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(monday|wednesday)
     summary: Survival genre is a popular genre of fiction that depicts the struggle of characters to survive in a hostile environment or after a catastrophic event. The stories usually revolve around individuals or groups who find themselves in extreme circumstances where basic necessities such as food, water, and shelter are scarce.
     file_poster: config/posters/Survival.png
     visible_shared: monthly(23)
@@ -1026,6 +1104,7 @@ collections:
 
   Surrealism:
     template: { name: Subgenre }
+    visible_library: weekly(tuesday|sunday)
     summary: Surrealism is an artistic and literary movement that emerged in the early 20th century, characterized by a focus on the subconscious mind and the exploration of the imagination. Surrealism sought to break free from traditional art and literary forms, emphasizing the irrational, the dreamlike, and the bizarre.
     file_poster: config/posters/Surrealism.png
     visible_shared: monthly(31)
@@ -1034,7 +1113,8 @@ collections:
       - https://letterboxd.com/delshannononion/list/surrealism/
 
   Supernatural:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(tuesday|thursday)
     summary: Supernatural refers to phenomena that are beyond the laws of nature or that cannot be explained by science or reason. In popular culture, supernatural often refers to paranormal or mystical events, creatures, or powers, such as ghosts, vampires, werewolves, magic, and psychic abilities.
     file_poster: config/posters/Supernatural.png
     visible_shared: monthly(29)
@@ -1045,6 +1125,7 @@ collections:
 
   Serial Killer:
     template: { name: Subgenre }
+    visible_library: weekly(friday|sunday)
     summary: A serial killer is a person who murders three or more people, typically with a cooling-off period between each murder. Serial killers are often motivated by psychological or sexual gratification, and may have a distorted view of reality that justifies their violent acts.
     file_poster: config/posters/Serial Killer.png
     visible_shared: monthly(27)
@@ -1065,7 +1146,8 @@ collections:
       - https://letterboxd.com/calathea_os/list/satire/
 
   Slasher:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(tuesday|friday)
     summary: The slasher film is a sub-genre of horror film typically involving a psychopathic killer (sometimes wearing a mask) who stalks and graphically murders a series of adolescent victims in a typically random, unprovoked fashion, killing many within a single day.
     file_poster: config/posters/Slasher.png
     visible_shared: monthly(9)
@@ -1076,6 +1158,7 @@ collections:
 
   Spy:
     template: { name: Subgenre }
+    visible_library: weekly(saturday|monday)
     summary: The spy film genre, also known sometimes as an espionage film, deals with the subject of fictional espionage, either in a realistic way (such as the adaptations of John le Carré) or as a basis for fantasy.
     file_poster: config/posters/Spy.png
     visible_shared: monthly(8)
@@ -1092,9 +1175,9 @@ collections:
 
   Summer:
     template: { name: Subgenre }
+    visible_library: weekly(tuesday)
     summary: Movies set in the summer season.
     file_poster: config/posters/Summer.png
-    visible_shared: monthly(20)
     limit: 300
     letterboxd_list:
       - https://letterboxd.com/teenageriots/list/summer/
@@ -1102,6 +1185,7 @@ collections:
 
   Sword & Sorcery:
     template: { name: Subgenre }
+    visible_library: weekly(monday|wednesday)
     summary: Sword and Sorcery film is a sub-genre of Fantasy that tend to be more plot-driven. These films rely on heavy action and battle scenes. Common themes in Sword and Sorcery films include a rescue mission, saving a princess, and battling a fantastical monster. The worlds and characters in these films are often much less developed than in other fantasy sub-genres. Of all the Fantasy sub-genres, Sword and Sorcery is most likely to be geared towards a younger audience, as many of these films are animated.
     file_poster: config/posters/Sword & Sorcery.png
     visible_shared: weekly(sunday)
@@ -1109,6 +1193,7 @@ collections:
 
   Time Travel:
     template: { name: Subgenre }
+    visible_library: weekly(tuesday|thursday)
     summary: Film/show contains time-travel. In any form. Be it time-loop, full on relocation in time, consciousness transfer...
     file_poster: config/posters/Time Travel.png
     visible_shared: monthly(4)
@@ -1117,7 +1202,8 @@ collections:
       - https://letterboxd.com/martinrj/list/time-travel/
 
   Trapped Inside:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(monday|sunday)
     summary: The main characther(s) are trapped in some sort of place and has to get out to survive.
     file_poster: config/posters/Trapped Inside.png
     visible_shared: monthly(7)
@@ -1128,13 +1214,15 @@ collections:
 
   Underrated:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday)
     summary: Movies that are better than what it is given credit for.
     file_poster: config/posters/Underrated.png
     visible_shared: monthly(6)
     letterboxd_list: https://letterboxd.com/randomk1ng/list/underrated/
 
   Vacation & Road Trip:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(thursday|sunday)
     summary: Vacations and road trips both gone horribly wrong or heavenly right.
     file_poster: config/posters/Vacation & Road Trip.png
     visible_shared: weekly(saturday)
@@ -1145,14 +1233,15 @@ collections:
       - https://letterboxd.com/shawn_stubbs/list/road-trip/
 
   Vampire:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(thursday|saturday)
     summary: A vampire is a creature from folklore that subsists by feeding on the vital essence (generally in the form of blood) of the living.
     file_poster: config/posters/Vampire.png
-    visible_shared: monthly(15)
     letterboxd_list: https://letterboxd.com/ashleyosborn/list/vampire/
 
   Video Game:
     template: { name: Subgenre }
+    visible_library: weekly(thursday|saturday)
     summary: Movies lightly or stritcly based of different types of video games.
     file_poster: config/posters/Video Game.png
     visible_shared: monthly(10)
@@ -1162,6 +1251,7 @@ collections:
 
   Villain:
     template: { name: Subgenre }
+    visible_library: weekly(friday|sunday)
     summary: Movies where the bad guy is more likely to come out on top.
     file_poster: config/posters/Villain.png
     visible_shared: monthly(5)
@@ -1171,9 +1261,9 @@ collections:
 
   Visually Insane:
     template: { name: Subgenre }
+    visible_library: weekly(saturday|monday)
     summary: Often exhibit surreal and mind-bending visuals, pushing the boundaries of conventional storytelling with hallucinatory sequences and abstract imagery. These films captivate audiences by immersing them in unpredictable and visually stunning cinematic experiences that challenge traditional norms of narrative coherence.
     file_poster: config/posters/Visually Insane.png
-    visible_shared: monthly(8)
     letterboxd_list: https://letterboxd.com/etolkin/list/filmlist:28697007/
 
   Werewolf:
@@ -1185,7 +1275,8 @@ collections:
       - https://letterboxd.com/dsuter8/list/werewolf/
 
   Wizardry & Witchcraft:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(monday|thursday)
     summary: Wizardry and witchcraft are terms used to describe the practice of magic and the supernatural. While the terms are often used interchangeably, there are some differences between the two.
     file_poster: config/posters/Wizardry & Witchcraft.png
     visible_shared: monthly(24)
@@ -1195,15 +1286,16 @@ collections:
 
   Winter:
     template: { name: Subgenre }
+    visible_library: weekly(sunday)
     summary: Movies set in the winter season.
     file_poster: config/posters/Winter.png
-    visible_shared: monthly(6)
     letterboxd_list:
       - https://letterboxd.com/shroudedbyleafs/list/winter/
       - https://letterboxd.com/japanesemovay/list/winter/
 
   Zombie:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday)
     summary: A zombie is a mythological undead corporeal revenant created through the reanimation of a corpse.
     file_poster: config/posters/Zombie.png
     visible_shared: monthly(1)

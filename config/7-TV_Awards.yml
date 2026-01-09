@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 #############################################################
-#                       AWARDS 10.0                         #
+#                       AWARDS 11.0                         #
 #############################################################
 
 templates:
@@ -48,6 +48,7 @@ collections:
     summary: "Une collection de gagnants des BAFTA"
     visible_shared: monthly(10)
     file_poster: config/posters/BAFTA Winners.png
+    visible_library: weekly(tuesday|thursday)
     imdb_award:
       event_id: "ev0000123"
       event_year: "1949-current"
@@ -60,7 +61,6 @@ collections:
   Critics Choice Awards - Winners:
     template: { name: Awards }
     summary: "Une collection de gagnants des Critics Choice Awards"
-    visible_shared: monthly(5)
     file_poster: config/posters/Critics Choice Awards Winners.png
     imdb_award:
       event_id: "ev0000133"
@@ -75,6 +75,7 @@ collections:
     template: { name: Awards }
     summary: "Une collection de gagnants des Emmy Awards"
     visible_shared: monthly(20)
+    visible_library: weekly(monday|wednesday)
     file_poster: config/posters/Emmy Winners.png
     imdb_award:
       event_id: "ev0000223"
@@ -89,6 +90,7 @@ collections:
     template: { name: Awards }
     summary: "Une collection de gagnants des Golden Globes"
     visible_shared: monthly(15)
+    visible_library: weekly(friday|sunday)
     file_poster: config/posters/Golden Globe Winners.png
     imdb_award:
       event_id: "ev0000292"

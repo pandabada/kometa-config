@@ -1,16 +1,9 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 #####################################################
-#                   DECADES 9.5                     #
+#                   DECADES 10.0                    #
 #####################################################
 templates:
   Decade:
-    smart_label: audience_rating.desc
-    sync_mode: sync
-    sort_title: "~~~~~~~_<<collection_name>>"
-    summary: "Les meilleurs films de la décennie avec une note IMDb d'au moins 7."
-    visible_library: true
-
-  Decade True:
     smart_label: audience_rating.desc
     sync_mode: sync
     sort_title: "~~~~~~~_<<collection_name>>"
@@ -34,7 +27,6 @@ collections:
         year.lt: 1930
         audience_rating.gte: 7.0
     limit: 500
-    visible_shared: range(10/01-10/15)
     file_poster: config/posters/Best of 1920s.png
 
   Best of 1930s:
@@ -45,7 +37,6 @@ collections:
         year.lt: 1940
         audience_rating.gte: 7.0
     limit: 500
-    visible_shared: range(06/01-06/15)
     file_poster: config/posters/Best of 1930s.png
 
   Best of 1940s:
@@ -56,7 +47,6 @@ collections:
         year.lt: 1950
         audience_rating.gte: 7.0
     limit: 500
-    visible_shared: range(04/01-04/15)
     file_poster: config/posters/Best of 1940s.png
 
   Best of 1950s:
@@ -67,11 +57,11 @@ collections:
         year.lt: 1960
         audience_rating.gte: 7.0
     limit: 500
-    visible_shared: range(12/01-12/15)
     file_poster: config/posters/Best of 1950s.png
 
   Best of 1960s:
     template: { name: Decade }
+    visible_library: weekly(friday|sunday)
     plex_search:
       all:
         year.gt: 1959
@@ -83,6 +73,7 @@ collections:
 
   Best of 1970s:
     template: { name: Decade }
+    visible_library: weekly(monday|thursday)
     plex_search:
       all:
         year.gt: 1969
@@ -94,6 +85,7 @@ collections:
 
   Best of 1980s:
     template: { name: Decade }
+    visible_library: weekly(tuesday|friday)
     plex_search:
       all:
         year.gt: 1979
@@ -105,6 +97,7 @@ collections:
 
   Best of 1990s:
     template: { name: Decade }
+    visible_library: weekly(wednesday|saturday)
     plex_search:
       all:
         year.gt: 1989
@@ -116,6 +109,7 @@ collections:
 
   Best of 2000s:
     template: { name: Decade }
+    visible_library: weekly(tuesday|thursday)
     plex_search:
       all:
         year.gt: 1999
@@ -127,6 +121,7 @@ collections:
 
   Best of 2010s:
     template: { name: Decade }
+    visible_library: weekly(wednesday|saturday)
     plex_search:
       all:
         year.gt: 2009
@@ -138,6 +133,7 @@ collections:
 
   Best of 2020s:
     template: { name: Decade }
+    visible_library: weekly(monday|sunday)
     plex_search:
       all:
         year.gt: 2019
@@ -376,3 +372,57 @@ collections:
       all:
         year: 2024
         audience_rating.gte: 7.0
+
+  Best of 2025:
+    template: { name: Year }
+    file_poster: config/posters/Best of 2025.png
+    visible_shared: range(04/16-04/22)
+    plex_search:
+      all:
+        year: 2025
+        audience_rating.gte: 7.0
+
+  Best of 2026:
+    template: { name: Year }
+    file_poster: config/posters/Best of 2026.png
+    visible_shared: range(04/16-04/22)
+    plex_search:
+      all:
+        year: 2026
+        audience_rating.gte: 7.0
+# Uncomment in the future
+#Best of 2027:
+#template: { name: Year }
+# file_poster: config/posters/Best of 2027.png
+# visible_shared: range(04/16-04/22)
+# plex_search:
+#   all:
+#     year: 2027
+#     audience_rating.gte: 7.0
+
+# Best of 2028:
+# template: { name: Year }
+# file_poster: config/posters/Best of 2028.png
+# visible_shared: range(04/16-04/22)
+# plex_search:
+#   all:
+#     year: 2028
+#     audience_rating.gte: 7.0
+
+# Best of 2029:
+# template: { name: Year }
+# file_poster: config/posters/Best of 2029.png
+# visible_shared: range(04/16-04/22)
+# plex_search:
+#   all:
+#     year: 2029
+#     audience_rating.gte: 7.0
+
+# Best of 2030:
+# template: { name: Year }
+# file_poster: config/posters/Best of 2030.png
+#   visible_shared: range(04/16-04/22)
+#   plex_search:
+#     all:
+#       year: 2030
+#       audience_rating.gte: 7.0

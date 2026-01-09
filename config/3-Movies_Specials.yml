@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 ######################################################
-#                   SPECIALS 18.5                    #
+#                   SPECIALS 19.0                    #
 ######################################################
 templates:
   Special:
@@ -11,22 +11,24 @@ templates:
   Special Smart:
     sync_mode: sync
     sort_title: "~~~~~~~~~-<<collection_name>>"
-    visible_library: true
-
-  Special Other:
-    smart_label: random
-    sync_mode: sync
-    sort_title: "~~~~~~~~~-<<collection_name>>"
-    visible_library: true
-
-  Special Smart Other:
-    sync_mode: sync
-    sort_title: "~~~~~~~~~-<<collection_name>>"
     visible_library: false
 
-collections:        
+collections:
+  1001+ Movies You Must See Before You Die:
+    template: { name: Special }
+    visible_library: weekly(tuesday|friday)
+    summary: 1001+ of the best movies you need to see before you die.
+    visible_shared:
+      - monthly(4)
+      - monthly(6)
+    file_poster: config/posters/1001+ Movies You Must See Before You Die.png
+    trakt_list:
+      - https://trakt.tv/users/captainnapalm/lists/1001-greatest-movies-of-all-time?sort=rank,asc
+      - https://trakt.tv/users/athwilson/lists/1001-movies?sort=released,desc
+
   2160P:
     template: { name: Special }
+    visible_library: weekly(monday|wednesday)
     summary: Une collection de films en 4K.
     file_poster: config/posters/2160P.png
     plex_search:
@@ -35,6 +37,7 @@ collections:
 
   DV/HDR: 
     template: { name: Special }
+    visible_library: weekly(tuesday|thursday)
     summary: Une collection de films en HDR10+ et Dolby Vision.
     file_poster: config/posters/DV-HDR.png
     plex_search:
@@ -42,14 +45,15 @@ collections:
         hdr: true
 
   En famille:
-    template: { name: Special Other }
+    template: { name: Special }
+    visible_library: weekly(wednesday|sunday)
     summary: Des films adaptés pour les familles, reconnus pour leur qualité et leur impact. Sélections incluant des médias appropriés pour susciter des conversations en famille.
     visible_shared: monthly(25)
     file_poster: config/posters/Family Friendly.png
     trakt_list: https://trakt.tv/users/k0meta/lists/common-sense-selection-movies
 
-  Favoris:
-    template: { name: Special Smart Other }
+  Favoris: # Fetched information from Tautulli
+    template: { name: Special Smart }
     tautulli_popular:
       list_days: 31
       list_size: 20
@@ -62,8 +66,8 @@ collections:
     file_poster: config/posters/Favored.png
     summary: Les films les plus appréciés sur Plex par les utilisateurs le mois dernier.
 
-  Les plus longs:
-    template: { name: Special Smart Other }
+  Les plus longs: # Longest movies on plex
+    template: { name: Special Smart }
     file_poster: config/posters/Longest.png
     summary: Les films les plus longs sur Plex, d'une durée minimale de 150 minutes.
     smart_filter:
@@ -74,6 +78,7 @@ collections:
 
   Newly Released: # Released within the month
     template: { name: Special Smart }
+    visible_library: weekly(monday|saturday)
     file_poster: config/posters/Newly Released.png
     summary: Movies recently released in the past month.
     radarr_add_missing: false
@@ -91,9 +96,10 @@ collections:
       - https://trakt.tv/users/childofkorm/lists/upcoming-movies?sort=rank,asc
       - https://trakt.tv/users/dracid7/lists/upcoming-movies-digital-releases?sort=rank,asc
 
-  Les plus courts:
+  Les plus courts: # Shortest movies on plex
     template: { name: Special Smart }
-    visible_library: true
+    visible_library: weekly(friday|sunday)
+    visible_shared: monthly(8)
     summary: Les films les plus courts sur Plex, d'une durée maximale de 85 minutes.
     file_poster: config/posters/Shortest.png
     smart_filter:
@@ -104,7 +110,7 @@ collections:
         genre.not: Animation
 
   Vus:
-    template: { name: Special Smart Other }
+    template: { name: Special Smart }
     tautulli_watched:
       list_days: 9999
       list_size: 9999

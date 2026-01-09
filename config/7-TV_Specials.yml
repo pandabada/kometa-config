@@ -1,16 +1,10 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 ######################################################
-#                   SPECIALS 17.5                    #
+#                   SPECIALS 18.0                    #
 ######################################################
 
 templates:
   Special:
-    smart_label: random
-    sync_mode: sync
-    sort_title: "~~~~~~_<<collection_name>>"
-    visible_library: true
-
-  Special Other:
     smart_label: random
     sync_mode: sync
     sort_title: "~~~~~~_<<collection_name>>"
@@ -19,16 +13,12 @@ templates:
   Special Smart:
     sync_mode: sync
     sort_title: "~~~~~~_<<collection_name>>"
-    visible_library: true
-
-  Special Smart Other:
-    sync_mode: sync
-    sort_title: "~~~~~~_<<collection_name>>"
     visible_library: false
 
 collections:
   18+: # Séries TV avec une classification adulte
     template: { name: Special Smart }
+    visible_library: weekly(monday|thursday)
     visible_shared: monthly(9)
     summary: Les séries avec cette classification ne conviennent généralement pas aux enfants ou aux personnes de moins de 17 ans (certaines sources peuvent indiquer 18 ans). Ce contenu est destiné à un public mature en raison de thèmes adultes tels que la violence, la violence sexuelle, un langage fort, la nudité, les substances, le tabagisme et le sexe.
     file_poster: config/posters/18+.png
@@ -41,7 +31,7 @@ collections:
         content_rating: TV-MA
 
   480P+: # 480p and 576p TV Shows
-    template: { name: Special Other }
+    template: { name: Special }
     summary: Une collection de séries TV en qualité SD, 480p et 576p.
     sort_title: zz__1480P+
     file_poster: config/posters/480P+.png
@@ -53,7 +43,7 @@ collections:
           - 576p
 
   720P:
-    template: { name: Special Other }
+    template: { name: Special }
     summary: Une collection de séries TV en qualité 720p.
     sort_title: zz__1720P
     file_poster: config/posters/720P.png
@@ -62,7 +52,7 @@ collections:
         resolution: 720p
 
   1080P:
-    template: { name: Special Other }
+    template: { name: Special }
     summary: Une collection de séries TV en qualité 1080p.
     sort_title: zz__31080P
     file_poster: config/posters/1080P.png
@@ -73,6 +63,7 @@ collections:
   2160P:
     template: { name: Special }
     summary: Une collection de séries TV en 4K.
+    visible_library: weekly(tuesday|saturday)
     sort_title: zz__42160P
     file_poster: config/posters/2160P.png
     plex_search:
@@ -82,6 +73,7 @@ collections:
   DV/HDR: # Films 1080p ou 4K avec HDR et/ou Dolby Vision
     template: { name: Special }
     summary: Une collection de séries TV en HDR10+ et Dolby Vision.
+    visible_library: weekly(wednesday|friday)
     file_poster: config/posters/DV-HDR.png
     plex_search:
       all:
@@ -90,12 +82,13 @@ collections:
   En famille: # Films mieux adaptés pour la famille
     template: { name: Special }
     summary: Des séries adaptées pour les familles, reconnues pour leur qualité et leur impact. Sélections incluant des médias appropriés pour susciter des conversations en famille.
+    visible_library: weekly(thursday|saturday)
     file_poster: config/posters/Family Friendly.png
     visible_shared: monthly(10)
     trakt_list: https://trakt.tv/users/k0meta/lists/common-sense-selection-shows
 
   Favoris: # Informations recueillies à partir de Tautulli
-    template: { name: Special Smart Other }
+    template: { name: Special Smart }
     tautulli_popular:
       list_days: 62
       list_size: 20
@@ -109,7 +102,7 @@ collections:
     summary: Les séries TV les plus appréciées sur Plex par les utilisateurs au cours des 2 derniers mois.
 
   Longest: # Longest TV shows on plex
-    template: { name: Special Other }
+    template: { name: Special }
     summary: Les séries les plus longues sur Plex.
     file_poster: config/posters/Longest.png
     trakt_list:
@@ -119,6 +112,7 @@ collections:
   Newly Released: # Released within last 2 months
     template: { name: Special Smart }
     file_poster: config/posters/Newly Released.png
+    visible_library: weekly(monday|sunday)
     summary: Shows recently released in the past 2 months.
     visible_shared: monthly(27)
     sonarr_add_missing: false
@@ -129,7 +123,7 @@ collections:
       - https://trakt.tv/users/jhn322/lists/upcoming-documentary?sort=rank,asc
 
   Vues: # Informations recueillies à partir de Tautulli
-    template: { name: Special Smart Other }
+    template: { name: Special Smart }
     tautulli_watched:
       list_days: 9999
       list_size: 9999

@@ -1,35 +1,30 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 ############################################
-#               GENRES 16.5                #
+#               GENRES 18.0                #
 ############################################
 
 templates:
   Genre:
     sort_title: "!!!_<<collection_name>>"
-    visible_library: true
+    visible_library: false
     sync_mode: sync
 
   Subgenre:
     sort_title: "!!!!_<<collection_name>>"
+    visible_library: false
     smart_label: random
-    visible_library: true
     sync_mode: sync
 
   Subgenre False:
     sort_title: "!!!!_<<collection_name>>"
-    smart_label: random
     visible_library: false
-    sync_mode: sync
-
-  Subgenre Other:
-    visible_library: true
-    sort_title: "!!!!_<<collection_name>>"
     sync_mode: sync
 
 # Creates collections for genres with a limit of 200
 collections:
   Action:
     template: { name: Genre }
+    visible_library: weekly(monday|wednesday)
     visible_shared: weekly(wednesday)
     file_poster: config/posters/Action TV.png
     summary: "L'action est un genre où l'action physique prend le pas sur le récit. Le film présente souvent un mouvement et une action continus, incluant des cascades, des poursuites, des combats, des batailles et des courses. L'histoire tourne généralement autour d'un héros qui a un objectif, mais qui doit faire face à des obstacles incroyables pour l'atteindre."
@@ -43,6 +38,7 @@ collections:
 
   Aventure:
     template: { name: Genre }
+    visible_library: weekly(tuesday|thursday)
     visible_shared: weekly(thursday)
     file_poster: config/posters/Adventure TV.png
     summary: "L'aventure est un genre qui tourne autour des conquêtes et des explorations d'un protagoniste. Le but de la conquête peut être de retrouver une personne ou un trésor, mais souvent, l'accent est mis simplement sur la quête de l'inconnu. Ces films se déroulent généralement dans des lieux exotiques et s'appuient sur des mythes historiques. Les films d'aventure intègrent des énigmes palpitantes et des obstacles complexes que le protagoniste doit surmonter pour atteindre son objectif final."
@@ -56,6 +52,7 @@ collections:
 
   Biopic:
     template: { name: Genre }
+    visible_library: weekly(monday|friday)
     visible_shared: weekly(thursday)
     file_poster: config/posters/Biopic TV.png
     summary: "Un biographique ou biopic est une série qui dramatise la vie d'une personne ou d'un groupe de personnes non fictives ou basées sur des faits historiques. Ces séries montrent la vie d'une personnalité historique, et le vrai nom du personnage principal est utilisé."
@@ -69,6 +66,7 @@ collections:
 
   Dessin animé:
     template: { name: Genre }
+    visible_library: weekly(thursday|saturday)
     visible_shared: weekly(tuesday)
     summary: "Toutes les séries de dessins animés."
     file_poster: config/posters/Cartoon TV.png
@@ -81,6 +79,7 @@ collections:
 
   Comédie:
     template: { name: Genre }
+    visible_library: weekly(friday|sunday)
     visible_shared: weekly(friday)
     file_poster: config/posters/Comedy TV.png
     summary: "La comédie est un genre de série qui utilise l'humour comme moteur. L'objectif d'un série comique est de susciter le rire du public à travers des histoires et des personnages divertissants. Bien que la sérié comique puisse aborder des sujets sérieux, la plupart se terminent sur une note positive. Les séries comiques ont tendance à devenir des sous-genres hybrides, car l'humour peut être intégré dans de nombreux autres genres. Les comédies ont plus de chances que d'autres séries de s'appuyer sur le succès et la popularité d'une star individuelle."
@@ -94,6 +93,7 @@ collections:
 
   Crime:
     template: { name: Genre }
+    visible_library: weekly(monday|thursday|saturday)
     visible_shared: weekly(monday)
     file_poster: config/posters/Crime TV.png
     summary: "La série criminelle est un genre qui tourne autour des actions d'un génie du crime. Une série criminelle se concentre souvent sur le criminel lui-même, chroniquant sa montée et sa chute. Certaines séries criminelles suivent l'histoire de la victime du criminel, tandis que d'autres suivent la personne qui poursuit le criminel. Ce genre tend à être rythmé et empreint de mystère, ce mystère pouvant venir de l'intrigue ou des personnages eux-mêmes."
@@ -107,9 +107,10 @@ collections:
 
   Documentaire:
     template: { name: Genre }
+    visible_library: weekly(tuesday|friday)
+    visible_shared: weekly(wednesday)
     summary: "Certaines des séries documentaires les plus marquants et acclamés par la critique jamais réalisés."
     file_poster: config/posters/Documentary TV.png
-    visible_shared: weekly(wednesday)
     smart_filter:
       sort_by: random
       limit: 200
@@ -120,6 +121,7 @@ collections:
 
   Drame:
     template: { name: Genre }
+    visible_library: weekly(monday|saturday)
     visible_shared: weekly(saturday)
     file_poster: config/posters/Drama TV.png
     summary: "La série dramatique est un genre qui s'appuie sur le développement émotionnel et relationnel de personnages réalistes. Bien que la série dramatique repose fortement sur ce type de développement, les thèmes dramatiques jouent également un grand rôle dans l'intrigue. Souvent, ces thèmes dramatiques sont tirés de problèmes intenses de la vie réelle. Que les héros ou héroïnes affrontent un conflit extérieur ou un conflit intérieur, la série dramatique vise à raconter une histoire honnête des luttes humaines."
@@ -133,7 +135,8 @@ collections:
 
   Familial:
     template: { name: Genre }
-    visible_shared: weekly(sunday)
+    visible_library: weekly(tuesday|saturday)
+    visible_shared: monthly(21)
     file_poster: config/posters/Family TV.png
     summary: "La série familiale est un genre qui contient un contenu approprié pour les jeunes spectateurs. La série familiale vise à séduire non seulement les enfants, mais aussi un large éventail d'âges. Bien que l'intrigue puisse séduire un public plus jeune, il existe des éléments de la série qui sont destinés aux adultes, comme des blagues et un humour subtil. Ce genre peut s'inscrire dans de nombreux autres genres, y compris la comédie, l'aventure, la fantaisie et la série d'animation."
     smart_filter:
@@ -146,6 +149,7 @@ collections:
 
   Fantastique:
     template: { name: Genre }
+    visible_library: weekly(wednesday|saturday)
     visible_shared: weekly(tuesday)
     file_poster: config/posters/Fantasy TV.png
     summary: "La série fantastique est un genre qui incorpore des thèmes imaginatifs et fantastiques. Ces thèmes impliquent généralement de la magie, des événements surnaturels ou des mondes fantastiques. Bien qu'il s'agisse d'un genre distinct, ces séries peuvent chevaucher les genres de l'horreur et de la science-fiction. Contrairement à la science-fiction, une série de fantasy n'a pas besoin d'être ancrée dans des faits. Cet élément permet au public d'être transporté dans un monde nouveau et unique. Souvent, ces séries mettent en scène un héros ordinaire dans une situation extraordinaire."
@@ -159,6 +163,7 @@ collections:
 
   Histoire:
     template: { name: Genre }
+    visible_library: weekly(monday|sunday)
     visible_shared: weekly(friday)
     file_poster: config/posters/History TV.png
     summary: "L'histoire est un genre qui prend des événements et des personnes historiques et les interprète à grande échelle. L'exactitude historique n'est pas l'objectif principal, mais plutôt le récit d'une histoire grandiose. Le drame d'une série historique est souvent accentué par une bande sonore grandiose, des costumes luxueux et une haute valeur de production."
@@ -172,6 +177,7 @@ collections:
 
   Horreur:
     template: { name: Genre }
+    visible_library: weekly(tuesday|sunday)
     visible_shared: weekly(monday)
     file_poster: config/posters/Horror TV.png
     summary: "L'horreur est un genre qui vise à créer un sentiment de peur, de panique, d'alarme et d'effroi chez le public. Ces séries sont souvent perturbantes et s'appuient sur la peur du public en représentant ses pires craintes et cauchemars. Les séries d'horreur se concentrent généralement sur l'arrivée d'une force, d'une personne ou d'un événement maléfique. Beaucoup de séries d'horreur incluent des créatures mythiques telles que des fantômes, des vampires et des zombies. Traditionnellement, les séries d'horreur intègrent une grande quantité de violence et de gore dans l'intrigue. Bien qu'elles aient leur propre style, les séries d'horreur chevauchent souvent les genres de la fantasy, du thriller et de la science-fiction."
@@ -185,6 +191,7 @@ collections:
 
   Mini-séries:
     template: { name: Genre }
+    visible_library: weekly(thursday|sunday)
     visible_shared: weekly(sunday)
     file_poster: config/posters/Miniseries TV.png
     summary: "Séries avec une seule saison."
@@ -201,6 +208,7 @@ collections:
 
   Mystère:
     template: { name: Genre }
+    visible_library: weekly(monday|wednesday|friday)
     visible_shared: weekly(saturday)
     file_poster: config/posters/Mystery TV.png
     summary: "Un mystère se concentre sur une personne d'autorité, généralement un détective, qui essaie de résoudre un crime mystérieux. Le protagoniste principal utilise des indices, des enquêtes et un raisonnement logique. L'élément le plus important dans ces récits est un sentiment de suspense du type 'qui a fait ça ?', généralement créé par des indices visuels et des rebondissements inattendus dans l'intrigue."
@@ -214,6 +222,7 @@ collections:
 
   Romance:
     template: { name: Genre }
+    visible_library: weekly(tuesday|thursday)
     visible_shared: weekly(wednesday)
     file_poster: config/posters/Romance TV.png
     summary: "La série romantique peut être définie comme un genre où l'intrigue tourne autour de l'amour entre deux protagonistes. Ce genre explore généralement un thème lié à des problématiques amoureuses, y compris, mais sans s'y limiter, l'amour au premier regard, l'amour interdit, les triangles amoureux et l'amour sacrificiel. Le ton de la série romantique peut varier considérablement. Que la fin soit heureuse ou tragique, la série romantique vise à susciter de fortes émotions chez le public."
@@ -227,6 +236,7 @@ collections:
 
   Science-Fiction:
     template: { name: Genre }
+    visible_library: weekly(wednesday|friday|sunday)
     visible_shared: weekly(monday)
     file_poster: config/posters/Sci-Fi TV.png
     summary: "La science-fiction est un genre qui intègre des thèmes hypothétiques basés sur la science dans l'intrigue de la série. Souvent, ce genre incorpore des éléments et des technologies futuristes pour explorer des problématiques sociales, politiques et philosophiques. La série est généralement située dans le futur, que ce soit sur Terre ou dans l'espace. Traditionnellement, une série de science-fiction met en scène des héros, des méchants, des lieux inexplorés, des quêtes fantastiques et une technologie avancée."
@@ -240,7 +250,8 @@ collections:
 
   Sport:
     template: { name: Genre }
-    visible_shared: monthly(8)
+    visible_library: weekly(thursday|saturday)
+    visible_shared: monthly(2)
     file_poster: config/posters/Sport TV.png
     summary: "Une série sportive tourne autour d'un cadre sportif, d'un événement ou d'un athlète. Souvent, ces séries se concentrent sur un événement sportif unique qui revêt une grande importance. Les séries sportives ont traditionnellement une intrigue simple qui se construit jusqu'à cet événement sportif significatif. Ce genre est connu pour intégrer des techniques cinématographiques afin de créer de l'anticipation et de l'intensité. Les séries sportives couvrent une large gamme de sous-genres, des comédies aux drames, et sont plus susceptibles que d'autres genres d'être basées sur des événements réels."
     smart_filter:
@@ -253,6 +264,7 @@ collections:
 
   Thriller:
     template: { name: Genre }
+    visible_library: weekly(tuesday|friday|sunday)
     visible_shared: weekly(thursday)
     file_poster: config/posters/Thriller TV.png
     summary: "La série thriller est un genre qui tourne autour de l'anticipation et du suspense. L'objectif des thrillers est de garder le public en alerte et sur le bord de son siège. Le protagoniste de ces séries est confronté à un problème – une fuite, une mission ou un mystère. Peu importe le sous-genre auquel appartient une série thriller, elle mettra en avant le danger auquel le protagoniste fait face. La tension liée au problème principal est cultivée tout au long de la série et mène à un climax très stressant."
@@ -266,6 +278,7 @@ collections:
 
   Guerre:
     template: { name: Genre }
+    visible_library: weekly(monday|thursday)
     visible_shared: weekly(friday)
     file_poster: config/posters/War TV.png
     summary: "La guerre est un genre qui examine la réalité de la guerre à grande échelle. Il se concentre souvent sur des batailles emblématiques ainsi que sur des problématiques politiques liées à la guerre. Ce genre met généralement en avant un personnage principal et son équipe de soutien, offrant au public un aperçu brut de la réalité de la guerre."
@@ -281,6 +294,7 @@ collections:
 
   Western:
     template: { name: Genre }
+    visible_library: weekly(tuesday|friday)
     visible_shared: weekly(sunday)
     file_poster: config/posters/Western TV.png
     summary: "Les westerns soulignent souvent la dureté et l'isolement de la nature sauvage, et situent fréquemment l'action dans un paysage aride et désolé. Les séries western ont généralement des décors spécifiques, tels que des ranchs isolés, des villages amérindiens ou de petites villes de front pionnier avec un saloon."
@@ -293,22 +307,23 @@ collections:
         genre: western
 
   ############################################
-  #               SUBGENRES 11.0             #
+  #               SUBGENRES 12.0             #
   ############################################
 
   # Creates more unique genre collections based on certain themes from Trakt lists
   Alien:
     template: { name: Subgenre }
+    visible_library: weekly(monday|saturday)
     summary: Shows containing aliens in some form.
     file_poster: config/posters/Alien TV.png
-    visible_shared: weekly(monday)
     trakt_list:
       - https://trakt.tv/users/captaincarrot/lists/space-tv-shows-non-animated?sort=rank,asc
       - https://trakt.tv/users/angel1online/lists/tv-14a-tv-aliens?sort=my_rating,asc
 
   Anthology:
-    template: { name: Subgenre Other }
-    visible_shared: monthly(31)
+    template: { name: Subgenre }
+    visible_library: weekly(tuesday|saturday)
+    visible_shared: monthly(29)
     summary: An anthology series is a television, or film series that presents a different story and a different set of characters in each episode, season, segment or short.
     file_poster: config/posters/Anthology TV.png
     trakt_list:
@@ -317,6 +332,7 @@ collections:
 
   Based on a True Story:
     template: { name: Subgenre }
+    visible_library: weekly(monday|wednesday|saturday)
     visible_shared: monthly(8)
     summary: Shows based on true events.
     file_poster: config/posters/Based on a True Story TV.png
@@ -324,6 +340,7 @@ collections:
 
   Book Adaption:
     template: { name: Subgenre }
+    visible_library: weekly(monday|sunday)
     summary: Shows based on book novels.
     visible_shared: monthly(11)
     file_poster: config/posters/Book Adaption TV.png
@@ -331,6 +348,7 @@ collections:
 
   British Detective:
     template: { name: Subgenre }
+    visible_library: weekly(tuesday|sunday)
     file_poster: config/posters/British Detective TV.png
     visible_shared: weekly(sunday)
     summary: Detective dramas from Great Britian.
@@ -339,7 +357,8 @@ collections:
       - https://trakt.tv/users/majeed_pk/lists/british-detective-tv-series?sort=rank,asc
 
   Classic:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(wednesday|sunday)
     summary: TV shows made back in the good old days.
     file_poster: config/posters/Classic TV.png
     visible_shared: monthly(5)
@@ -348,13 +367,15 @@ collections:
 
   Comic Book:
     template: { name: Subgenre }
+    visible_library: weekly(thursday|sunday)
     summary: Shows based on comic books.
     file_poster: config/posters/Comic Book TV.png
-    visible_shared: monthly(14)
+    visible_shared: monthly(10)
     trakt_list: https://trakt.tv/users/k0meta/lists/shows-based-on-comics?sort=rank,asc
 
   Courtroom:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(monday|friday)
     summary: Showcasing brainy lawyers, gripping cases, and complex plotlines, these are the best legal dramas to watch
     file_poster: config/posters/Courtroom TV.png
     visible_shared: monthly(7)
@@ -364,15 +385,17 @@ collections:
 
   Dark Comedy:
     template: { name: Subgenre }
+    visible_library: weekly(tuesday|thursday)
     summary: Dark comedy is a style of comedy that makes light of subject matter that is generally considered taboo, particularly subjects that are normally considered serious or painful to discuss.
     file_poster: config/posters/Dark Comedy TV.png
-    visible_shared: monthly(31)
+    visible_shared: monthly(26)
     trakt_list:
       - https://trakt.tv/users/majeed_pk/lists/dark-comedy-uk-tv-shows?sort=rank,asc
       - https://trakt.tv/users/hitman860/lists/tv-shows-dark-comedy?sort=rank,asc
 
   Drug:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday|friday)
     file_poster: config/posters/Drug TV.png
     visible_shared: monthly(13)
     trakt_list:
@@ -381,7 +404,8 @@ collections:
       - https://trakt.tv/users/dr-rieux/lists/drugs-in-tv-shows?sort=added,asc
 
   Dystopian:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(thursday|saturday)
     summary: A dystopia, or cacotopia, is a speculated ideal society with minimal crime, violence and poverty that is undesirable or frightening.
     file_poster: config/posters/Dystopian TV.png
     visible_shared: monthly(1)
@@ -391,13 +415,15 @@ collections:
 
   Gangster:
     template: { name: Subgenre }
+    visible_library: weekly(friday|sunday)
     summary: Gangster show is a sub-genre of crime shows that center on organized crime or the mafia. Often the plot revolves around the rise and fall of an organized crime leader. Many Gangster films explore the destructive nature of organized crime, while others attempt to show the humanity of the individual characters.
     file_poster: config/posters/Gangster TV.png
     visible_shared: monthly(27)
     trakt_list: https://trakt.tv/users/majeed_pk/lists/best-mafia-gangsters-tv-shows?sort=rank,asc
 
   Hacking:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(monday|thursday)
     summary: Hacker, a computer expert with advanced technical knowledge. Hacker culture, activity within the computer programmer subculture.
     file_poster: config/posters/Hacking TV.png
     visible_shared: monthly(23)
@@ -407,7 +433,8 @@ collections:
       - https://trakt.tv/users/sanojjonas/lists/hacking-corruption-technology-enviroment?sort=added,asc
 
   LGBTQ+:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(tuesday|friday)
     summary: LGBTQ+ show is a genre of shows where the characters decpict lesbian, gay, bisexual, transgender, queer and intersex people.
     file_poster: config/posters/LGBTQ+ TV.png
     visible_shared: monthly(19)
@@ -418,6 +445,7 @@ collections:
 
   Monster:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday|saturday)
     summary: Shows where the main protagonist is a monster of some form.
     file_poster: config/posters/Monster TV.png
     visible_shared: monthly(9)
@@ -427,6 +455,7 @@ collections:
 
   Music:
     template: { name: Subgenre Other }
+    visible_library: weekly(monday|sunday)
     visible_shared: monthly(24)
     summary: Music series is genre that revolves around music being an integral part of the characters lives.
     file_poster: config/posters/Music TV.png
@@ -440,6 +469,7 @@ collections:
 
   Nature Documentary:
     template: { name: Subgenre }
+    visible_library: weekly(tuesday|sunday)
     file_poster: config/posters/Nature Documentary TV.png
     visible_shared: monthly(14)
     summary: Nature documentaries showcase the beauty and complexity of the natural world through stunning visuals and expert narration, aiming to educate and raise awareness about wildlife, ecosystems, and environmental conservation.
@@ -449,6 +479,7 @@ collections:
 
   Outer Space:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday|sunday)
     summary: Shows That Take Place in Outer Space
     file_poster: config/posters/Outer Space TV.png
     visible_shared: monthly(6)
@@ -458,7 +489,8 @@ collections:
       - https://trakt.tv/users/arclight/lists/space-fiction?sort=rank,asc
 
   Pandemic:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(thursday|sunday)
     summary: A Pandemic show resolves around widespread viruses, plagues, and diseases.
     file_poster: config/posters/Pandemic TV.png
     visible_shared: monthly(31)
@@ -467,7 +499,8 @@ collections:
       - https://trakt.tv/users/skavau/lists/pandemic-live-action-series?sort=popularity,asc
 
   Paranormal:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(monday|friday)
     summary: Shows containing something supernatural like ghosts or spirits.
     file_poster: config/posters/Paranormal TV.png
     visible_shared: monthly(28)
@@ -477,9 +510,10 @@ collections:
 
   Period Piece:
     template: { name: Subgenre }
+    visible_library: weekly(tuesday|thursday)
     summary: Shows in the period piece fiction genre are made up of stories that feature historical places, people, or events that are crucial to the story.
     file_poster: config/posters/Period Piece TV.png
-    visible_shared: weekly(sunday)
+    visible_shared: monthly(22)
     trakt_list:
       - https://trakt.tv/users/majeed_pk/lists/period-dramas-tv?sort=rank,asc
       - https://trakt.tv/users/yuzuchan/lists/period-pieces?sort=rank,asc
@@ -488,9 +522,10 @@ collections:
 
   Police:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday|friday)
     summary: Shows in the perspective of a policeman or a policeman being present in any capacity.
     file_poster: config/posters/Police TV.png
-    visible_shared: monthly(20)
+    visible_shared: monthly(17)
     trakt_list:
       - https://trakt.tv/users/conepuff/lists/police?sort=rank,asc
       - https://trakt.tv/users/bongaholic/lists/great-police-tv?sort=released,desc
@@ -498,7 +533,8 @@ collections:
       - https://trakt.tv/users/wsquared_72/lists/tv-american-police-procedurals?sort=rank,asc
 
   Political:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(thursday|saturday)
     summary: Political refers to shows that do not hide their political stance. In this sense, they differ from other films not because they are political, but because of the way in which their politics is presented.
     file_poster: config/posters/Political TV.png
     visible_shared: monthly(16)
@@ -508,23 +544,26 @@ collections:
 
   Post Apocalyptic:
     template: { name: Subgenre }
-    summary: Apocalyptic and post-apocalyptic fiction are subgenres of science fiction that are set in a time period where the earth as we know it is coming to an end.
+    visible_library: weekly(wednesday|friday|sunday)
+    summary: Apocalyptic and post-apocalyptic fiction are Subgenres of science fiction that are set in a time period where the earth as we know it is coming to an end.
     file_poster: config/posters/Post Apocalyptic TV.png
-    visible_shared: monthly(12)
+    visible_shared: monthly(3)
     trakt_list:
       - https://trakt.tv/users/kdlb/lists/post-apocalyptic-tv?sort=rank,asc
       - https://trakt.tv/users/shriek/lists/post-apocalyptic-tv-shows?sort=title,asc
       - https://trakt.tv/users/kdlb/lists/post-apocalyptic-tv?sort=rank,asc
 
   Prison:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(monday|thursday)
     summary: Shows taking place inside a prison.
     file_poster: config/posters/Prison TV.png
     visible_shared: monthly(12)
     trakt_list: https://trakt.tv/users/aliasrogue/lists/crime-punishment?sort=rank,asc
 
   Robot:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(tuesday|friday)
     summary: Shows containing robots in many forms, often set in the future.
     file_poster: config/posters/Robot TV.png
     visible_shared: monthly(20)
@@ -534,6 +573,7 @@ collections:
 
   Romantic Comedy:
     template: { name: Subgenre Other }
+    visible_library: weekly(wednesday|saturday)
     visible_shared: weekly(tuesday)
     file_poster: config/posters/Romantic Comedy TV.png
     summary: Romantic Comedy is a genre that attempts to catch the viewer’s heart with the combination of love and humor. This sub-genre is light-hearted and usually places the two protagonists in humorus situation. Romantic-Comedy series revolves around a romantic ideal, such as true love. In the end, the ideal triumphs over the situation or obstacle, thus creating a happy ending.
@@ -549,7 +589,7 @@ collections:
 
   Romantic Drama:
     template: { name: Subgenre Other }
-    visible_shared: monthly(31)
+    visible_library: weekly(monday|sunday)
     file_poster: config/posters/Romantic Drama TV.png
     summary: Romantic Drama series is a genre that explores the complex side of love. The plot usually centers around an obstacle that is preventing love between two people. The obstacles in Romantic Drama series can range from a family's disapproval, to forbidden love, to one's own psychological restraints. Many Romantic Dramas end with the lovers separating because of the enormity of the obstacle, the realization of incompatibility, or simply because of fate.
     smart_filter:
@@ -564,15 +604,16 @@ collections:
 
   Sitcom:
     template: { name: Subgenre }
+    visible_library: weekly(thursday|sunday)
     summary: A Sitcom is a serialized comedic program where each episode revolves around a different situation. In each different situation, however, there is the same cast of characters who return from episode to episode.
     file_poster: config/posters/Sitcom TV.png
-    visible_shared: weekly(friday)
     trakt_list:
       - https://trakt.tv/users/norman05/lists/sitcoms?sort=title,asc
       - https://trakt.tv/users/jhall-316-hotmail-com/lists/sitcoms?sort=rank,asc
       - https://trakt.tv/users/caira34/lists/sitcoms?sort=title,asc
   Spy:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(wednesday|sunday)
     summary: The spy genre, also known sometimes as an espionage, deals with the subject of fictional espionage, either in a realistic way (such as the adaptations of John le Carré) or as a basis for fantasy.
     file_poster: config/posters/Spy TV.png
     visible_shared: monthly(4)
@@ -582,15 +623,15 @@ collections:
 
   Sword & Sorcery:
     template: { name: Subgenre }
+    visible_library: weekly(monday|sunday)
     summary: Sword and Sorcery shows is a sub-genre of Fantasy that tend to be more plot-driven. These films rely on heavy action and battle scenes. Common themes in Sword and Sorcery films include a rescue mission, saving a princess, and battling a fantastical monster. The worlds and characters in these films are often much less developed than in other fantasy sub-genres. Of all the Fantasy sub-genres, Sword and Sorcery is most likely to be geared towards a younger audience, as many of these films are animated.
     file_poster: config/posters/Sword & Sorcery TV.png
-    visible_shared:
-      - monthly(1)
-      - monthly(15)
+    visible_shared: monthly(15)
     trakt_list: https://trakt.tv/users/cinematicthrowbacks/lists/monsters-titans-occult-medieval-medieval-dragons?sort=added,asc
 
   Time Travel:
     template: { name: Subgenre }
+    visible_library: weekly(monday|wednesday|friday)
     summary: A show  that contains time-travel. In any form. Be it time-loop, full on relocation in time, consciousness transfer...
     file_poster: config/posters/Time Travel TV.png
     visible_shared: weekly(saturday)
@@ -599,7 +640,8 @@ collections:
       - https://trakt.tv/users/zambucca/lists/time-travel
 
   Vampire:
-    template: { name: Subgenre Other }
+    template: { name: Subgenre }
+    visible_library: weekly(tuesday|thursday)
     summary: A vampire is a creature from folklore that subsists by feeding on the vital essence (generally in the form of blood) of the living.
     file_poster: config/posters/Vampire TV.png
     visible_shared: monthly(25)
@@ -610,6 +652,7 @@ collections:
 
   Video Game:
     template: { name: Subgenre }
+    visible_library: weekly(wednesday|friday)
     summary: Shows lightly or stritcly based of different types of video games.
     file_poster: config/posters/Video Game TV.png
     visible_shared: monthly(18)
@@ -617,9 +660,9 @@ collections:
 
   Zombie:
     template: { name: Subgenre }
+    visible_library: weekly(thursday|saturday)
     summary: A zombie is a mythological undead corporeal revenant created through the reanimation of a corpse.
     file_poster: config/posters/Zombie TV.png
-    visible_shared: weekly(wednesday)
     trakt_list:
       - https://trakt.tv/users/kuratchikingu/lists/zombie-movies-shows?sort=rank,asc
       - https://trakt.tv/users/skavau/lists/zombie-live-action-series?sort=popularity,asc

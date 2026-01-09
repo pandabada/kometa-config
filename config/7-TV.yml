@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Kometa-Team/Kometa/master/json-schema/config-schema.json
 ######################################################
-#                    TV 18.0                        #
+#                    TV 19.0                        #
 ######################################################
 
 templates:
@@ -8,22 +8,23 @@ templates:
     smart_label: random
     sync_mode: sync
     sort_title: +++_<<collection_name>>
-    visible_library: true
+    visible_library: false
 
   TV Release:
     smart_label: release.desc
     sync_mode: sync
     sort_title: +++_<<collection_name>>
-    visible_library: true
+    visible_library: false
 
   TV Top:
     sync_mode: sync
-    visible_library: true
+    visible_library: false
 
 collections:
   IMDb - Best Recent: # IMDb specific chart lists
     template: { name: TV Top }
     summary: TV shows rated 7.5 or higher on IMDb, released in the past 3 months.
+    visible_library: weekly(monday|friday)
     sort_title: ++_IMDb Best Recent
     visible_shared:
       - monthly(11)
@@ -39,6 +40,7 @@ collections:
   IMDb - Top 250:
     template: { name: TV Top }
     smart_label: audience_rating.desc
+    visible_library: weekly(tuesday|friday)
     sort_title: ++_IMDB top 250
     file_poster: config/posters/IMDb Top 250 Gold.png
     visible_shared:
@@ -48,6 +50,7 @@ collections:
 
   Metacritic - Must-See: # Metacritic specific chart lists
     template: { name: TV }
+    visible_library: weekly(wednesday|sunday)
     visible_shared:
       - monthly(14)
       - monthly(31)
@@ -59,6 +62,7 @@ collections:
     template: { name: TV }
     tmdb_popular: 150
     sort_title: +_XPopular
+    visible_library: weekly(thursday|saturday)
     visible_shared:
       - monthly(10)
       - monthly(12)
@@ -68,7 +72,6 @@ collections:
     trakt_chart:
       chart: popular
       limit: 40
-    visible_library: true
     file_poster: config/posters/Popular.png
     summary: Popular shows on IMDb, Trakt and TMDb over the past few months.
     trakt_list: https://trakt.tv/users/justin/lists/imdb-popular-tv-shows?sort=rank,asc
@@ -76,6 +79,7 @@ collections:
   RT - Certified Fresh: # Rotten Tomatoes specific chart lists
     template: { name: TV }
     limit: 150
+    visible_library: weekly(monday|saturday)
     visible_shared:
       - monthly(13)
       - monthly(6)
@@ -87,6 +91,7 @@ collections:
     template: { name: TV Release }
     tmdb_on_the_air: 80
     tmdb_airing_today: 40
+    visible_library: weekly(wedneday|friday)
     visible_shared: monthly(1)
     file_poster: config/posters/TMDb On the Air.png
     summary: Shows airing right now across streaming services.
@@ -95,6 +100,7 @@ collections:
     template: { name: TV }
     tmdb_top_rated: 300
     sort_title: +_Top Rated
+    visible_library: weekly(tuesday|sunday)
     visible_shared:
       - monthly(17)
       - monthly(18)
@@ -116,6 +122,7 @@ collections:
       limit: 220
       time_period: all
     file_poster: config/posters/Trakt Most Watched All-Time.png
+    visible_library: weekly(monday|thursday)
     visible_shared:
       - monthly(28)
       - monthly(25)
@@ -129,6 +136,7 @@ collections:
       time_period: monthly
     file_poster: config/posters/Trakt Most Watched Monthly.png
     summary: Most watched shows across the internet this month.
+    visible_library: weekly(firday|sunday)
     visible_shared: monthly(14)
 
   Trakt - Most Watched (Yearly):
@@ -139,6 +147,7 @@ collections:
       time_period: yearly
     file_poster: config/posters/Trakt Most Watched Yearly.png
     summary: Most watched shows across the internet this year.
+    visible_library: weekly(wednesday|saturday)
     visible_shared: monthly(23)
 
   Trakt - Recommended:
@@ -147,6 +156,7 @@ collections:
     sort_title: ++_Trakt - Recommended
     summary: Shows recommended by trakt API.
     file_poster: config/posters/Trakt Recommended.png
+    visible_library: weekly(tuesday|saturday)
     visible_shared:
       - monthly(29)
       - monthly(30)
@@ -158,9 +168,9 @@ collections:
       chart: trending
       limit: 30
     sort_title: +_ZTrending
+    visible_library: weekly(monday|thursday)
     visible_shared:
       - monthly(26)
       - monthly(24)
-      - monthly(21)
     file_poster: config/posters/Trending.png
     summary: Shows trending on Trakt and TMDb this week.
