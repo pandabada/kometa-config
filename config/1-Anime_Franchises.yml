@@ -46,6 +46,7 @@ collections:
     plex_search:
       all:
         title: berserk
+        genre: horror
 
   Beyblade:
     template: { name: Franchise }
@@ -74,6 +75,7 @@ collections:
           - rokka
           - witches
           - raideen
+          - scum
 
   Burn-Up:
     template: { name: Franchise }
@@ -170,6 +172,7 @@ collections:
     plex_search:
       all:
         title: garo
+        title.not: garouden
 
   Gatchaman:
     template: { name: Franchise }

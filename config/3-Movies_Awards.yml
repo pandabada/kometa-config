@@ -69,7 +69,7 @@ collections:
     template: { name: Awards }
     visible_library: weekly(thursday|saturday)
     summary: Le Festival de Cannes, jusqu'en 2003 appelé le Festival international du film, est un festival de cinéma annuel qui se tient à Cannes, en France, et présente des films de tous genres, y compris des documentaires, venus du monde entier. Créé en 1946, ce festival sur invitation est organisé chaque année au Palais des Festivals et des Congrès. Il a été accrédité officiellement par la FIAPF en 1951.
-    visible_shared: monthly(17)
+    visible_shared: monthly(4)
     file_poster: config/posters/Cannes Palme d'or.png
     imdb_award:
       event_id: "ev0000147"
@@ -101,7 +101,6 @@ collections:
     visible_library: weekly(tuesday|thursday)
     summary: Les Golden Globe Awards sont des distinctions décernées par la Hollywood Foreign Press Association depuis janvier 1944, reconnaissant l'excellence dans les films et la télévision, tant américains qu'internationaux. Depuis 2022, l'HFPA compte 105 membres.
     visible_shared:
-      - monthly(23)
       - monthly(24)
     file_poster: config/posters/Golden Globe Best Picture.png
     imdb_award:
